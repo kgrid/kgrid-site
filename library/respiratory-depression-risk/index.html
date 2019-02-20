@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/ObjectTeller/#/object/ark:%2F67034%2Fk43k5p -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="./index_files/jquery.js"></script>
+    <link rel="stylesheet" href="./index_files/datagrid.css" type="text/css">
+    <link rel="stylesheet" href="./index_files/button.css" type="text/css">
+    <link rel="stylesheet" href="./index_files/ot2.css" type="text/css">
+    <link rel="stylesheet" href="./index_files/animate.css" type="text/css">
+    <script type="text/javascript" src="./index_files/date.format.js"></script>
+    <script src="./index_files/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <title>Knowledge Grid - Build 0112A</title>
+    <link href="./index_files/app.0f1a1a2c60df6ce60be185cf39c2c39d.css" rel="stylesheet">
+</head>
+<body class="">
+<div id="app">
+    <div>
+        <div data-v-af260aa4="" class="ot-nav"><a href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/"
+                                                  class="navbar-brand ot-1 router-link-active" data-v-af260aa4=""><img
+                data-v-af260aa4="" alt="Brand"
+                src="data:image/png;base64,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"></a>
+            <nav data-v-af260aa4="" class="navbar navbar-default navbar-fixed-top ot-1">
+                <div data-v-af260aa4="" class="container-fluid ot-1">
+                    <div data-v-af260aa4="" class="navbar-header ot-1">
+                        <button data-v-af260aa4="" type="button" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false"
+                                class="navbar-toggle collapsed ot-1"><span data-v-af260aa4="" class="sr-only">Toggle navigation</span>
+                            <span data-v-af260aa4="" class="icon-bar"></span> <span data-v-af260aa4=""
+                                                                                    class="icon-bar"></span> <span
+                                    data-v-af260aa4="" class="icon-bar"></span></button>
+                    </div>
+                    <div data-v-af260aa4="" id="bs-example-navbar-collapse-1" class="collapse navbar-collapse ot-1">
+                        <ul data-v-af260aa4="" class="nav navbar-nav">
+                            <li data-v-af260aa4=""><a href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/about"
+                                                      class="" data-v-af260aa4="">About</a></li>
+                            <li data-v-af260aa4=""><a href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/faq"
+                                                      class="" data-v-af260aa4="">FAQ</a></li>
+                            <li data-v-af260aa4=""><a href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/contactus"
+                                                      class="" data-v-af260aa4="">Contact Us</a></li>
+                        </ul>
+                        <div data-v-af260aa4="">
+                            <ul data-v-af260aa4="" class="nav navbar-nav navbar-right ot-1">
+                                <li data-v-af260aa4="" class="login-link1">
+                                    <div data-v-af260aa4="" id="userDropdown" class="dropdown" style="height: 55px;"><a
+                                            data-v-af260aa4="" id="dLabel" data-target="#">Hello,
+                                        Larry<span data-v-af260aa4=""><img data-v-af260aa4="" id="dropdowniconimg"
+                                                                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAcCAYAAADxyeavAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAABj0lEQVRYR82YgU3DQAxFAwuQEdiAjtBNyAhhA0ZghLIBIzBC2QA2KBOE/7m6OgVf4nOclC+96mqd0//bSOfmZhiGZiXtQJuWzQkc0zJQNL8CPRirA9peN2pxIQeg6QR2QOtxoRYXUDIuCg2gFp3MGReFBVCLDqzGRSEB1GIltcZFiwOoxQq8xkWLAqhFAy14AxFyB/AcUjx43sHD77sYfYN7wMPMrFrzNcY/gJjhaXuXlkVx/x7YA+Q/wwy8VY7AomeQ9/K24O0xJ16fn5P3FlGLCjXGS2NAeAC1OCLCuBAaQC1mRBoXwgKoxTP8kE9gUe3EGBJALQLrxSnvqLsHFjGA1q+a38K4wH6LeJL/6R8XrMa5h3vH/R7cAfI31zAuuALI4prGheoAfPkPxoWqAGzgUT6nLYwL1gD97XnEmRInPg5M8Y8udB3AU1pOqp0z/wW2NC56Aa9pWRbNcyPH0bFY4yi7tXFRByYDyDzPOZ0/V/6Ei81Vfw5WEn09puVFDNWt+bgvUj3Iv1jcLU3zAzAgdEWbYnUBAAAAAElFTkSuQmCC"
+                                                                           width="12px" class="down"></span></a> <!---->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="ot-content">
+                <div class="whitebacking">
+                    <div class="wrapper">
+                        <div class="ot-banner detail">
+                            <div>
+                                <div class="row ot-detail-spacer"></div>
+                                <div class="row ot-detail-smallrow">
+                                    <div class="col-md-3">
+                                        <div id="goback">
+                                            <div id="backButton"><a>BACK TO THE LIBRARY
+                                                <div class="ot-r1-btn ot-back">
+                                                    <div class="greyroundbutton"></div>
+                                                    <div class="btnContent"><img
+                                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAdCAYAAACaCl3kAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWVJREFUeNqUlTFywjAQRW1BT24ANwhlunAAz6AbYDqXcAJyg0DnDnMDU6UVNyA3MJ1L0qVzdpl1RvkjycrO7Aiv/Galz+467bouibGiKDQtc/IZuRlHQgxU5BMJNelQRoKe+EULYjuriIQGILZaDWTj4z1D+FSWZaUC0IaWFYQvBOX8QwUUfIfwJ7nuH1RAQdu+yHPKdneComDlEEMTdLUDmLF2iLElyODJFCj46lBw79LhUQAEsVJHFIOguU/1Udu2vPkB8Rv5S5Zl3z5Qyb1QQW0r6AOnWGKooA+8QGwpdx4EtRzPtqMUgh+UuywcsJGC8GZM5E4b2JuE4N8C4Fah5QD7XEX7ICgwZz3DOyvK+hYExXJpIdt20mp/S87RWjzJrtAlLN6i/4+djUybjd20llh1L5Z3dEgrrSE8leGVxIzHyjF7DmnMJCfYQK+eYuZqIve9Wc9N+o9vx0y+GyzO/UeAAQD7DYm8ckw05QAAAABJRU5ErkJggg=="
+                                                            width="4px"></div>
+                                                </div>
+                                            </a></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-5 pri-pub">
+                                        <div class="col-md-7" style="text-align: right;">VIEW TYPE:</div>
+                                        <div class="col-md-2"><label class="ot-pub radio-inline"><input type="radio"
+                                                                                                        value="false">
+                                            <span>PRIVATE</span></label></div>
+                                        <div class="col-md-3"><label class="ot-pub radio-inline"><input type="radio"
+                                                                                                        value="true"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdxJREFUeNrsmcttg0AQhpdtwO4ApwIowcfcUkIoIFLowE4HjpS7SQdwy5EOgjvAHZgKyIzzI2HzRjwGyb80wpKx/Xl2dpiZNdI0VX20/nq26bKF8Wuz4tYTWUQWkvmXt59Ln98zuoAS3JouDplbA9akgMwjYH8UUILcA3ClhhF72iXgcBBQLLFHZqlxxB52mkJCN0DyMv+OCMl64RiGQ7qD0gcPdDmqacTxHtbB6hrIdzWtVnWwhRjFch/VfEo43VHMxpUexb+ZEzLzrN+09J6SIQvpsAiKNywlRzti2tyA4onjKnna33vUGfCJM6ReM69moBK9qXJOVBo73RQPijJNskxe/iWAsrYaRa90XT1qLsWji9AD9AEqXLFGN7gI0GgBoKHGBEO6Il1W9gtTwD2/RuMfCAb187veEwqZ3IBiYCVx9x+yUU8+j0qr8s8MWkj4mKpJilU3PzjTJWX/WQDk5/38tGykYyO3ztWVngjSbnzW000R2pNkDsiq1qi0KJkJ9gpZNdCtnTij+edYsSaIydqs02qGj7nUbqQU5LY5eGhVj9IXMegT2feAT5wP9T8HbVVrGF3PmRAODqxrBxsglDqfNxl9D8Ry0LzpNhW7NYZxuov6Hoax/gQYAKl+tKXcsRnEAAAAAElFTkSuQmCC"
+                                                width="6px"> <span class="active middleout">PUBLIC</span></label></div>
+                                    </div>
+                                </div>
+                                <div class="row ot-detail-titlerow">
+                                    <div id="ko-title">
+                                        <div id="type-status"><img
+                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAdxJREFUeNrsmcttg0AQhpdtwO4ApwIowcfcUkIoIFLowE4HjpS7SQdwy5EOgjvAHZgKyIzzI2HzRjwGyb80wpKx/Xl2dpiZNdI0VX20/nq26bKF8Wuz4tYTWUQWkvmXt59Ln98zuoAS3JouDplbA9akgMwjYH8UUILcA3ClhhF72iXgcBBQLLFHZqlxxB52mkJCN0DyMv+OCMl64RiGQ7qD0gcPdDmqacTxHtbB6hrIdzWtVnWwhRjFch/VfEo43VHMxpUexb+ZEzLzrN+09J6SIQvpsAiKNywlRzti2tyA4onjKnna33vUGfCJM6ReM69moBK9qXJOVBo73RQPijJNskxe/iWAsrYaRa90XT1qLsWji9AD9AEqXLFGN7gI0GgBoKHGBEO6Il1W9gtTwD2/RuMfCAb187veEwqZ3IBiYCVx9x+yUU8+j0qr8s8MWkj4mKpJilU3PzjTJWX/WQDk5/38tGykYyO3ztWVngjSbnzW000R2pNkDsiq1qi0KJkJ9gpZNdCtnTij+edYsSaIydqs02qGj7nUbqQU5LY5eGhVj9IXMegT2feAT5wP9T8HbVVrGF3PmRAODqxrBxsglDqfNxl9D8Ry0LzpNhW7NYZxuov6Hoax/gQYAKl+tKXcsRnEAAAAAElFTkSuQmCC"
+                                                width="10px" height="auto"></div>
+                                        <h1>
+                                            <small id="page_title_v">Respiratory Depression Risk Indicator</small>
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="row ot-detail-daterow">
+                                    <div class="col-md-3"><p class="date-title">Object ID:</p>
+                                        <p class="date-data"><span>ark:/67034/k43k5p</span></p></div>
+                                    <div class="col-md-2"><p class="date-title">Last Updated:</p>
+                                        <p class="date-data"><span>Mar 27, 2017</span></p></div>
+                                    <div class="col-md-2"><p class="date-title">Created On:</p>
+                                        <p class="date-data"><span>Nov 1, 2016</span></p></div>
+                                    <div class="col-md-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="theadwrapper" style="height: 65px;">
+                    <div class="header">
+                        <div class="headercontainer">
+                            <div class="headercol">
+                                <div>
+                                    <ul role="tablist" id="tabs" class="nav nav-tabs view">
+                                        <li id="metadata" class="active"><a>METADATA</a></li>
+                                        <li id="payload" class=""><a>PAYLOAD</a></li>
+                                        <li id="inputMessage" class=""><a>INPUT</a></li>
+                                        <li id="outputMessage" class=""><a>OUTPUT</a></li>
+                                        <li id="logData" class=""><a>LOG DATA</a></li>
+                                        <li role="presentation" class="labels accessLevelOne"><a>
+                                            <div id="more" class="labels iconBtn accessLevelOne"></div>
+                                        </a></li>
+                                    </ul>
+                                    <div id="objBtns" class="inline editwrapper accessLevelOne">
+                                        <button id="metadataeditBtn" class="edit">EDIT</button>
+                                        <button id="deleteButton" class="edit">DELETE</button>
+                                        <div id="downloadButton"><a
+                                                href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/ObjectTeller/knowledgeObject/ark:/67034/k43k5p/complete.json"
+                                                class="edit">DOWNLOAD
+                                            <div class="ot-r1-btn ot-download">
+                                                <div class="greyroundbutton"></div>
+                                                <div class="btnContent"><img
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAnCAYAAACIVoEIAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUFJREFUeNrs2NENgjAQBmAgvssIbgAjMAq+8egG6gb4xpu6gRvYDYRN2ACvycU0SEt7B9WHXtIYjJEv5S78EA/DEHGqqqodfLSwtrA6WEXTND3nP5OIXyWCZGV4HP0aNa70H1FRQAVUQAVUQAVUQAXUOrXB5LjD45abGonpNVdyWJtgUnziEvCD1DNInv+lGPLx5ct8whB0tekpLzAdCKqXqBqfQrzBDKA99HSbYGMXvmAG0AUst8/l8wUzgO5gOHz11NowHPtaAyq1jb4WDEFCeWjVgianb2mYK0h7m1kKRgEZ731cGBUkK55764InF4hRq0O0nJqj8v0Z1oMKskoJczs28UIj54Csdspix2zKGuSUpww7tijIOeQRYM4gUvJ0gJFA5DhsASODWBndAGOBnKZvZiprzPkCQCdumngLMABQU76ReUPiJAAAAABJRU5ErkJggg=="
+                                                        width="8px"></div>
+                                            </div>
+                                        </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="e6backing">
+                    <div class="wrapper">
+                        <div class="datagrid">
+                            <div>
+                                <ul id="tab" class="tab-content view">
+                                    <li id="metadata" class="active">
+                                        <div class="tab-content view-obj">
+                                            <ul>
+                                                <li class="ot-viewlist">
+                                                    <div id="title" class="addtext">
+                                                        <h4 style="margin-bottom: .5em">TITLE</h4>
+                                                        <div>Respiratory Depression Risk Indicator</div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="description" class="">
+                                                        <h4 style="margin: 1em 0 1em 0">DESCRIPTION</h4>
+                                                        <div class=" ">This object scans a list of a patient's prescriptions and determines if they are at risk greater for drug-induced respiratory depression because of being exposed simultaneously to a known dangerous combination of an opioid, a benzodiazepine, and a muscle relaxant.</div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="keywords" class="">
+                                                        <h4 style="margin: 1em 0 1em 0">KEYWORDS</h4>
+                                                        <div>respiratory depression, opioid, benzodiazepine, muscle relaxant, triple threat, risk, opiate</div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="owner" class="addtext">
+                                                        <h4 style="margin: 1em 0 1em 0">OWNERS</h4>
+                                                        <div>University of Michigan Department of Learning Health Sciences</div>
+                                                    </div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="contributors" class="addtext">
+                                                        <h4 style="margin: 1em 0 1em 0">CONTRIBUTORS</h4>
+                                                        <div>Kristen McGarry, Peter Boisvert, Allen Flynn</div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="license" class="addtext"><h4>LICENSE</h4> <!----> <!---->
+                                                        <a target="_blank"
+                                                           href="http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/ObjectTeller/"><span></span></a>
+                                                        <!----></div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="citations" class="addtext"><h4>CITATIONS</h4> <!---->
+                                                        <!----> <!---->
+                                                        <div id="citation_entries" class="entryDisplayArea">
+                                                            <ul class="list">
+                                                                <li><a target="_blank"
+                                                                       href="http://www.ingentaconnect.com/content/carfax/cadd/1999/00000094/00000007/art00002?crawler=true&amp;mimetype=application/pdf"><span>Mechanisms of fatal opioid overdose</span></a>
+                                                                </li>
+                                                                <li><a target="_blank"
+                                                                       href="https://www.researchgate.net/profile/William_Kennedy2/publication/259771477_Benzodiazepines_A_Major_Component_in_Unintentional_Prescription_Drug_Overdoses_With_Opioid_Analgesics/links/573500c608aea45ee83b133e.pdf"><span>Benzodiazepines: A Major Component in Unintentional Prescription Drug Overdoses With Opioid Analgesics</span></a>
+                                                                </li>
+                                                                <li><a target="_blank"
+                                                                       href="http://www.capsat.org/index_htm_files/Piercefield2010opioidodOK.pdf"><span>Increase in Unintentional Medication Overdose Deaths Oklahoma, 1994â2006</span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="payload" class="">
+                                        <div class="tab-content view-obj">
+                                            <ul>
+                                                <li class="ot-viewlist">
+                                                    <div id="functionName" class="addtext"><h4>FUNCTION NAME</h4> <input
+                                                            type="text" disabled="disabled" class="metaEdit"> <!---->
+                                                        <!----> <!----></div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="engineType" class="addtext"><h4>ENGINE TYPE</h4> <input
+                                                            type="text" disabled="disabled" class="metaEdit"> <!---->
+                                                        <!----> <!----></div>
+                                                </li>
+                                                <li class="ot-viewlist">
+                                                    <div id="content" class="addtext"><h4>CONTENT</h4> <!---->
+                                                        <div class="metaEdit textview"># Code to screen a medication
+                                                            list expressed in RXNORM RxCUIs for a variety of opioid and
+                                                            non-opioid medications
+                                                            # Objective: Identify regimens where the risk of harm from
+                                                            respiratory depression is real
+
+                                                            #import requests
+                                                            #import re
+
+                                                            def makeListOfRxCUIs(classID):
+                                                            temp_grab =
+                                                            requests.get("https://rxnav.nlm.nih.gov/REST/rxclass/classMembers?classId="+
+                                                            str(classID) + "&amp;relaSource=FDASPL&amp;rela=has_EPC")
+                                                            #print (temp_grab.status_code)
+                                                            regex = r"&lt;rxcui&gt;(.+?)&lt;/rxcui&gt;"
+                                                            listMade = re.findall(regex,temp_grab.text)
+                                                            return listMade
+
+                                                            def opioidCheck(n,opioidList): # Check if an RxCUI
+                                                            indiccates an opioid
+                                                            if n in opioidList:
+                                                            return True
+                                                            else:
+                                                            return False
+
+                                                            def benzodiazepineCheck(n,benzodiazepineList): # Check if an
+                                                            RxCUI indicates a benzodiazepine
+                                                            if n in benzodiazepineList:
+                                                            return True
+                                                            else:
+                                                            return False
+
+                                                            def muscleRelaxantCheck(n,muscleRelaxantList): # Check if an
+                                                            RxCUI indicates a muscle relaxant
+                                                            if n in muscleRelaxantList:
+                                                            return True
+                                                            else:
+                                                            return False
+
+                                                            # execution sequence begins here
+
+                                                            def execute(info):
+                                                            # breaking input dictionary into list on spaces
+                                                            rxcuistring = info.get("rxcui")
+                                                            rxcuistring
+                                                            rxcuis=rxcuistring.split()
+
+                                                            # default to False
+                                                            ocheck = False
+                                                            bcheck = False
+                                                            mcheck = False
+
+                                                            # extracting only the RxCUIs
+                                                            # calls to utilize API
+                                                            #opioidList = makeListOfRxCUIs("N0000175690")
+                                                            #benzodiazepineList = makeListOfRxCUIs("N0000175694")
+                                                            #muscleRelaxantList = makeListOfRxCUIs("N0000175737")
+
+                                                            #hard coded list of drugs within class
+                                                            opioidList = ["480", "2670", "235412", "23088", "4337",
+                                                            "5489", "221107", "314667", "3423", "6378", "6468", "6754",
+                                                            "6813", "7052", "7804", "7814", "32926", "8785", "73032",
+                                                            "56795", "787390", "10689"]
+                                                            benzodiazepineList = ["596", "2356", "21241", "2598",
+                                                            "2353", "3322", "4077", "4501", "6470", "6960", "7781",
+                                                            "35185", "10355", "10767"]
+                                                            muscleRelaxantList = ["2101", "2410", "21949", "59078",
+                                                            "6845", "7715"]
+
+
+                                                            for cui in rxcuis: # Scan a list of RxCUIs to identify any
+                                                            of three classes
+                                                            otemp = opioidCheck(cui,opioidList)
+                                                            if otemp == True:
+                                                            ocheck = True
+                                                            continue
+                                                            btemp = benzodiazepineCheck(cui,benzodiazepineList)
+                                                            if btemp == True:
+                                                            bcheck = True
+                                                            continue
+                                                            mtemp = muscleRelaxantCheck(cui,muscleRelaxantList)
+                                                            if mtemp == True:
+                                                            mcheck = True
+
+                                                            outputString = ("Opioid? " + str(ocheck) + " Benzodiazepine?
+                                                            " + str(bcheck) + " Muscle Relaxant? " + str(mcheck))
+                                                            #print outputString
+                                                            return outputString
+
+
+                                                            # Test function to see if program is working correctly.
+                                                            def test():
+                                                            if execute({"rxcui":"480 2101 10767"}) != "Opioid? True
+                                                            Benzodiazepine? True Muscle Relaxant? True":
+                                                            return "error."
+                                                            if execute({"rxcui":"830861 2101 10767"}) != "Opioid? False
+                                                            Benzodiazepine? True Muscle Relaxant? True":
+                                                            return "error."
+                                                            if execute({"rxcui":"830861 1099870 966443"}) != "Opioid?
+                                                            False Benzodiazepine? False Muscle Relaxant? False":
+                                                            return "error."
+                                                            if execute({"rxcui":"480 2101 1099870"}) != "Opioid? True
+                                                            Benzodiazepine? False Muscle Relaxant? True":
+                                                            return "error."
+                                                            if execute({"rxcui":""}) != "Opioid? False Benzodiazepine?
+                                                            False Muscle Relaxant? False":
+                                                            return "error."
+                                                            return "ok."
+                                                        </div> <!----> <!----></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="inputMessage" class="">
+                                        <div class="tab-content view-obj">
+                                            <ul>
+                                                <li class="ot-viewlist">
+                                                    <div id="inputMessage" class="addtext"><h4>CONTENT</h4> <!---->
+                                                        <div class="metaEdit textview">&lt;rdf:RDF
+                                                            xmlns:ot="http://uofm.org/objectteller/#"
+                                                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+                                                            &lt;rdf:Description
+                                                            rdf:about="http://uofm.org/objectteller/inputMessage"&gt;
+                                                            &lt;ot:noofparams&gt;1&lt;/ot:noofparams&gt;
+                                                            &lt;ot:params&gt;
+                                                            &lt;rdf:Seq&gt;
+                                                            &lt;rdf:li&gt;rxcui&lt;/rdf:li&gt;
+                                                            &lt;/rdf:Seq&gt;
+                                                            &lt;/ot:params&gt;
+                                                            &lt;/rdf:Description&gt;
+                                                            &lt;rdf:Description
+                                                            rdf:about="http://uofm.org/objectteller/param/"&gt;
+                                                            &lt;ot:datatype&gt;STRING&lt;/ot:datatype&gt;
+                                                            &lt;/rdf:Description&gt;
+                                                            &lt;/rdf:RDF&gt;
+                                                        </div> <!----> <!----></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="outputMessage" class="">
+                                        <div class="tab-content view-obj">
+                                            <ul>
+                                                <li class="ot-viewlist">
+                                                    <div id="outputMessage" class="addtext"><h4>CONTENT</h4> <!---->
+                                                        <div class="metaEdit textview">&lt;rdf:RDF
+                                                            xmlns:ot="http://uofm.org/objectteller/"
+                                                            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+                                                            &lt;rdf:Description
+                                                            rdf:about="http://uofm.org/objectteller/outputMessage"&gt;
+                                                            &lt;ot:returntype&gt;STRING&lt;/ot:returntype&gt;
+                                                            &lt;/rdf:Description&gt;
+                                                            &lt;/rdf:RDF&gt;
+                                                        </div> <!----> <!----></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li id="logData" class="">
+                                        <div class="tab-content view-obj">
+                                            <ul>
+                                                <li class="ot-viewlist">
+                                                    <div id="logData" class="addtext"><h4>CONTENT</h4> <!---->
+                                                        <div class="metaEdit textview">67034-k43k5p wasGeneratedBy
+                                                            http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/fcrepo/rest/67034-k43k5p/Log/CreateActivity
+                                                            67034-k43k5p isA http://www.w3.org/ns/prov#Entity
+                                                            67034-k43k5p wasAttributedTo Kristen McGarry
+                                                            67034-k43k5p/Log/CreateActivity isA
+                                                            http://www.w3.org/ns/prov#Activity
+                                                            67034-k43k5p/Log/CreateActivity startedAtTime Tue Nov 01
+                                                            08:52:18 EDT 2016
+                                                            67034-k43k5p/Log/CreateActivity Used
+                                                            http://dlhs-fedora-dev-a.umms.med.umich.edu:8080/fcrepo/rest/67034-k43k5p
+                                                            67034-k43k5p/Log/CreateActivity wasAssociatedWith Kristen
+                                                            McGarry
+                                                            67034-k43k5p/Log/CreateActivity endedAtTime Tue Nov 01
+                                                            08:52:18 EDT 2016
+                                                        </div> <!----> <!----></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> <!----></div>
+                </div>
+            </div>
+        </div> <!----></div>
+</div>
+<script type="text/javascript" src="./index_files/manifest.521aba794b90280455c8.js"></script>
+<script type="text/javascript" src="./index_files/vendor.7cfd0a4729248eeb128d.js"></script>
+<script type="text/javascript" src="./index_files/app.c273b4ddbd89b5ef0ff6.js"></script>
+</body>
+</html>
