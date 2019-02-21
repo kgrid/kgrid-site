@@ -4,6 +4,7 @@
     "vuepress": "^0.14.9"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   }
 }
