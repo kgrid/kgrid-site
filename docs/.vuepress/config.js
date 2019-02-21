@@ -1,14 +1,12 @@
 module.exports = {
-  base: '/ipp-collection/',
-  title: 'ipp Collection',
+  base: '/kgrid-site/',
+  title: 'kgrid-site',
   themeConfig: {
-    repo: 'kgrid-objects/ipp-collection',
+    repo: 'kgrid-objects/kgrid-site',
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'KGrid.org', link: 'https://kgrid.org' },
       { text: 'Guide', link: '/' },
-      // { text: 'IPP Kit', link: 'https://demo.kgrid.org/ipp-kit'},
-      // { text: 'Online Demo', link: 'https://demo.kgrid.org/ipp-kit/web' }
     ],
     search: true,
     searchMaxSuggestions: 10,
