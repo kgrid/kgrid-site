@@ -1,7 +1,0 @@
----
----
-
-## The Kgrid Models
-
-### Conceptual
-
