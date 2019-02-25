@@ -1,12 +1,13 @@
 module.exports = {
   base: '/kgrid-site/',
-  title: 'kgrid-site',
+  title: "Knowledge Grid Documentation",
   themeConfig: {
-    repo: 'kgrid-objects/kgrid-site',
+    repo: 'kgrid',
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'KGrid.org', link: 'https://kgrid.org' },
-      { text: 'Guide', link: '/' },
+      { text: "Integrator's Guide", link: '/integrator/'},
+      { text: "Developer's Guide", link: '/developer/'}
     ],
     search: true,
     searchMaxSuggestions: 10,

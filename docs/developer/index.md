@@ -1,4 +1,4 @@
-# IPP Collection of KOs (Draft)
+# Developer's Guide
 
 [![GitHub release](https://img.shields.io/github/release/kgrid-objects/ipp-collection.svg)](https://github.com/kgrid-objects/ipp-collection/releases/)
 [![CircleCI](https://circleci.com/gh/kgrid-objects/ipp-collection.svg?style=svg)](https://circleci.com/gh/kgrid-objects/ipp-collection)
