@@ -25,41 +25,10 @@ jobs:
         name: Install KGrid Site Dependencies
         command: npm install
 
-#    - run:
-#        name: IPP Tests
-#        command: npm test
-#
-#    - run:
-#        name: Install\Build IPP Web Client
-#        command: cd web && npm install && npm run build && cd ..
-#
-#    - run:
-#        name: Create IPP zip ready for deployment
-#        command: npm run package
-
     - run:
         name: Deploy VuePress GitHub Pages
         command: |
               chmod 775 .circleci/vuepress_deploy.sh && .circleci/vuepress_deploy.sh
-#
-#    - run:
-#        name: Create Release
-#        command: |
-#
-#          if [ $RELEASE ]; then
-#              git config --global user.email "$GIT_USER_EMAIL"
-#              git config --global user.name "$GIT_USER_NAME"
-#
-#              .circleci/release.sh
-#
-#          fi
-#
-#    - store_artifacts:
-#        path: dist
-
-#    - store_test_results:
-#        path: test_results
-#
 
 workflows:
   version: 2
