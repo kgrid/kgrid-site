@@ -196,39 +196,18 @@ main page you will see a _Deposit Knowledge Object_.
 1. Download [hello-world.zip](https://github.com/kgrid-objects/example-projects/releases/latest)
 1. Navigate to the [KGrid Library](http://localhost:8080) site.
 1. Follow this screen flow
-<ol type="A">
-<li>
-<div>
-<a target="_blank" href="./img/AddKOScreenShot1.png">
-  <img src="./assets/img/AddKOScreenShot1.png" alt="" width=350>
-</a>
-<div>Click on <i>Deposit Knowledge Object</i> in the right side of the screen</div>
-</div></li>
-<li>
-<div>
-<a target="_blank" href="./img/AddKOScreenShot2.png">
-  <img src="./assets/img/AddKOScreenShot2.png" alt=""  width=350>
-</a>
-<div>Click in the grey box to bring up a file select window.</div>
-</div></li>
-<li>
-<div>
-<a target="_blank" href="./img/AddKOScreenShot3.png">
-  <img src="./assets/img/AddKOScreenShot3.png" alt=""  width=350>
-</a>
-<div>Select the hello-world.zip you just download<br>
-Click <i>Deposit Object</i> in the lower right of the screen.</div>
-</div></li>
-<li>
-<div>
-<a target="_blank" href="./img/AddKOScreenShot4.png">
-  <img src="./assets/img/AddKOScreenShot4.png" alt=""  width=350>
-</a>
-<div> The file will be upload to the 
-     library and you return to library main screen.</div>
-</div></li>
-</ol>
 
+#### Click on ***Deposit Knowledge Object*** in the right side of the screen
+<img src="../assets/img/AddKOScreenShot1.png" style="width: 66%; margin: 1em;">
+
+#### Click in the grey box to bring up a file select window.
+<img src="../assets/img/AddKOScreenShot2.png" style="width: 66%; margin: 1em;">
+
+#### Select the hello-world.zip you just downloaded and click ***Deposit Object*** in the lower right of the screen.
+<img src="../assets/img/AddKOScreenShot3.png" style="width: 66%; margin: 1em;">
+
+#### The file will be upload to the library and you return to library main screen.
+<img src="../assets/img/AddKOScreenShot4.png" style="width: 66%; margin: 1em;">
 
 ## Example Collection
 
