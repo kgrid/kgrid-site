@@ -22,7 +22,7 @@ jobs:
         - v1-dependencies-
 
     - run:
-        name: Install KGrid Site Dependencies
+        name: Install KGrid Site
         command: npm install
 
     - run:
