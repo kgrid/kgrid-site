@@ -19,7 +19,7 @@ For running the application you need:
 
 ### Running the Activator
 
-Download the latest activator jar from GitHub [Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest). 
+Download the latest activator jar from GitHub [Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest). (Or use the `kgrid CLI`)
 
 1. Create a activator directory
 1. Create a directory named shelf in the new activator directory
