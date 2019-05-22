@@ -13,8 +13,8 @@ npm run dev
 
 #### Test the build (before committing)
 
-'''
+```
 npm run build
-'''
+```
 
 The site uses [CircleCI](https://circleci.com/gh/kgrid/kgrid-site) to build and commit the documentation files in the `/docs` directory. THe site is published via Github to the [`gh-pages`](https://github.com/kgrid/kgrid-site/tree/gh-pages) branch.
