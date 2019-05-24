@@ -1,6 +1,6 @@
 # KGrid Guides for Developers and Integrators
 
-[![CircleCI](https://circleci.com/gh/kgrid/kgrid-site.svg?style=svg)](https://circleci.com/gh/kgrid/kgrid-site)
+[![CircleCI](https://circleci.com/gh/kgrid/guides.svg?style=svg)](https://circleci.com/gh/kgrid/guides)
 
 This is the site documentation for developers and integrators (integrators).
 
@@ -17,4 +17,4 @@ npm run dev
 npm run build
 ```
 
-The site uses [CircleCI](https://circleci.com/gh/kgrid/kgrid-site) to build and commit the documentation files in the `/docs` directory. THe site is published via Github to the [`gh-pages`](https://github.com/kgrid/kgrid-site/tree/gh-pages) branch.
+The site uses [CircleCI](https://circleci.com/gh/kgrid/guides) to build and commit the documentation files in the `/docs` directory. THe site is published via Github to the [`gh-pages`](https://github.com/kgrid/guides/tree/gh-pages) branch.
