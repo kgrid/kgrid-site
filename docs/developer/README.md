@@ -294,6 +294,3 @@ npm run package
 * [scripty](https://www.npmjs.com/package/scripty)
 * [jest](https://jestjs.io/)
 * [rewire](https://github.com/jhnns/rewire)
-
-
-2
