@@ -6,7 +6,7 @@
   },
   "project": "guides",
   "dependencies": {
-    "vuepress": "^0.14.9"
+    "vuepress": "^1.0.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",

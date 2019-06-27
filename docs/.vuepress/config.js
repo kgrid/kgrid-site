@@ -7,7 +7,8 @@ module.exports = {
     nav: [
       { text: 'KGrid.org', link: 'https://kgrid.org' },
       { text: "Integrator's Guide", link: '/integrator/'},
-      { text: "Developer's Guide", link: '/developer/'}
+      { text: "Developer's Guide", link: '/developer/'},
+      { text: "KGrid API", link: '/api/'}
     ],
     search: true,
     searchMaxSuggestions: 10,

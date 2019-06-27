@@ -5,7 +5,98 @@
 
 ## Introduction to the Knowledge Grid
 
-## Installation
+Nulla in elit vel mi consectetur venenatis. Phasellus et tellus vel felis ultricies posuere vitae quis felis. In hac habitasse platea dictumst. Nulla pulvinar lorem eu faucibus ullamcorper. Quisque at varius tortor, a finibus sem. Sed diam nunc, dictum at sodales finibus, mollis ac eros. Mauris gravida cursus pulvinar. Etiam aliquam dui a nibh scelerisque rutrum. Cras bibendum finibus massa, at gravida odio tempus ut.
+
+Donec venenatis fringilla nisi, vel maximus lacus sagittis ac. In hac habitasse platea dictumst. Nulla vel leo justo. Fusce a tellus quis orci consequat malesuada nec ac tellus. Suspendisse viverra quam sapien, in sollicitudin massa vestibulum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus mattis metus sagittis lorem aliquam malesuada. Vestibulum dignissim ligula hendrerit elementum pellentesque.
+
+
+## Setup
+
+### Installing the KGrid command line tool
+
+Confirm Node and Java 8 are installed
+
+Install CLI (see kgrid-cli)
+
+Create a directory to hold the objects that will be developed (Kgrid project directory) `mkdir myproject` `cd myproject` (project, workspace, shelf, collection)
+
+
+### Installing KGrid
+
+Use kgrid-cli to intall a micro-grid in current directory
+
+Start Kgrid & verify in browser that the activator and library are running
+
+
+## My first object
+
+### Create an object
+
+Open additional terminal window and navigate to the myproject folder that you created
+
+Create a new knowledge object using the kgrid-cli. (Specify the name for object and the implementation; link to the kgrid-cli docs and provide example)
+
+Verify in browser that the new object is displayed in the activator and library
+
+### Try out the object
+
+Try out object in Swagger editor (`kgrid play -p 8082)
+* kgrid play defaults to querying an activator on port 8080
+* it prompts for the user to select an inplemetation from the results of the endpoint
+* it launches a window with Swagger Editor pointed to the activated implementation
+
+Try changing the name to some other string; validate the new string's execution
+
+### Edit the object
+
+* Edit the metadata and/or javascript function
+
+### Test the object
+
+
+## Advanced KO stuff
+
+### Using the Activator AP
+describe and link to ../api
+
+### Deep dive into the anatomy of a KO
+
+#### Structure and metadata
+#### The service description
+#### Deployment configuration
+#### Organizing your code (top level vs ***collection***)
+
+### Bundled objects vs single objects
+
+#### Using webpack
+#### requiring dependencies (your own and node modules)
+#### transpiling
+
+### Executive objects
+
+#### How to do it (the `context object`) 
+#### Why it's a bad idea
+#### Why it's a good idea
+
+### Building simple clients
+
+## Packaging and publishing
+
+### Gotchas for Nashorn environment
+
+
+
+
+
+
+```text
+
+
+
+```
+
+
+# >>>> Old stuff beyond this point
 
 ## Activator Quick Start
 
@@ -52,29 +143,29 @@ Type in the following.
 By default the activator will run on port 8080. You can validate the activator is up and running using 
 the [activators health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
 
-```yaml
+```json
 {
-   status: "UP",
-   shelf: {
-      status: "UP",
-      kgrid.shelf.cdostore.url: "shelf"
+   "status": "UP",
+   "shelf": {
+      "status": "UP",
+      "kgrid.shelf.cdostore.url": "shelf"
    },
-   activationService: {
-      status: "UP",
-      Knowledge Objects found: 1,
-      Adapters loaded: [
+   "activationService": {
+      "status": "UP",
+      "Knowledge Objects found": 1,
+      "Adapters loaded": [
         "JAVASCRIPT",
         "PROXY"
        ],
-   EndPoints loaded: [
+   "EndPoints loaded": [
         "hello/world/v0.0.1/welcome"
    ]
    },
-   diskSpace: {
-      status: "UP",
-      total: 499963170816,
-      free: 415911948288,
-      threshold: 10485760
+   "diskSpace": {
+      "status": "UP",
+      "total": 499963170816,
+      "free": 415911948288,
+      "threshold": 10485760
    }
  }
  
@@ -139,7 +230,7 @@ Download the latest library jar from GitHub [Latest Activator Release](https://g
 Directory structure should look similar to the following
 
 ```text 
- ├── library
+ └── library
      └── shelf  
      └── kgrid-library-#.#.#.jar
 ```
@@ -152,7 +243,7 @@ Type in the following.
  java -jar kgrid-library-#.#.#.jar 
 ```
 
-By default the activator will run on port 8080. You can validate the activator is up and running using 
+By default the activator will run  on port 8080. You can validate the activator is up and running using 
 the [library health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
 
 ```yaml
@@ -259,11 +350,10 @@ _bundle.v1_ and _bundle.v2_ implementations.
 Sample tests are located in the tests directory and can be executed using _npm_.  These tests utilize
 [Jest](https://jestjs.io/) and  [rewire](https://github.com/jhnns/rewire). est provides the testing
 framework and rewire allows the tests to access the javascript function without the
-convienace of the export modules (KGrid Javascript adaptor limitation).  The [tests](../tests) are in
-the tests directory.  You can execute the tests via npm
+convenience of the export modules (KGrid Javascript adaptor limitation).  Each version of the object has a `tests` directory.  You can execute the tests via npm
 
 ```
-npm test
+> npm test
 ```
 
 ### Integration Testing
