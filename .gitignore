@@ -118,3 +118,4 @@ fabric.properties
 
 /.idea/
 /package-lock.json
+/docs/.vuepress/dist/

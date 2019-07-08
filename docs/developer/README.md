@@ -12,59 +12,338 @@ Donec venenatis fringilla nisi, vel maximus lacus sagittis ac. In hac habitasse 
 
 ## Setup
 
-### Installing the KGrid command line tool
+Confirm [Node and NPM](https://nodejs.org) are installed, and [Java 8+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed
 
-Confirm Node and Java 8 are installed
+```bash
+> node --version
+v10.15.3
 
-Install CLI (see kgrid-cli)
+> java -version
+java version "11.0.1" 2018-10-16 LTS
+...
+```
+### Install the [KGrid CLI](https://kgrid.org/kgrid-cli) and set up a workspace
 
-Create a directory to hold the objects that will be developed (Kgrid project directory) `mkdir myproject` `cd myproject` (project, workspace, shelf, collection)
+```bash
+> npm install -g @kgrid/cli
+```
 
+Create a directory to hold your knowledge objects (Kgrid workspace) 
 
-### Installing KGrid
+```bash
+> mkdir myproject
+> cd myproject
+```
 
-Use kgrid-cli to intall a micro-grid in current directory
+Use KGrid CLI to install a micro-grid in your project directory
 
-Start Kgrid & verify in browser that the activator and library are running
+```bash
+> kgrid setup
+KGrid CLI v0.2.1
 
+Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
+Downloading kgrid components... done
+kgrid setup complete
+
+> kgrid --version
+Checking JAVA Version ...
+java version "11.0.1" 2018-10-16 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
+
+Checking Node Version ...
+v10.15.3
+
+Checking KGrid Components Version ...
+KGRID Components are installed at: /Users/pboisver/dev/foof/.kgrid
+  KGRID Library:   version 1.2.0
+  KGRID Activator: version 1.1.0
+
+=========================================================
+@kgrid/cli/0.2.1 darwin-x64 node-v10.15.3
+```
+### Start a local grid
+
+Start KGrid & verify in the browser that the activator and library are running
+
+```bash
+> kgrid start
+java -jar .../kgrid-library-1.2.0.jar ...  --server.port=8081
+java -jar .../kgrid-activator-1.1.0.jar ... --server.port=8080
+library: You have the latest version.
+Starting KGrid library...
+activator: You have the latest version.
+Starting KGrid activator...
+
+...
+```
+
+::: tip
+Once the Library and Activator are running you can open a browser window and navigate to [http://localhost:8081](http://localhost:8081) and [http://localhost:8080](http://localhost:8080)
+
+The Library will be empty and the Activator should show an empty KO list, `{}`.
+![Empty Library](../assets/img/EmptyLibrary.png) 
+:::
+
+You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
+
+::: tip
+For more information on configuring and running local grids see [the KGrid CLI docs](http://kgrid.org/kgrid-cli/#kgrid-setup) or [the Integrator's Guide](../integrator)
+:::
 
 ## My first object
 
 ### Create an object
 
-Open additional terminal window and navigate to the myproject folder that you created
+Open additional terminal tab or window and navigate to the `myproject` folder that you created
 
-Create a new knowledge object using the kgrid-cli. (Specify the name for object and the implementation; link to the kgrid-cli docs and provide example)
+Create a new knowledge object using the kgrid-cli. (You will be prompted for an implementation/version identifier — accept any defaults.)
 
-Verify in browser that the new object is displayed in the activator and library
+```bash
+> kgrid create myobject
+...
+# coming soon...
+# KO implementation `ark:/username/myobject/one` has been created.
+# Try `kgrid start` and `kgrid play ark:/username/myobject/one`
+```
+
+Verify in browser that the new object is displayed in the Activator (http://localhost:8080) and Library (http://localhost:8081). (Restart the grid with `kgrid start` if it's not running.)
 
 ### Try out the object
 
-Try out object in Swagger editor (`kgrid play -p 8082)
-* kgrid play defaults to querying an activator on port 8080
-* it prompts for the user to select an inplemetation from the results of the endpoint
-* it launches a window with Swagger Editor pointed to the activated implementation
+::: warning
+You may have to reload the Activator after creating or modifying code or metadata. Go to the [`/activate`](http://localhost:8080/activate) endoint in a browser or use `curl localhost:8080/activate` from the command line
+:::
 
-Try changing the name to some other string; validate the new string's execution
+```bash
+> kgrid play myobject -i one
+## kgrid play ark:/username/myobject/one (coming soon)
+``` 
 
-### Edit the object
+::: tip
+By default`kgrid play myobject` queries the local activator (http://localhost:8080) and
+prompts you to select an implementation. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
+:::
 
-* Edit the metadata and/or javascript function
+Once the the Swagger Editor is pointed to `myobject/one`, you'll see the OpenAPI 3 service description and a simple interface for testing the object. 
 
-### Test the object
+![The Swagger Editor](../assets/img/SwaggerEditor.png)
 
+- Select the (green) `POST` operation for the `/welcome` endpoint
+- Click on `Try it out`
+- The input section should have example inputs filled in:
+```
+{
+  "name": "Bob"
+}
+```
+- Scroll down to the blue `Execute` button and click it
+- Scroll down to the response section. You should see a `200` code and a JSON response object
+```
+{
+  "result": "Welcome to Knowledge Grid, Bob",
+   ...
+}
+```
+### Change the inputs
+Scroll back up to the inputs section and change the `"name"`.
+```
+{
+  "name": "Ted"
+}
+```
+- `Execute` the endpoint operation again. The response body should change.
+```
+{
+  "result": "Welcome to Knowledge Grid, Ted",
+   ...
+}
+```
+
+For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [API guide](../api)
+
+## Unit test the implementation
+
+Make sure you're in the implementation directory and set up the Javascript project.
+
+```bash
+> cd myobject/one
+> npm install
+```
+The `kgrid create` command adds a simple unit test to your object implementation and specifies Jest as a testing dependency (in package.json). 
+
+```bash
+> npm test
+
+> Implementation@1.0.0 test ../myobject/one
+> jest
+
+ PASS  test/welcome.test.js
+  ✓ hello barney (src) (2ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.513s
+Ran all test suites.
+```
+
+You can add your own tests (in `myobject/one/test` directory), and you'll need to update the existing tests in the next section when you change the code.
+
+For more information on the jest framework and unit testing in general see [Jest project](https://jestjs.io/).
+
+## Edit the object
+
+### Metadata
+
+Let's make the object your own! Open the `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
+
+```json
+{
+    ...
+    "title": "Hello World 1",
+    "contributors": "Team Wonderface",
+    "description": "Best ever, yeah!",
+    "keywords": "moose, squirrel",
+    ...
+}
+```
+Make sure that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
+
+Now change the implementation metadata (`myobject/one/metadata.json`) to remove title and add a description and keywords
+
+```json
+{
+    ...
+    "description": "First try",
+    "keywords": "over, easy",
+    ...
+}
+```
+ Check again that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
+
+For more info on the metadata for KOs and implementations and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) 
+
+### Changing the code
+
+Let's change the code to reverse the name input.
+
+#### Update the unit test
+
+```javascript
+...
+test("hello barney (src)", () =>
+  {
+    expect( welcome({"name": "Barney Rubble"}) )
+    .toBe("Welcome to Knowledge Grid, elbbuR yenraB") // reverse the expected result 
+  })
+```
+Rerun the test (`npm test`). It should fail.
+
+```bash
+> npm test
+...
+    Expected: "Welcome to Knowledge Grid, elbbuR yenraB"
+    Received: "Welcome to Knowledge Grid, Barney Rubble"
+```
+
+#### Update the welcome() function
+
+Open up `myobject/impl/src/index.js` in your favorite editor. 
+```javascript
+function welcome(inputs){
+ name = inputs.name
+  return "Welcome to Knowledge Grid, " + name.split("").reverse().join("");
+ }
+```
+
+Rerun the tests. They should be all green!
+
+#### Try it out
+
+Back to the Swagger Editor (remember to hit the `/activate` endpoint first). If you noticed that the example input `"name": "Bob"` is a palindrome and changed it to `"name": "Ted"` you'll get:
+```
+{
+  "result": "Welcome to Knowledge Grid, deT",
+   ...
+}
+```
+
+### Update the Service Description
+
+Let's make another code change to say "Goodbye" instead of "Welcome". (Remember to update the unit test and rerun the tests.):
+```javascript
+function byebye(inputs){
+ name = inputs.name
+  return "Goodbye from the Knowledge Grid, " + name.split("").reverse().join("");
+ }
+````
+
+Reactivate the object and test it out in the Swagger Editor. **It doesn't work!**
+
+The problem is our object's microAPI endpoint still says `/welcome`. Let's update the OpenAPI service description. Find the `paths:` element in the `myobject/impl/service.yaml` file, and change `/welcome` to `/byebye`:
+```yaml
+...
+paths:
+  /byebye:
+    post:
+      description: So long.
+      operationId: seeya
+      requestBody:
+        description: inputs
+        required: true
+...
+```
+Then find `x-kgrid-activation:` element and change  `entry:` to the function name:
+```yaml
+...
+      x-kgrid-activation:
+        artifact: src/index.js
+        adapter: JAVASCRIPT
+        entry: byebye
+...
+```
+
+Reactivate and then reload the Swagger Editor page and the `POST` endpoint should change to `/byebye`. You should also see the other changes reflected both in the OpenAPI yaml file and the test UI. Of course the object title is still "Hello' World" — fixing that is left as an exercise. (Hint: you may need to change elements of the metadata and the service description.)
+
+For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy of a KO](), etc.
+ 
 
 ## Advanced KO stuff
 
-### Using the Activator AP
-describe and link to ../api
+### Using the Activator API
+
+Knowledge objects are designed to run in a Knowledge Grid Activator. It helps to be familiar with the Activator API when developing KOs. There is a full [Integrator's Guide](../integrator) available for running a grid and Activators in production, but here's enough to get you started.
+
+#### Shelf API (`/` or `/kos`)
+
+The shelf API is accessible by default at the root, `localhost:8080/`, (or `/kos` in the newer version). It is used to see lists of available knowledge objects and to view details about KOs and their implementations. Try it at http://localhost:8080/kos
+
+Each resource returned from the shelf API should contain links to the important parts (implementations, service descriptions, etc.)
+
+#### Service API (/{naan}/{name}/{version}/{endpoint})
+The service API exposes the endpoints for each KO implementation in the form: `/{naan}/{name}/{verion}/{endpoint}` and allows you to POST inputs and get back outputs. This is the endpoint you'll use to test your (running) objects. 
+
+It is the API that is described by the OpenAPI service description (`service.yaml` by default). THe Swagger Editor pulls the service description from `http://localhost:8080/{user}/myobject/impl/service.yaml` and then creates a generic client accessing KO APIs of the form `http://localhost:8080/{user}/myobject/impl/byebye`
+
+#### Resource API (`/{naan}/{name}/{version}/{resource}`)
+
+Where are we on this?
+
+::: tip
+You can also use simple clients like `curl` to access the API, or more capable testing clients like Postman. See the [KGrid API](../api) for more examples.
+:::
+
+#### Other Activator endpoints
+##### activate
+##### info
+##### health
 
 ### Deep dive into the anatomy of a KO
 
 #### Structure and metadata
 #### The service description
 #### Deployment configuration
-#### Organizing your code (top level vs ***collection***)
 
 ### Bundled objects vs single objects
 
@@ -80,307 +359,19 @@ describe and link to ../api
 
 ### Building simple clients
 
+### Handling multiple implementations of the same object
+
 ## Packaging and publishing
 
-### Gotchas for Nashorn environment
+## Best practices
 
+### Organizing your code and your KOs
+(top level, ***collection***)
 
+## Gotchas for Nashorn environment
 
 
 
 
-```text
 
 
-
-```
-
-
-# >>>> Old stuff beyond this point
-
-## Activator Quick Start
-
-These instructions will get the Kgrid Activator running with sample set of Knowledge Objects.
-
-### Prerequisites
-
-For running the application you need:
-
-- [Java 8 or higher](https://www.oracle.com/java/)
-
-### Running the Activator
-
-Download the latest activator jar from GitHub [Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest).
-
-1. Create a activator directory
-1. Create a directory named shelf in the new activator directory
-1. Download [kgrid-activator-#.#.#.jar](https://github.com/kgrid/kgrid-activator/releases/latest)  
-1. Place the kgrid-activator-#.#.#.jar into the activator
-1. Download [hello-world.zip](https://github.com/kgrid-objects/example-collection/releases/latest) 
-1. Place the hello-world.zip into the activator/shelf directory and unzip. This will place the KOs into the shelf directory
-
-
-Directory structure should look similar to the following
-
-```text  
- ├── activator   
- │  └──  shelf
- │     └── hello-world  
- │        └── v0.0.1
- │           ├── model
- │           └── metadata.json
- └── kgrid-activator-#.#.#.jar
-```
-
-The activator is executable jar and can be run from the command line.  Open a terminal window and navigate to the direcoty where the jar and shelf are located.  
-
-Type in the following. 
-
-```bash
- java -jar kgrid-activator-#.#.#.jar 
-```
-
-By default the activator will run on port 8080. You can validate the activator is up and running using 
-the [activators health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
-
-```json
-{
-   "status": "UP",
-   "shelf": {
-      "status": "UP",
-      "kgrid.shelf.cdostore.url": "shelf"
-   },
-   "activationService": {
-      "status": "UP",
-      "Knowledge Objects found": 1,
-      "Adapters loaded": [
-        "JAVASCRIPT",
-        "PROXY"
-       ],
-   "EndPoints loaded": [
-        "hello/world/v0.0.1/welcome"
-   ]
-   },
-   "diskSpace": {
-      "status": "UP",
-      "total": 499963170816,
-      "free": 415911948288,
-      "threshold": 10485760
-   }
- }
- 
-```
-
-### Using the Hello World KO on the Activator 
-
-The Hello World is a very simple KO with a Javascript based service that takes in a name and displays 
- a _Welcome to the Knowledge Grid_ message. 
- 
-First lets look at the Hello World's metadata. Hello World
- 
- * View the [Hello World](http://localhost:8080/hello/world) Knowledge Object
- * View version 0.0.1 of the [Hello World 0.0.1](http://localhost:8080/hello/world//v0.0.1)  
-
-The Hello World KO has one service called _welcome_.  The welcome service expects you to pass it a name as a json 
-object, for example _{"name":"Fred Flintstone"}_.  The following is a curl POST to the Hello World 
-welcome.
-
-```bash
-curl -X POST -H "Content-Type:application/json"  \
-    -d "{\"name\": \"Fred Flintstone\"}" \
-     http://localhost:8080/hello/world/v0.0.1/welcome
-
-```
-
-The Hello World KO will return the following
-
-```json
-{
-    "result": "Welcome to Knowledge Grid, Fred Flintstone",
-    "info": {
-        "ko": "hello/world/v0.0.1",
-        "inputs": {
-            "name": "Fred Flintstone"
-        }
-    }
-}
-```
-
-
-
-## Library Quick Start
-
-These instructions will get the Kgrid Library running with sample set of Knowledge Objects.
-
-### Prerequisites
-
-For running the application you need:
-
-- [Java 8 or higher](https://www.oracle.com/java/)
-
-### Running the Library
-
-Download the latest library jar from GitHub [Latest Activator Release](https://github.com/kgrid/kgrid-library/releases/latest).
-
-1. Create a _library_ directory
-1. Download [kgrid-library-#.#.#.jar](https://github.com/kgrid/kgrid-library/releases/latest)  
-1. Place the _kgrid-library-#.#.#.jar_ into the _library_ 
-1. Create a directory named _shelf_ in the new _library_ directory 
-
-Directory structure should look similar to the following
-
-```text 
- └── library
-     └── shelf  
-     └── kgrid-library-#.#.#.jar
-```
-
-The library is executable jar and can be run from the command line.  Open a terminal window and navigate to the directory where the jar and shelf are located.  
-
-Type in the following. 
-
-```bash
- java -jar kgrid-library-#.#.#.jar 
-```
-
-By default the activator will run  on port 8080. You can validate the activator is up and running using 
-the [library health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
-
-```yaml
-{
-   status: "UP",
-   userDetailService: {
-     status: "UP",
-     number of users: 2
-    }  ,
-    ezidService: {
-      status: "UP",
-      ezid.base.url: "https://ezid.lib.purdue.edu/",
-      ezid.mock: "false"
-    },
-    shelf: {
-      status: "UP",
-      kgrid.shelf.cdostore.url: "/Users/me/library/shelf"
-    },
-    diskSpace: {
-      status: "UP",
-      total: 402672611328,
-      free: 269428576256,
-      threshold: 10485760
-    },
-      db: {
-      status: "UP",
-      database: "H2",
-      hello: 1
-    }
-}
- 
-```
-
-Now simply navigate to the [KGrid Library](http://localhost:8080).
-
-### Adding the Hello World KO on the Library 
-
-The Library allows you to take deposit a Knowledge Object archive (zip file).  On the KGrid Library 
-main page you will see a _Deposit Knowledge Object_. 
-
-1. Download [hello-world.zip](https://github.com/kgrid-objects/example-projects/releases/latest)
-1. Navigate to the [KGrid Library](http://localhost:8080) site.
-1. Follow this screen flow
-
-#### Click on ***Deposit Knowledge Object*** in the right side of the screen
-<img src="../assets/img/AddKOScreenShot1.png" style="width: 66%; margin: 1em;">
-
-#### Click in the grey box to bring up a file select window.
-<img src="../assets/img/AddKOScreenShot2.png" style="width: 66%; margin: 1em;">
-
-#### Select the hello-world.zip you just downloaded and click ***Deposit Object*** in the lower right of the screen.
-<img src="../assets/img/AddKOScreenShot3.png" style="width: 66%; margin: 1em;">
-
-#### The file will be upload to the library and you return to library main screen.
-<img src="../assets/img/AddKOScreenShot4.png" style="width: 66%; margin: 1em;">
-
-## Example Collection
-
-This repository contains a collection of KGrid Knowledge Objects that demonstrate features
-of the grid, good development practices and useful tools.
-
-### Anatomy of this Knowledge Object project.
-The following structure is not an requirement or enforced, it is a recommendation based
-on what the JavaScript and in particular Node community at large have been following by convention.
-
-#### Prerequisites
-There are testing and packaging features in this project that require npm, npm is installed with Node.js
-[npm](https://www.npmjs.com/get-npm).  Once npm is installed run  ```npm install``` at the root of this project.
-
-#### Directories
-
-* **collection/** contains one to many directories representing knowledge objects
-  * **naan-name** is intended for each knowledge object (e.g. _hello-world_)
-* **tests/** is for all of your project test scripts
-* **etc/** is a sub-directory for miscellaneous project
-* **docs/** is a sub-directory for more detailed information about these KOs
-* **dist/** is created and destroyed when running ```npm run package```
-* **scripts/** is intended to capture various scripts need for the project (using [scripty](https://www.npmjs.com/package/scripty))
-* **scriptswin/** windows versions of the scripts
-
-### Example Knowledge Objects
- * [Hello World](https://github.com/kgrid-objects/example-collection/tree/master/collection/hello-world) - Simple KO designed as a starting point. Demonstrates a project structure the includes unit testing and scripts to package the KO deposit.
- * [BMI Calculator](https://github.com/kgrid-objects/example-collection/tree/master/collection/ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes.
- * [Minimum Viable](https://github.com/kgrid-objects/example-collection/tree/master/collection/mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
-
-
-### Bundled Object Example
-
-Currently the KGrid Activator uses the 
-[Nashorn JavaScript engine](https://openjdk.java.net/projects/nashorn/ ) for execution of JavaScript 
-Objects.  Nashorn implements [ECMAScript 5.1 specification](http://www.ecma-international.org/ecma-262/5.1/)  
-This limits the tools and technics avalable to the KO developer.  The KGrid has experimented with 
-[webpack](https://webpack.js.org/) and [babel](https://babeljs.io/) as a method to all the developer it until
-more current tools and techniques.  Very simple example is Nashorn doesn't support _const_ and _let_ statements but 
-use babel transpiler we can convert es6 to es5.
-
-Please review [Hello World](https://github.com/kgrid-objects/example-collection/tree/master/collection/hello-world)
-_bundle.v1_ and _bundle.v2_ implementations.
-
-## Executive Object Example
-
-
-### Testing
-Sample tests are located in the tests directory and can be executed using _npm_.  These tests utilize
-[Jest](https://jestjs.io/) and  [rewire](https://github.com/jhnns/rewire). est provides the testing
-framework and rewire allows the tests to access the javascript function without the
-convenience of the export modules (KGrid Javascript adaptor limitation).  Each version of the object has a `tests` directory.  You can execute the tests via npm
-
-```
-> npm test
-```
-
-### Integration Testing
-
-#### Running Example KOs in an Activator
-You can now test the example objects in an activator via a npm script. This script will download the 
-latest released activator and start up the activator using the example repository as it's shelf. 
-
-Open a terminal window at the root of the cloned repository and run the following command.
-
-```
-npm run dev
-```
-
-
-#### Package
-
-You can create zip file of the Knowledge Object which can be used to deposit to a KGrid
-Library or load/activate on a KGrid Activator.
-
-```
-npm run package
-```
-
-#### Tools
-
-*NPM Tool*
-* [scripty](https://www.npmjs.com/package/scripty)
-* [jest](https://jestjs.io/)
-* [rewire](https://github.com/jhnns/rewire)
