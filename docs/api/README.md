@@ -17,9 +17,9 @@ The API is defined in a OpenApi specification and can accessed at
 Knowledge Object represents one or more services (a micro API) organized as endpoints
 and operations (with media types, schemas, responses etc.).  Using the KOS services you can
 
-- [Read/Update/Delete Knowledge Objects](/swagger/#/Knowledge%20Object%20Read%2FUpdate%2FDelete)
-- [Import Knowledge Objects](/swagger/#/KGrid%20Activator%20Server)
-- [Export Knowledge Objects](/swagger/#/Knowledge%20Object%20Export)
+- <a href="/guides/swagger/#/Knowledge%20Object%20Read%2FUpdate%2FDelete" target="_blank">Read/Update/Delete Knowledge Objects</a>
+- <a href="/guides/swagger/#/KGrid%20Activator%20Server" target="_blank">Import Knowledge Objects</a>
+- <a href="/guides/swagger/#/Knowledge%20Object%20Export" target="_blank" >Export Knowledge Objects</a>
 
 
 #### Endpoints
