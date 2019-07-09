@@ -493,7 +493,7 @@ paths:
                 format: binary
     put:
       tags:
-        - Knowledge Object Implementation Read/Update/Delete
+        - Knowledge Object Implementation Read Update Delete
       summary: Update Knowledge Object
       operationId: updatekoimplementation
       parameters:

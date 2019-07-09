@@ -9,7 +9,7 @@ returns JSON-encoded responses, and uses standard HTTP response codes and verbs.
 
 ## KGrid Activator API
 The API is defined in a OpenApi specification and can accessed at
-[KGrid Activator API](./openapi).
+[KGrid Activator API](/guides/swagger).
 
 ### Resources
 
@@ -17,9 +17,9 @@ The API is defined in a OpenApi specification and can accessed at
 Knowledge Object represents one or more services (a micro API) organized as endpoints
 and operations (with media types, schemas, responses etc.).  Using the KOS services you can
 
-- [Read/Update/Delete Knowledge Objects](https://kgrid.org/api/swagger/#/Knowledge%20Object%20Read%2FUpdate%2FDelete)
-- [Import Knowledge Objects](https://kgrid.org/api/swagger/#/Knowledge%20Object%20Import)
-- [Export Knowledge Objects](https://kgrid.org/api/swagger/#/Knowledge%20Object%20Export)
+- [Read/Update/Delete Knowledge Objects](/swagger/#/Knowledge%20Object%20Read%2FUpdate%2FDelete)
+- [Import Knowledge Objects](/swagger/#/KGrid%20Activator%20Server)
+- [Export Knowledge Objects](/swagger/#/Knowledge%20Object%20Export)
 
 
 #### Endpoints
