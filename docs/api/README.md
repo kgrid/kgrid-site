@@ -38,8 +38,13 @@ Each Knowledge Object has services/endpoints defined by their OpenAPI specificat
 to these services/endpoints follows _/{naan}/{name}/{implementation}/{endpoint}_ pattern, e.g. (_/hello/world/v0.1.0/welcome_).
 Please review <a href="/guides/swagger/#/Knowledge%20Object%20Endpoint/serverendpoint" target="_blank" >Knowledge Objects Service</a>
 
-###### Knowledge Objects Service Response
+##### Knowledge Objects Service Response
+All Knowledge Objects Services will return a KGrid reponse which consists of
+a result, info and inputs
 
+- **result** element is defined and controlled by the service.
+- **info** is the Knowledge Object Implementation where this service is defined
+- **inputs** describes the incoming information to the service
 
 
 ```
