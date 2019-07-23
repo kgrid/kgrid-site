@@ -5,9 +5,35 @@
 
 ## Introduction to the Knowledge Grid
 
-Nulla in elit vel mi consectetur venenatis. Phasellus et tellus vel felis ultricies posuere vitae quis felis. In hac habitasse platea dictumst. Nulla pulvinar lorem eu faucibus ullamcorper. Quisque at varius tortor, a finibus sem. Sed diam nunc, dictum at sodales finibus, mollis ac eros. Mauris gravida cursus pulvinar. Etiam aliquam dui a nibh scelerisque rutrum. Cras bibendum finibus massa, at gravida odio tempus ut.
+The **Knowledge Grid** (KGrid) is an open-source platform for managing and running **computable biomedical knowledge** (CBK). 
 
-Donec venenatis fringilla nisi, vel maximus lacus sagittis ac. In hac habitasse platea dictumst. Nulla vel leo justo. Fusce a tellus quis orci consequat malesuada nec ac tellus. Suspendisse viverra quam sapien, in sollicitudin massa vestibulum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus mattis metus sagittis lorem aliquam malesuada. Vestibulum dignissim ligula hendrerit elementum pellentesque.
+The kind of knowledge that works well in the KGrid might be risk calculators, computable guidelines, or reference and lookup tables — anything that can be represented as a set of services. A researcher or developer writes code to implement the knowledge as one or more functions, and the resulting code is packaged along with service and deployment descriptions as a **knowledge object** (KO).
+
+::: tip
+The fundamental thing the Knowledge Grid does is allow you to externalize key pieces of computable biomedical knowledge that would otherwise be embedded in applications, EHRs, databases, and backend services. This makes it easier to reuse and update that knowledge, across time, for multiple channels, and in many organizations.  
+:::
+
+### Basics
+KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, extracts and deploys the code to a suitable runtime environment, exposes the service the code implements as a simple RESTful API, and routes requests and responses. The service description (using OpenAPI 3) also specifies the inputs and outputs for the KO. 
+
+There is also a **library** component that can be used to manage and browse KOs stored in an archive. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
+
+This guide will focus on creating and modifying knowledge objects, deploying them in an activator, and using them with simple clients.
+
+For more information see [Integrator's guide](../integrator) and [Kgrid platform](../platform) 
+
+### How it works
+
+Currently, KGrid supports embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
+
+ - a top level metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
+ - one or more **implementation** folders with: 
+   - a code artifact(s)
+   - an OpenAPI `.yaml` document describing the service interface(s) the object provides
+   - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
+   
+The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) SPA. They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
+
 
 
 ## Setup
