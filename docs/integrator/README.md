@@ -1,7 +1,7 @@
 # Integrator's Guide
 
 
-# `Old stuff beyond this point`
+# Refers to a previous version — updates coming soon!
 
 ## Activator Quick Start
 

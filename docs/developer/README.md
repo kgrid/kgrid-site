@@ -18,21 +18,22 @@ KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, ex
 
 There is also a **library** component that can be used to manage and browse KOs stored in an archive. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
 
-This guide will focus on creating and modifying knowledge objects, deploying them in an activator, and using them with simple clients.
+This guide will focus on creating and modifying knowledge objects, deploying KOs as services in an activator, and using the services with simple clients.
 
-For more information see [Integrator's guide](../integrator) and [Kgrid platform](../platform) 
+For more information see [Integrator's guide](../integrator) and [Kgrid platform](../platform).
 
 ### How it works
 
-Currently, KGrid supports embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
+Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
 
  - a top level metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
  - one or more **implementation** folders with: 
-   - a code artifact(s)
+   - code artifact(s)
    - an OpenAPI `.yaml` document describing the service interface(s) the object provides
    - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
+   - additional metadata specific to the **implementation**
    
-The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) SPA. They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
+The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) Single Page Application (SPA). They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
 
 
 
@@ -142,8 +143,7 @@ You may have to reload the Activator after creating or modifying code or metadat
 :::
 
 ```bash
-> kgrid play myobject -i one
-## kgrid play ark:/username/myobject/one (coming soon)
+> kgrid play ark:/username/myobject/one
 ``` 
 
 ::: tip
@@ -193,15 +193,15 @@ For more information on the structure of the object, OpenAPI, and activating and
 Make sure you're in the implementation directory and set up the Javascript project.
 
 ```bash
-> cd myobject/one
+> cd myobject/impl
 > npm install
 ```
-The `kgrid create` command adds a simple unit test to your object implementation and specifies Jest as a testing dependency (in package.json). 
+When the KO was created a simple unit test was added to your object implementation and specifies Jest as a testing dependency (in package.json). 
 
 ```bash
 > npm test
 
-> Implementation@1.0.0 test ../myobject/one
+> Implementation@1.0.0 test ../myobject/metadata
 > jest
 
  PASS  test/welcome.test.js
@@ -214,7 +214,7 @@ Time:        1.513s
 Ran all test suites.
 ```
 
-You can add your own tests (in `myobject/one/test` directory), and you'll need to update the existing tests in the next section when you change the code.
+You can add your own tests (in `myobject/metadata/test` directory), and you'll need to update the existing tests in the next section when you change the code.
 
 For more information on the jest framework and unit testing in general see [Jest project](https://jestjs.io/).
 
@@ -222,7 +222,7 @@ For more information on the jest framework and unit testing in general see [Jest
 
 ### Metadata
 
-Let's make the object your own! Open the `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
+Let's make the object your own! Open the top-level `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
 
 ```json
 {
@@ -236,7 +236,7 @@ Let's make the object your own! Open the `myobject/metadata.json` file in your f
 ```
 Make sure that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
 
-Now change the implementation metadata (`myobject/one/metadata.json`) to remove title and add a description and keywords
+Now change the implementation metadata (`myobject/metadata/metadata.json`) to remove title and add a description and keywords
 
 ```json
 {
@@ -279,7 +279,7 @@ Open up `myobject/impl/src/index.js` in your favorite editor.
 ```javascript
 function welcome(inputs){
  name = inputs.name
-  return "Welcome to Knowledge Grid, " + name.split("").reverse().join("");
+  return "Welcome to Knowledge Grid, " + name.split(" ").reverse().join("");
  }
 ```
 
