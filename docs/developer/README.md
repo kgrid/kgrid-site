@@ -22,6 +22,8 @@ KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, ex
 
 There is also a **library** component that can be used to manage and browse KOs stored in an archive. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
 
+<img alt="Kgrid overview" src="../assets/img/kgridoverview.png" width="90%">
+
 This guide will focus on creating and modifying knowledge objects, deploying KOs as services in an activator, and using the services with simple clients.
 
 For more information see [Integrator's guide](../integrator) and [Kgrid platform](../platform).
@@ -110,7 +112,7 @@ Starting KGrid activator...
 ```
 
 ::: tip
-Once the Library and Activator are running you can open a browser window and navigate to [http://localhost:8081](http://localhost:8081) and [http://localhost:8080](http://localhost:8080)
+Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
 
 The Library will be empty and the Activator should show an empty KO list, `{}`.
 ![Empty Library](../assets/img/EmptyLibrary.png)
@@ -138,7 +140,9 @@ Create a new knowledge object using the kgrid-cli. (You will be prompted for an 
 # Try `kgrid start` and `kgrid play ark:/username/myobject/one`
 ```
 
-Verify in browser that the new object is displayed in the Activator (http://localhost:8080) and Library (http://localhost:8081). (Restart the grid with `kgrid start` if it's not running.)
+::: tip
+Verify in browser that the new object is displayed in the the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)). (Restart the grid with `kgrid start` if it's not running.)
+:::
 
 ### Try out the object
 
