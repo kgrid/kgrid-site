@@ -1,3 +1,7 @@
+---
+sidebarDepth: 2
+sidebar: auto
+---
 # Integrator's Guide
 
 
@@ -21,7 +25,7 @@ Download the latest activator jar from GitHub [Latest Activator Release](https:/
 1. Create a directory named shelf in the new activator directory
 1. Download [kgrid-activator-#.#.#.jar](https://github.com/kgrid/kgrid-activator/releases/latest)  
 1. Place the kgrid-activator-#.#.#.jar into the activator
-1. Download [hello-world.zip](https://github.com/kgrid-objects/example-collection/releases/latest) 
+1. Download [hello-world.zip](https://github.com/kgrid-objects/example-collection/releases/latest)
 1. Place the hello-world.zip into the activator/shelf directory and unzip. This will place the KOs into the shelf directory
 
 
@@ -39,13 +43,13 @@ Directory structure should look similar to the following
 
 The activator is executable jar and can be run from the command line.  Open a terminal window and navigate to the direcoty where the jar and shelf are located.  
 
-Type in the following. 
+Type in the following.
 
 ```bash
- java -jar kgrid-activator-#.#.#.jar 
+ java -jar kgrid-activator-#.#.#.jar
 ```
 
-By default the activator will run on port 8080. You can validate the activator is up and running using 
+By default the activator will run on port 8080. You can validate the activator is up and running using
 the [activators health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
 
 ```json
@@ -73,21 +77,21 @@ the [activators health endpoint](http://localhost:8080/health).  The health of t
       "threshold": 10485760
    }
  }
- 
+
 ```
 
-### Using the Hello World KO on the Activator 
+### Using the Hello World KO on the Activator
 
-The Hello World is a very simple KO with a Javascript based service that takes in a name and displays 
- a _Welcome to the Knowledge Grid_ message. 
- 
+The Hello World is a very simple KO with a Javascript based service that takes in a name and displays
+ a _Welcome to the Knowledge Grid_ message.
+
 First lets look at the Hello World's metadata. Hello World
- 
+
  * View the [Hello World](http://localhost:8080/hello/world) Knowledge Object
  * View version 0.0.1 of the [Hello World 0.0.1](http://localhost:8080/hello/world//v0.0.1)  
 
-The Hello World KO has one service called _welcome_.  The welcome service expects you to pass it a name as a json 
-object, for example _{"name":"Fred Flintstone"}_.  The following is a curl POST to the Hello World 
+The Hello World KO has one service called _welcome_.  The welcome service expects you to pass it a name as a json
+object, for example _{"name":"Fred Flintstone"}_.  The following is a curl POST to the Hello World
 welcome.
 
 ```bash
@@ -129,12 +133,12 @@ Download the latest library jar from GitHub [Latest Activator Release](https://g
 
 1. Create a _library_ directory
 1. Download [kgrid-library-#.#.#.jar](https://github.com/kgrid/kgrid-library/releases/latest)  
-1. Place the _kgrid-library-#.#.#.jar_ into the _library_ 
-1. Create a directory named _shelf_ in the new _library_ directory 
+1. Place the _kgrid-library-#.#.#.jar_ into the _library_
+1. Create a directory named _shelf_ in the new _library_ directory
 
 Directory structure should look similar to the following
 
-```text 
+```text
  └── library
      └── shelf  
      └── kgrid-library-#.#.#.jar
@@ -142,13 +146,13 @@ Directory structure should look similar to the following
 
 The library is executable jar and can be run from the command line.  Open a terminal window and navigate to the directory where the jar and shelf are located.  
 
-Type in the following. 
+Type in the following.
 
 ```bash
- java -jar kgrid-library-#.#.#.jar 
+ java -jar kgrid-library-#.#.#.jar
 ```
 
-By default the activator will run  on port 8080. You can validate the activator is up and running using 
+By default the activator will run  on port 8080. You can validate the activator is up and running using
 the [library health endpoint](http://localhost:8080/health).  The health of the Activator should display a status of **UP**.  
 
 ```yaml
@@ -179,15 +183,15 @@ the [library health endpoint](http://localhost:8080/health).  The health of the 
       hello: 1
     }
 }
- 
+
 ```
 
 Now simply navigate to the [KGrid Library](http://localhost:8080).
 
-### Adding the Hello World KO on the Library 
+### Adding the Hello World KO on the Library
 
-The Library allows you to take deposit a Knowledge Object archive (zip file).  On the KGrid Library 
-main page you will see a _Deposit Knowledge Object_. 
+The Library allows you to take deposit a Knowledge Object archive (zip file).  On the KGrid Library
+main page you will see a _Deposit Knowledge Object_.
 
 1. Download [hello-world.zip](https://github.com/kgrid-objects/example-projects/releases/latest)
 1. Navigate to the [KGrid Library](http://localhost:8080) site.
@@ -237,12 +241,12 @@ There are testing and packaging features in this project that require npm, npm i
 
 ### Bundled Object Example
 
-Currently the KGrid Activator uses the 
-[Nashorn JavaScript engine](https://openjdk.java.net/projects/nashorn/ ) for execution of JavaScript 
+Currently the KGrid Activator uses the
+[Nashorn JavaScript engine](https://openjdk.java.net/projects/nashorn/ ) for execution of JavaScript
 Objects.  Nashorn implements [ECMAScript 5.1 specification](http://www.ecma-international.org/ecma-262/5.1/)  
-This limits the tools and technics avalable to the KO developer.  The KGrid has experimented with 
+This limits the tools and technics avalable to the KO developer.  The KGrid has experimented with
 [webpack](https://webpack.js.org/) and [babel](https://babeljs.io/) as a method to all the developer it until
-more current tools and techniques.  Very simple example is Nashorn doesn't support _const_ and _let_ statements but 
+more current tools and techniques.  Very simple example is Nashorn doesn't support _const_ and _let_ statements but
 use babel transpiler we can convert es6 to es5.
 
 Please review [Hello World](https://github.com/kgrid-objects/example-collection/tree/master/collection/hello-world)
@@ -264,8 +268,8 @@ convenience of the export modules (KGrid Javascript adaptor limitation).  Each v
 ### Integration Testing
 
 #### Running Example KOs in an Activator
-You can now test the example objects in an activator via a npm script. This script will download the 
-latest released activator and start up the activator using the example repository as it's shelf. 
+You can now test the example objects in an activator via a npm script. This script will download the
+latest released activator and start up the activator using the example repository as it's shelf.
 
 Open a terminal window at the root of the cloned repository and run the following command.
 

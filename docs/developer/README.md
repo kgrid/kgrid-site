@@ -1,3 +1,7 @@
+---
+sidebarDepth: 2
+sidebar: auto
+---
 # Developer's Guide
 
 [![CircleCI](https://circleci.com/gh/kgrid/guides.svg?style=svg)](https://circleci.com/gh/kgrid/guides)
@@ -5,7 +9,7 @@
 
 ## Introduction to the Knowledge Grid
 
-The **Knowledge Grid** (KGrid) is an open-source platform for managing and running **computable biomedical knowledge** (CBK). 
+The **Knowledge Grid** (KGrid) is an open-source platform for managing and running **computable biomedical knowledge** (CBK).
 
 The kind of knowledge that works well in the KGrid might be risk calculators, computable guidelines, or reference and lookup tables — anything that can be represented as a set of services. A researcher or developer writes code to implement the knowledge as one or more functions, and the resulting code is packaged along with service and deployment descriptions as a **knowledge object** (KO).
 
@@ -14,7 +18,7 @@ The fundamental thing the Knowledge Grid does is allow you to externalize key pi
 :::
 
 ### Basics
-KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, extracts and deploys the code to a suitable runtime environment, exposes the service the code implements as a simple RESTful API, and routes requests and responses. The service description (using OpenAPI 3) also specifies the inputs and outputs for the KO. 
+KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, extracts and deploys the code to a suitable runtime environment, exposes the service the code implements as a simple RESTful API, and routes requests and responses. The service description (using OpenAPI 3) also specifies the inputs and outputs for the KO.
 
 There is also a **library** component that can be used to manage and browse KOs stored in an archive. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
 
@@ -27,12 +31,12 @@ For more information see [Integrator's guide](../integrator) and [Kgrid platform
 Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
 
  - a top level metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
- - one or more **implementation** folders with: 
+ - one or more **implementation** folders with:
    - code artifact(s)
    - an OpenAPI `.yaml` document describing the service interface(s) the object provides
    - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
    - additional metadata specific to the **implementation**
-   
+
 The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) Single Page Application (SPA). They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
 
 
@@ -55,7 +59,7 @@ java version "11.0.1" 2018-10-16 LTS
 > npm install -g @kgrid/cli
 ```
 
-Create a directory to hold your knowledge objects (Kgrid workspace) 
+Create a directory to hold your knowledge objects (Kgrid workspace)
 
 ```bash
 > mkdir myproject
@@ -109,7 +113,7 @@ Starting KGrid activator...
 Once the Library and Activator are running you can open a browser window and navigate to [http://localhost:8081](http://localhost:8081) and [http://localhost:8080](http://localhost:8080)
 
 The Library will be empty and the Activator should show an empty KO list, `{}`.
-![Empty Library](../assets/img/EmptyLibrary.png) 
+![Empty Library](../assets/img/EmptyLibrary.png)
 :::
 
 You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
@@ -144,14 +148,14 @@ You may have to reload the Activator after creating or modifying code or metadat
 
 ```bash
 > kgrid play ark:/username/myobject/one
-``` 
+```
 
 ::: tip
 By default`kgrid play myobject` queries the local activator (http://localhost:8080) and
 prompts you to select an implementation. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
 :::
 
-Once the the Swagger Editor is pointed to `myobject/one`, you'll see the OpenAPI 3 service description and a simple interface for testing the object. 
+Once the the Swagger Editor is pointed to `myobject/one`, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
 
 ![The Swagger Editor](../assets/img/SwaggerEditor.png)
 
@@ -196,7 +200,7 @@ Make sure you're in the implementation directory and set up the Javascript proje
 > cd myobject/impl
 > npm install
 ```
-When the KO was created a simple unit test was added to your object implementation and specifies Jest as a testing dependency (in package.json). 
+When the KO was created a simple unit test was added to your object implementation and specifies Jest as a testing dependency (in package.json).
 
 ```bash
 > npm test
@@ -248,7 +252,7 @@ Now change the implementation metadata (`myobject/metadata/metadata.json`) to re
 ```
  Check again that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
 
-For more info on the metadata for KOs and implementations and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) 
+For more info on the metadata for KOs and implementations and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko)
 
 ### Changing the code
 
@@ -261,7 +265,7 @@ Let's change the code to reverse the name input.
 test("hello barney (src)", () =>
   {
     expect( welcome({"name": "Barney Rubble"}) )
-    .toBe("Welcome to Knowledge Grid, elbbuR yenraB") // reverse the expected result 
+    .toBe("Welcome to Knowledge Grid, elbbuR yenraB") // reverse the expected result
   })
 ```
 Rerun the test (`npm test`). It should fail.
@@ -275,7 +279,7 @@ Rerun the test (`npm test`). It should fail.
 
 #### Update the welcome() function
 
-Open up `myobject/impl/src/index.js` in your favorite editor. 
+Open up `myobject/impl/src/index.js` in your favorite editor.
 ```javascript
 function welcome(inputs){
  name = inputs.name
@@ -333,71 +337,7 @@ Then find `x-kgrid-activation:` element and change  `entry:` to the function nam
 Reactivate and then reload the Swagger Editor page and the `POST` endpoint should change to `/byebye`. You should also see the other changes reflected both in the OpenAPI yaml file and the test UI. Of course the object title is still "Hello' World" — fixing that is left as an exercise. (Hint: you may need to change elements of the metadata and the service description.)
 
 For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy of a KO](), etc.
- 
-
-## Advanced KO stuff
-
-### Using the Activator API
-
-Knowledge objects are designed to run in a Knowledge Grid Activator. It helps to be familiar with the Activator API when developing KOs. There is a full [Integrator's Guide](../integrator) available for running a grid and Activators in production, but here's enough to get you started.
-
-#### Shelf API (`/` or `/kos`)
-
-The shelf API is accessible by default at the root, `localhost:8080/`, (or `/kos` in the newer version). It is used to see lists of available knowledge objects and to view details about KOs and their implementations. Try it at http://localhost:8080/kos
-
-Each resource returned from the shelf API should contain links to the important parts (implementations, service descriptions, etc.)
-
-#### Service API (/{naan}/{name}/{version}/{endpoint})
-The service API exposes the endpoints for each KO implementation in the form: `/{naan}/{name}/{verion}/{endpoint}` and allows you to POST inputs and get back outputs. This is the endpoint you'll use to test your (running) objects. 
-
-It is the API that is described by the OpenAPI service description (`service.yaml` by default). THe Swagger Editor pulls the service description from `http://localhost:8080/{user}/myobject/impl/service.yaml` and then creates a generic client accessing KO APIs of the form `http://localhost:8080/{user}/myobject/impl/byebye`
-
-#### Resource API (`/{naan}/{name}/{version}/{resource}`)
-
-Where are we on this?
-
-::: tip
-You can also use simple clients like `curl` to access the API, or more capable testing clients like Postman. See the [KGrid API](../api) for more examples.
-:::
-
-#### Other Activator endpoints
-##### activate
-##### info
-##### health
-
-### Deep dive into the anatomy of a KO
-
-#### Structure and metadata
-#### The service description
-#### Deployment configuration
-
-### Bundled objects vs single objects
-
-#### Using webpack
-#### requiring dependencies (your own and node modules)
-#### transpiling
-
-### Executive objects
-
-#### How to do it (the `context object`) 
-#### Why it's a bad idea
-#### Why it's a good idea
-
-### Building simple clients
-
-### Handling multiple implementations of the same object
-
-## Packaging and publishing
-
-## Best practices
-
-### Organizing your code and your KOs
-(top level, ***collection***)
-
-## Gotchas for Nashorn environment
 
 
-
-
-
-
+## What's next?
+Now, you learned the basics of Knowledge Grid. [KGRID SCORE tutorial](../tutorial/) will guide you through the process of developing a KO implementing SCORE risk calculation. The tutorial will also cover a wide range of advanced topics. 
