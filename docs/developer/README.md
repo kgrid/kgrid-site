@@ -153,10 +153,10 @@ KGrid CLI v0.3.3
 The implementation of impl has been initialized.
 
 
-The knowledge object username/foo is ready.
+The knowledge object <username>/foo is ready.
 ```
 
-The `kgrid create` command sets up a KO source code folder called `myobject` with a subfolder `impl`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/username/myobject` and the implementation is accessed with `ark:/username/myobject/impl`. 
+The `kgrid create` command sets up a KO source code folder called `myobject` with a subfolder `impl`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and the implementation is accessed with `ark:/<username>/myobject/impl`. 
 
 In general, the ARK is used to refer to the activated object running in the activator, the source code folder names are ignored. (Later when the KO is packaged and published the source folder names are replaced with names derived from the actual ARK).
 
@@ -171,15 +171,15 @@ You may have to reload the Activator after creating or modifying code or metadat
 :::
 
 ```bash
-> kgrid play ark:/username/myobject/one
+> kgrid play ark:/<username>/myobject/impl
 ```
 
 ::: tip
-By default`kgrid play myobject` queries the local activator (http://localhost:8080) and
+By default`kgrid play` queries the local activator [http://localhost:8080](http://localhost:8080) and
 prompts you to select an implementation. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
 :::
 
-Once the the Swagger Editor is pointed to `myobject/one`, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
+Once the the Swagger Editor is pointed to `myobject/impl`, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
 
 ![The Swagger Editor](../assets/img/SwaggerEditor.png)
 
