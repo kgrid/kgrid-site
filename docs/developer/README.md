@@ -45,7 +45,9 @@ The activator and library are Spring Boot microservices written in Java. The lib
 
 ## Setup
 
-Confirm [Node and NPM](https://nodejs.org) are installed, and [Java 8+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed
+### What you'll need
+
+**Confirm [Node and NPM (version 10+)](https://nodejs.org) are installed, and [Java 8+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.** 
 
 ```bash
 > node --version
@@ -55,6 +57,14 @@ v10.15.3
 java version "11.0.1" 2018-10-16 LTS
 ...
 ```
+
+::: warning
+You should not have to use `sudo` to install `node`, `npm`, or any additional packages. If you run into trouble see [https://timonweb.com/posts/install-npm-packages-without-sudo/](https://timonweb.com/posts/install-npm-packages-without-sudo/)
+:::
+
+**You will also need a good code editor.** You can use your development IDE, or try [Atom](https://atom.io). It's useful to open up an editor for browsing the workspace we'll create in the next step. You'll also be creating and working with a number of source files as we build knowledge objects. 
+
+
 ### Install the [KGrid CLI](https://kgrid.org/kgrid-cli) and set up a workspace
 
 ```bash
@@ -134,11 +144,21 @@ Create a new knowledge object using the kgrid-cli. (You will be prompted for an 
 
 ```bash
 > kgrid create myobject
-...
-# coming soon...
-# KO implementation `ark:/username/myobject/one` has been created.
-# Try `kgrid start` and `kgrid play ark:/username/myobject/one`
+KGrid CLI v0.3.3
+
+====  Create the Knowledge Object  ====
+
+====  Initialize the implementation  ====
+? Implementation:  impl
+The implementation of impl has been initialized.
+
+
+The knowledge object username/foo is ready.
 ```
+
+The `kgrid create` command sets up a KO source code folder called `myobject` with a subfolder `impl`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/username/myobject` and the implementation is accessed with `ark:/username/myobject/impl`. 
+
+In general, the ARK is used to refer to the activated object running in the activator, the source code folder names are ignored. (Later when the KO is packaged and published the source folder names are replaced with names derived from the actual ARK).
 
 ::: tip
 Verify in browser that the new object is displayed in the the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)). (Restart the grid with `kgrid start` if it's not running.)
@@ -228,9 +248,17 @@ For more information on the jest framework and unit testing in general see [Jest
 
 ## Edit the object
 
+Let's make the object your own! There are several kinds of changes that you'll make as you work on an object. 
+- The top-level and implementation specific metadata can be changed (and sometimes those changes need ot be coordinated with code and service changes.)
+- You may change the code (there are lots of ways to organize and write your code. See [Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
+- You can change the services description (which services are available, there names, the inputs and outputs, etc.) These changes also need to be coordinated with the code.
+
+Spend some time reviewing the structure and files in the KO you just created. See [KO Deep Dive](../tutorial/deepdive.md) for more info.
+
+
 ### Metadata
 
-Let's make the object your own! Open the top-level `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
+Open the top-level `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
 
 ```json
 {
@@ -304,6 +332,8 @@ Back to the Swagger Editor (remember to hit the `/activate` endpoint first). If 
 ```
 
 ### Update the Service Description
+
+***<span style="color: darkred;">=> Rewrite in progress</span>***
 
 Let's make another code change to say "Goodbye" instead of "Welcome". (Remember to update the unit test and rerun the tests.):
 ```javascript

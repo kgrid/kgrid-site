@@ -6,7 +6,7 @@
   },
   "project": "guides",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "vuepress dev docs -p 3000",
     "build": "vuepress build docs"
   },
   "devDependencies": {
