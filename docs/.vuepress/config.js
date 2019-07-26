@@ -9,7 +9,8 @@ module.exports = {
       { text: "Developer's Guide", link: '/developer/'},
       { text: "Integrator's Guide", link: '/integrator/'},
       { text: "SCORE Tutorial", link: '/tutorial/'},
-      { text: "KGrid API", link: '/api/'}
+      { text: "KGrid API", link: '/api/'},
+      { text: "Fall 2019 Workshop", link: '/workshop2019.md'}
     ],
     search: true,
     searchMaxSuggestions: 10,
