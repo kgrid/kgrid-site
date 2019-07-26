@@ -7,6 +7,6 @@
 - Attend individual site meeting
 - Join the Fall Workshop Slack channel
 
-![Image](././assets/img/agenda.png)
+![Image](/assets/img/agenda.png)
 
-![Image](././assets/img/locations.png)
+![Image](/assets/img/locations.png)
