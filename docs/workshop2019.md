@@ -7,5 +7,6 @@
 - Attend individual site meeting
 - Join the Fall Workshop Slack channel
 
+## Agenda Rough Draft
 ![Image](./assets/img/workshopAgenda.png)
 
