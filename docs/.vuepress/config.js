@@ -21,8 +21,9 @@ module.exports = {
           '/tutorial/createko',
           {
             title: 'Deep Dive into the KO ',
-            // collapsable: false,
+            // collapsible: false,
             children: [
+              '/tutorial/ko-intro',
               '/tutorial/service',
               '/tutorial/sourcecode',
               '/tutorial/metadata'
