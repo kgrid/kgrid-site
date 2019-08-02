@@ -1,3 +1,8 @@
+---
+sidebarDepth: 2
+sidebar: auto
+---
+
 # KGrid API
 
 The platform API allows developers to access KGrid and Knowledge Object services.

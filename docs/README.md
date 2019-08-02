@@ -21,7 +21,22 @@ description: Get started!
   </div>
   <div class="feature">
     <div class="action hero">
-        <a href="/guides/tutorial/" class="nav-link action-button">SCORE Tutorial</a>
+        <a href="/guides/comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
+    </div>    
+    <h2>For Librarians managing the Knowledge Objects and For Users finding the Knowledge Objects</h2>
+    <p style="color: darkred;">(coming soon)</p>
+    <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
+  </div>
+  <div class="feature">
+    <div class="action hero">
+        <a href="/guides/api/" class="nav-link action-button">KGrid API</a>
+    </div>    
+    <h2>KGRID Activator API and KO Service API</h2>
+    <p>KGRID Activator API and KO service API Documentations</p>
+  </div>
+  <div class="feature">
+    <div class="action hero">
+      <a href="/guides/tutorial/" class="nav-link action-button">SCORE Tutorial</a>
     </div>    
     <h2>KO Advanced Tutorial</h2>
     <p style="color: darkred;">(work in progress)</p>
