@@ -1,3 +1,7 @@
+---
+sidebarDepth: 3
+sidebar: auto
+---
 # Awesome KGrid
 
 A curated list of KGrid publications, presentations, articles.
