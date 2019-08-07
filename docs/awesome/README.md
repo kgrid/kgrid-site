@@ -6,7 +6,7 @@ sidebar: auto
 
 A curated list of KGrid publications, presentations, articles.
 
-## Table of Content
+## KGrid Team
 
 ### Published Papers
 
@@ -39,16 +39,60 @@ Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/eve
 ### Documents
 - [Strategic Plan Summer 2017](https://drive.google.com/open?id=1LDR_Hf9yks0Mjr3B7IVkaEf9q3jkd9dB)
 
-### Others Resources
+## Other Resources
 
-- [Mobilizing Computable Biomedical Knowledge (CBK):A Manifesto](https://medicine.umich.edu/sites/default/files/content/downloads/MCBK%20Manifesto%20Ver%2010.7.18.pdf)
+### Published Papers
+
+- [Stewardship in the “Age of Algorithm”](https://firstmonday.org/ojs/index.php/fm/article/view/8097/6583)
+
+- [Mobilizing Computable Biomedical Knowledge (CBK):A Manifesto
+](https://medicine.umich.edu/sites/default/files/content/downloads/MCBK%20Manifesto%20Ver%2010.7.18.pdf)
 
 - [Mobilizing Computable Biomedical Knowledge for
 Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.duke.edu/files/field/attachments/GPMF_Richesson.09.27.2018.pdf)
 
-- [FAIR Principles](https://www.go-fair.org/fair-principles/)
+- [Desiderata for sharable computable biomedical knowledge for learning
+health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
 
-- [Desiderata for sharable computable biomedical knowledge for learning health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
+- [Ten Commandments for Effective Clinical Decision Support: Making the
+Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC264429/)
+
+- [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/)
+
+- [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2)
+
+- [Toward an Information Infrastructure for Global Health Improvement](https://www.thieme-connect.com/products/ejournals/html/10.15265/IY-2017-004)
+
+- [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4)
+
+- [Digital Open Annotation with Hypothesis: Supplying the Missing Capability of the Web](https://www.utpjournals.press/doi/abs/10.3138/jsp.49.3.04)
+
+- [The dynamics of innovation: from National Systems and “Mode 2” to a
+Triple Helix of university–industry–government relations](https://www.sciencedirect.com/science/article/pii/S0048733399000554)
+
+- [Demonstrating Cloud-based Clinical Decision Support at Scale: The
+Clinical Decision Support Consortium](http://ebooks.iospress.nl/publication/34506)
+
+- [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4)
+
+- [A multi-layered framework for disseminating knowledge for
+computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073)
+
+- [What is A Philosophical Question?](https://onlinelibrary.wiley.com/doi/full/10.1111/meta.12035)
+
+- [What informatics is and isn't](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3638194/)
+
+### Web Sites
+
+- [Research Object](http://www.researchobject.org/)
+
+### Documents
+
+- [FAIR Principles](https://www.force11.org/group/fairgroup/fairprinciples)
 
 - [MiHIN Computable Knowledge Use Case Summary](https://drive.google.com/open?id=1LDNK1QM3GjxgElHvUpSeE-LsN1eCE0SF)
 
+- [Yosemite Manifesto on RDF as a Universal Healthcare Exchange Language](http://yosemitemanifesto.org/)
+
+- [Knowledge to Practice (K2P) Focused
+Organizations](https://docs.google.com/document/d/1aXxrY_ccE7AivoRmqzaD94m80_ssaYGKaH75X49G3lI/edit?usp=sharing)
