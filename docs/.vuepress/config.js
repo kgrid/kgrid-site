@@ -1,6 +1,7 @@
 module.exports = {
   title: "Knowledge Grid Guides",
   themeConfig: {
+    "base": "/guides/",
     repo: 'kgrid/guides',
     lastUpdated: 'Last Updated',
     nav: [
