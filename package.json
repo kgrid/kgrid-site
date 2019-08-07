@@ -10,8 +10,9 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.0.3",
     "vuepress": "^1.0.2",
-    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
-    "webpack": "^4.39.1"
+    "webpack": "^4.39.1",
+    "live-server": "^1.2.1"
   }
 }
