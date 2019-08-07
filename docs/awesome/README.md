@@ -50,3 +50,5 @@ Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.d
 
 - [Desiderata for sharable computable biomedical knowledge for learning health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
 
+- [MiHIN Computable Knowledge Use Case Summary](https://drive.google.com/open?id=1LDNK1QM3GjxgElHvUpSeE-LsN1eCE0SF)
+
