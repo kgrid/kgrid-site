@@ -48,3 +48,5 @@ Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.d
 
 - [FAIR Principles](https://www.go-fair.org/fair-principles/)
 
+-[Desiderata for sharable computable biomedical knowledge for learning health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
+
