@@ -6,14 +6,14 @@ description: Get started!
 <div class="features">
   <div class="feature">
     <div class="action hero">
-          <a href="/developer/" class="nav-link action-button">Developer's Guide</a>
+          <a href="developer/" class="nav-link action-button">Developer's Guide</a>
     </div>    
     <h2>For developers of knowledge objects</h2>
     <p>Develop new knowledge objects and collections from a simple set of starter objects in the language of your choice.</p>
   </div>
   <div class="feature">
     <div class="action hero">
-        <a href="/integrator/" class="nav-link action-button">Integrator's Guide</a>
+        <a href="integrator/" class="nav-link action-button">Integrator's Guide</a>
     </div>    
     <h2>For system integrators running grids in research and health care settings</h2>
     <p style="color: darkred;">(work in progress)</p>
@@ -21,7 +21,7 @@ description: Get started!
   </div>
   <div class="feature">
     <div class="action hero">
-        <a href="/comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
+        <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
     </div>    
     <h2>For Librarians managing the Knowledge Objects and For Users finding the Knowledge Objects</h2>
     <p style="color: darkred;">(coming soon)</p>
@@ -29,14 +29,14 @@ description: Get started!
   </div>
   <div class="feature">
     <div class="action hero">
-        <a href="/api/" class="nav-link action-button">KGrid API</a>
+        <a href="api/" class="nav-link action-button">KGrid API</a>
     </div>    
     <h2>KGRID Activator API and KO Service API</h2>
     <p>KGRID Activator API and KO service API Documentations</p>
   </div>
   <div class="feature">
     <div class="action hero">
-      <a href="/tutorial/" class="nav-link action-button">SCORE Tutorial</a>
+      <a href="tutorial/" class="nav-link action-button">SCORE Tutorial</a>
     </div>    
     <h2>KO Advanced Tutorial</h2>
     <p style="color: darkred;">(work in progress)</p>
