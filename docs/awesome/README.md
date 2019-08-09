@@ -82,6 +82,21 @@ computer-based decision support](https://academic.oup.com/jamia/article/18/Suppl
 
 - [What informatics is and isn't](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3638194/)
 
+- [The unacknowledged convergence of open source, open access, and open science](https://ojphi.org/ojs/index.php/fm/article/view/1265/1185)
+
+- [Ushering in a New Era of Open Science Through Data Sharing](https://jamanetwork.com/journals/jama/article-abstract/1668313)
+
+- [Big Data And New Knowledge In Medicine: The Thinking, Training, And
+Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2014.0053)
+
+- [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726)
+
+- [The science commons in health research: structure, function,
+and value](https://link.springer.com/article/10.1007/s10961-006-9016-9)
+
+
+
+
 ### Web Sites
 
 - [Research Object](http://www.researchobject.org/)
