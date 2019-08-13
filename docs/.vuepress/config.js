@@ -17,14 +17,14 @@ module.exports = {
     displayAllHeaders: true,
     sidebar: {
         '/tutorial/':[
-          '/tutorial/',
-          '/tutorial/createko',
+          '',
+          'createko',
           {
             title: 'Deep Dive into the KO ',
             // collapsible: false,
             children: [
-              '/tutorial/ko-intro',
-              '/tutorial/service',
+              'ko-intro',
+              'service',
               '/tutorial/sourcecode',
               '/tutorial/metadata'
             ]
