@@ -1,3 +1,10 @@
+---
+meta:
+  - property: og:image
+    content: /guides/image/KG_Logo_DarkBlue.png
+  - name: description
+    content: KGrid Workshop 2019
+---
 # Fall 2019 Workshop
 
 ## August To-Do List
@@ -9,4 +16,3 @@
 
 ## Agenda Rough Draft (Check back for updates!)
 ![Image](./assets/img/workshopAgenda.png)
-
