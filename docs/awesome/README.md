@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 4
+sidebarDepth: 6
 sidebar: auto
 ---
 # Awesome KGrid
