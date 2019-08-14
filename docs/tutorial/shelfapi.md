@@ -1,6 +1,5 @@
 # KGrid API
 
-## Overview
 The platform API allows developers to access KGrid and Knowledge Object services.
 You can use the KGrid API to evaluate the status of the Activator or Library,
 import and export Knowledge Objects discovery Knowledge Object services and interact with

@@ -4,7 +4,7 @@
 
 ### Command Line
 
-#### [Curl](https://curl.haxx.se/)
+####  Curl
  [Curl](https://curl.haxx.se/)  is a command line tool and library for
 transferring data with URLs.  The following is examples of using  [curl](https://curl.haxx.se/)  to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
@@ -27,7 +27,7 @@ curl -X POST \
   -d '{"age": 48,"gender": "female","risk": "low","sbp": 120,"cholesterol": 8,"smoker": false}'
 ```
 
-####  [HTTPie](https://httpie.org)
+####  HTTPie
 [HTTPie](https://httpie.org)  is a command line HTTP client with an intuitive UI,
 JSON support, syntax highlighting, wget-like downloads, plugins, and more.
 HTTPie runs on windows, mac, linux, etc.  The following is examples of using  [HTTPie](https://httpie.org)   to
