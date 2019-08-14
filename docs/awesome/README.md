@@ -59,7 +59,7 @@ Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.d
 #### Informatics
 
 - [A multi-layered framework for disseminating knowledge for
-computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073) <i> This paper describes four layers, L1-L4, from human-readable knowledge to deployed machine-executable knowledge.</i>
+computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073) <i> This paper describes four layers, L1-L4, from L1, human-readable knowledge to L4, deployed machine-executable knowledge.</i>
 
 - [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/)
 
@@ -86,7 +86,7 @@ Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/ful
 
 - [Desiderata for sharable computable biomedical knowledge for learning
 health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) 
-<i>This paper highlights things to that account for to share machine-executable knoweldge effectively.</i>
+<i>This paper highlights things to account for to share machine-executable knoweldge effectively.</i>
 
 - [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2) 
 <i> KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression. </i>
