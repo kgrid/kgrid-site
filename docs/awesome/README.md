@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 sidebar: auto
 ---
 # Awesome KGrid
@@ -41,9 +41,24 @@ Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/eve
 
 ## Other Resources
 
-### Published Papers
+### Papers Related to KGrid
+
+#### Library Science
+
+- [Digital Open Annotation with Hypothesis: Supplying the Missing Capability of the Web](https://www.utpjournals.press/doi/abs/10.3138/jsp.49.3.04)
 
 - [Stewardship in the “Age of Algorithm”](https://firstmonday.org/ojs/index.php/fm/article/view/8097/6583)
+
+#### Perspectives on Knoweldge
+
+- [Desiderata for sharable computable biomedical knowledge for learning
+health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) This paper highlights considerations that must be accounted for in order to share knowledge in machine-executable forms.
+
+- [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2) This paper points out that compressed data is a form of knowledge. KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression.
+
+- [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4) This paper describes what it takes to upgrade information and arrive at knowledge. What it takes is to embed information in a network in a manner that it can flow from a source to a target in such a way that correct answers to the target's questions are provided by the source. This perspective on knowledge highlights its relational nature by putting information networks into relief.
+
+- [What is A Philosophical Question?](https://onlinelibrary.wiley.com/doi/full/10.1111/meta.12035) 
 
 - [Mobilizing Computable Biomedical Knowledge (CBK):A Manifesto
 ](https://medicine.umich.edu/sites/default/files/content/downloads/MCBK%20Manifesto%20Ver%2010.7.18.pdf)
@@ -51,21 +66,20 @@ Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/eve
 - [Mobilizing Computable Biomedical Knowledge for
 Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.duke.edu/files/field/attachments/GPMF_Richesson.09.27.2018.pdf)
 
-- [Desiderata for sharable computable biomedical knowledge for learning
-health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
+
 
 - [Ten Commandments for Effective Clinical Decision Support: Making the
 Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC264429/)
 
 - [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/)
 
-- [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2)
+
 
 - [Toward an Information Infrastructure for Global Health Improvement](https://www.thieme-connect.com/products/ejournals/html/10.15265/IY-2017-004)
 
-- [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4)
 
-- [Digital Open Annotation with Hypothesis: Supplying the Missing Capability of the Web](https://www.utpjournals.press/doi/abs/10.3138/jsp.49.3.04)
+
+
 
 - [The dynamics of innovation: from National Systems and “Mode 2” to a
 Triple Helix of university–industry–government relations](https://www.sciencedirect.com/science/article/pii/S0048733399000554)
@@ -73,12 +87,10 @@ Triple Helix of university–industry–government relations](https://www.scienc
 - [Demonstrating Cloud-based Clinical Decision Support at Scale: The
 Clinical Decision Support Consortium](http://ebooks.iospress.nl/publication/34506)
 
-- [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4)
-
 - [A multi-layered framework for disseminating knowledge for
 computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073)
 
-- [What is A Philosophical Question?](https://onlinelibrary.wiley.com/doi/full/10.1111/meta.12035)
+
 
 - [What informatics is and isn't](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3638194/)
 
