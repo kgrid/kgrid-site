@@ -86,7 +86,7 @@ Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/ful
 
 - [Desiderata for sharable computable biomedical knowledge for learning
 health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) 
-This paper highlights considerations that must be accounted for in order to share knowledge in machine-executable forms.
+<i>This paper highlights considerations that must be accounted for in order to share knowledge in machine-executable forms.</i>
 
 - [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2) 
 This paper points out that compressed data is a form of knowledge. KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression.
