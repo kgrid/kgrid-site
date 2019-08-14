@@ -1,6 +1,16 @@
 module.exports = {
   base: '/guides/',
   title: "Knowledge Grid Guides",
+  head: [
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:site', content: '@kgrid' }],
+    ['meta', { name: 'twitter:creator', content: '@kgrid' }],
+    ['meta', { property: 'og:type', content: 'article' }],
+    ['meta', { property: 'og:title', content: 'Raum.sh' }],
+    ['meta', { property: 'og:site_name', content: 'Raum.sh' }],
+    ['meta', { property: 'og:url', content: 'http://localhost:3000' }],
+    ['meta', { property: 'og:image', content: '/guides/assets/image/KGridLogo_Blue.jpg' }]
+  ],
   themeConfig: {
     repo: 'kgrid/guides',
     lastUpdated: 'Last Updated',

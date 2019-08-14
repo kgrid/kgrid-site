@@ -1,6 +1,6 @@
 ---
 home: true
-description: Get started!
+description: Knowledge Grid Guides
 ---
 
 <div class="features">

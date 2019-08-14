@@ -1,5 +1,6 @@
 ---
 sidebarDepth: 2
+description: KGrid SCORE Tutorial with advanced topics
 ---
 # Overview
 
