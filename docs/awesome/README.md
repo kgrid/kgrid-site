@@ -59,7 +59,7 @@ Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.d
 #### Informatics
 
 - [A multi-layered framework for disseminating knowledge for
-computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073)
+computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073) <i> This paper describes four layers, L1-L4, from human-readable knowledge to deployed machine-executable knowledge.</i>
 
 - [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/)
 
@@ -68,13 +68,13 @@ Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/
 
 - [What informatics is and isn't](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3638194/)
 
-#### Openness
+#### About Open Science
+
+- [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726)
 
 - [The unacknowledged convergence of open source, open access, and open science](https://ojphi.org/ojs/index.php/fm/article/view/1265/1185)
 
 - [Ushering in a New Era of Open Science Through Data Sharing](https://jamanetwork.com/journals/jama/article-abstract/1668313)
-
-- [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726)
 
 - [The science commons in health research: structure, function,
 and value](https://link.springer.com/article/10.1007/s10961-006-9016-9)
