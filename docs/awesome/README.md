@@ -86,16 +86,16 @@ Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/ful
 
 - [Desiderata for sharable computable biomedical knowledge for learning
 health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) 
-<i>This paper highlights considerations that must be accounted for in order to share knowledge in machine-executable forms.</i>
+<i>This paper highlights things to that account for to share machine-executable knoweldge effectively.</i>
 
 - [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2) 
-This paper points out that compressed data is a form of knowledge. KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression.
+<i> KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression. </i>
 
 - [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4) 
-This paper describes what it takes to upgrade information and arrive at knowledge. What it takes is to embed information in a network in a manner that it can flow from a source to a target in such a way that correct answers to the target's questions are provided by the source. This perspective on knowledge highlights its relational nature by putting information networks into relief.
+<i> This paper describes what it takes to upgrade information and arrive at knowledge. What it takes is to embed information in a network so that it can flow in such a way that correct answers to a target's questions are provided by the source. </i>
 
 - [What is A Philosophical Question?](https://onlinelibrary.wiley.com/doi/full/10.1111/meta.12035) 
-This paper categorizes knowledge as three types of answers: observational, logico-mathematical, and noetic. KGrid focuses primarily on providing logico-mathematical answers by using computable knowledge.
+<i> This paper categorizes knowledge as three types of answers: observational, logico-mathematical, and noetic. KGrid focuses primarily on providing logico-mathematical answers by using computable knowledge. </i>
 
 #### Sociotechnical Infrastructure Perspectives
 
