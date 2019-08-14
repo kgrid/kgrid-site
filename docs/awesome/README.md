@@ -59,9 +59,9 @@ Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.d
 #### Informatics
 
 - [A multi-layered framework for disseminating knowledge for
-computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073) <i> This paper describes four layers, L1-L4, from L1, human-readable knowledge to L4, deployed machine-executable knowledge.</i>
+computer-based decision support](https://academic.oup.com/jamia/article/18/Supplement_1/i132/797073) <i> This paper describes four layers from L1, human-readable knowledge to L4, fully-deployed machine-executable knowledge.</i>
 
-- [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/)
+- [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/) <i> Changing an information space for a person is not the same as improving it. </i>
 
 - [Ten Commandments for Effective Clinical Decision Support: Making the
 Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC264429/)
@@ -70,7 +70,7 @@ Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/
 
 #### About Open Science
 
-- [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726)
+- [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726) <i> An important story of analyzing available data in real-time to gain knowledge to inform a single medical decision. </i>
 
 - [The unacknowledged convergence of open source, open access, and open science](https://ojphi.org/ojs/index.php/fm/article/view/1265/1185)
 
@@ -86,16 +86,16 @@ Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/ful
 
 - [Desiderata for sharable computable biomedical knowledge for learning
 health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) 
-<i>This paper highlights things to account for to share machine-executable knoweldge effectively.</i>
+<i>This paper lists things to account for before machine-executable knoweldge can be shared.</i>
 
 - [Learning as Data Compression](https://link.springer.com/chapter/10.1007/978-3-540-73001-9_2) 
 <i> KGrid generally focuses on machine-executable knowledge arising from analytic or deliberative data compression. </i>
 
 - [Semantic information and the network theory of account](https://link.springer.com/article/10.1007/s11229-010-9821-4) 
-<i> This paper describes what it takes to upgrade information and arrive at knowledge. What it takes is to embed information in a network so that it can flow in such a way that correct answers to a target's questions are provided by the source. </i>
+<i> What does it take to upgrade information and arrive at knowledge? Try embedding information in a network so that it flows in such a way that correct answers to questions are provided. </i>
 
 - [What is A Philosophical Question?](https://onlinelibrary.wiley.com/doi/full/10.1111/meta.12035) 
-<i> This paper categorizes knowledge as three types of answers: observational, logico-mathematical, and noetic. KGrid focuses primarily on providing logico-mathematical answers by using computable knowledge. </i>
+<i> This paper categorizes knowledge as: observational, logico-mathematical, and noetic. KGrid focuses primarily on providing logico-mathematical answers using computable biomedical knowledge. </i>
 
 #### Sociotechnical Infrastructure Perspectives
 
@@ -118,6 +118,3 @@ Triple Helix of university–industry–government relations](https://www.scienc
 - [MiHIN Computable Knowledge Use Case Summary](https://drive.google.com/open?id=1LDNK1QM3GjxgElHvUpSeE-LsN1eCE0SF)
 
 - [Yosemite Manifesto on RDF as a Universal Healthcare Exchange Language](http://yosemitemanifesto.org/)
-
-- [Knowledge to Practice (K2P) Focused
-Organizations](https://docs.google.com/document/d/1aXxrY_ccE7AivoRmqzaD94m80_ssaYGKaH75X49G3lI/edit?usp=sharing)
