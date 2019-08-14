@@ -1,10 +1,7 @@
 # Clients interacting with KO
 
-## Existing Tools
 
-### Command Line
-
-####  Curl
+##  Curl
  [Curl](https://curl.haxx.se/)  is a command line tool and library for
 transferring data with URLs.  The following is examples of using  [curl](https://curl.haxx.se/)  to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
@@ -27,7 +24,7 @@ curl -X POST \
   -d '{"age": 48,"gender": "female","risk": "low","sbp": 120,"cholesterol": 8,"smoker": false}'
 ```
 
-####  HTTPie
+##  HTTPie
 [HTTPie](https://httpie.org)  is a command line HTTP client with an intuitive UI,
 JSON support, syntax highlighting, wget-like downloads, plugins, and more.
 HTTPie runs on windows, mac, linux, etc.  The following is examples of using  [HTTPie](https://httpie.org)   to
@@ -45,16 +42,16 @@ Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service KO Servi
  http POST http://activator.kgrid.org/score/calc/v0.3.0/score age:=48 gender=Female risk=low spb:=120 cholesterol:=8 smoker:=false
 ```
 
-### Postman
+## Postman
 [Postman](https://www.getpostman.com/) is a powerful tool for performing
 integration testing with your API. It allows for repeatable, reliable tests
 that can be automated and used in a variety of environments.
 
-### Swagger Editor
+## Swagger Editor
 The [Swagger Editor](https://swagger.io/tools/swagger-editor/) is an open source editor to
 design, define and document RESTful APIs in the OpenAPI Specification.
 
 
-## Build a simple web app
+## Simple web app
 
-## Build batch client
+## Simple batch client
