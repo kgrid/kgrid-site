@@ -1,4 +1,4 @@
-# Use the KO as library
+# Use the KO as dependency
 
 ## Context of Nashhorn
 
@@ -6,4 +6,4 @@
 
 ## Pass in the inputs
 
-## Work with the result 
+## Work with the result
