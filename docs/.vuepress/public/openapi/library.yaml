@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: KGrid Library API
+  description: KGrid Library API provides access to the Knowledge Objects
+  contact:
+    email: kgrid-developers@umich.edu
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: https://kgrid-library.herokuapp.com
+    description: Integration Activator
+  - url: https://monkey-library.kgrid.org
+    description: Sandbox Activator
+  - url: http://localhost:8080
+    description: Local Instance
+paths:
+  /health:
+    get:
+      tags:
+        - KGrid Library Server
+      summary: Returns health of the KGrid Library
+      description: |
+        Returns the health of the library compoenents
+      operationId: health
+      responses:
+        200:
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+  /info:
+    get:
+      tags:
+        - KGrid Library Server
+      summary: Finds all knowledge object endpoints
+      description: |
+        Returns a collection of endpoints
+      operationId: info
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+
+  /kos:
+    $ref: 'kos.yaml#/paths/~1kos'
+
+  /kos/{naan}/{name}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}'
+
+  /kos/{naan}/{name}/{implementation}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{implementation}'
+
+  '/kos/manifest':
+    $ref: 'kos.yaml#/paths/~1kos~1manifest'
+
+components:
+
+  examples:
+    KnowledgeObject:
+      $ref: 'kos.yaml#/components/examples/KnowledgeObject'
+
+    KnowledgeObjectImplementation:
+      $ref: 'kos.yaml#/components/examples/KnowledgeObjectImplementation'
+  schemas:
+    importKO:
+      $ref: 'kos.yaml#/components/schemas/importKO'
+

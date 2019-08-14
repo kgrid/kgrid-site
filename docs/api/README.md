@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 2
+sidebarDepth: 6
 sidebar: auto
 ---
 
@@ -14,9 +14,10 @@ returns JSON-encoded responses, and uses standard HTTP response codes and verbs.
 
 ## KGrid Activator API
 The API is defined in a [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification and can accessed at using swagger ui.
-[KGrid Activator API](/guides/swagger).  The raw activator openapi specification can be found at [OpenAPI Activator](https://kgrid.org/guides/openapi/openapi_activator_1.0.0.yaml)
+[KGrid Activator API](/guides/swagger).
 
-### Resources
+
+## Resources
 
 #### Knowledge Objects
 Knowledge Object represents one or more services (a micro API) organized as endpoints
@@ -34,16 +35,16 @@ Please review <a href="/guides/swagger/#/KGrid%20Activator%20Server" target="_bl
 Please review <a href="/guides/swagger/#/Knowledge%20Object%20Export" target="_blank" >Export Knowledge Objects</a>
 
 
-#### Endpoints
+### Endpoints
 Endpoints are the activated Knowledge Object services defined by the OpenAPI
 specifications in each Knowledge Object.  Please review <a href="/guides/swagger/#/Knowledge%20Object%20Endpoint" target="_blank" >Endpoints</a>
 
-#### Knowledge Objects Services
+### Knowledge Objects Services
 Each Knowledge Object has services/endpoints defined by their OpenAPI specifications. The path
 to these services/endpoints follows _/{naan}/{name}/{implementation}/{endpoint}_ pattern, e.g. (_/hello/world/v0.1.0/welcome_).
 Please review <a href="/guides/swagger/#/Knowledge%20Object%20Endpoint/serverendpoint" target="_blank" >Knowledge Objects Service</a>
 
-##### Knowledge Objects Service Response
+### Knowledge Objects Service Response
 All Knowledge Objects Services will return a KGrid reponse which consists of
 a result, info and inputs
 
@@ -75,15 +76,14 @@ a result, info and inputs
 
 ```
 
-### API Notes
+## API Notes
 
-#### CORS
+### CORS
 The KGrid API supports cross-origin resource sharing (CORS) so that requests can be sent from browsers
 using JavaScript served from any domain.
 
-#### Errors
+### Errors
 Failing responses will have an appropriate status and a JSON body containing more details about a p
 articular error. Codes in the 2xx range indicate success. Codes in the 4xx range indicate
 an error that failed given the information provided. Codes in the 5xx range indicate an error with KGrid servers.
 
-Error Format here

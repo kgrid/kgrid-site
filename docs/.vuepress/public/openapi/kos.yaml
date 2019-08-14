@@ -410,6 +410,7 @@ components:
         hasPayload: v0.1.0/welcome.js
         '@context':
           - http://kgrid.org/koio/contexts/implementation.jsonld
+          - http://kgrid.org/koio/contexts/implementation.jsonld
 
   schemas:
     importKO:
