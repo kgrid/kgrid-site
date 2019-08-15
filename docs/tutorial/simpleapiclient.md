@@ -10,7 +10,7 @@ KO Service.
 transferring data with URLs.  The following are examples of using  [curl](https://curl.haxx.se/)  to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
 
-Get the Ten-year Fatal Cardiovascular Risk Calculation KO Service implementation using [curl](https://curl.haxx.se/)
+Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using [curl](https://curl.haxx.se/)
 
 ```
 curl -X GET \
@@ -35,14 +35,14 @@ HTTPie runs on windows, mac, linux, etc.  The following are examples of using
  [HTTPie](https://httpie.org)   to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
 
-Get the Ten-year Fatal Cardiovascular Risk Calculation KO Service implementation using
+Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using
  [HTTPie](https://httpie.org)
 
 ```
  http GET http://activator.kgrid.org/kos/score/calc/v0.3.0
 ```
 
-Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service KO Service using [HTTPie](https://httpie.org)
+Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service using [HTTPie](https://httpie.org)
 
 ```
  http POST http://activator.kgrid.org/score/calc/v0.3.0/score age:=48 gender=Female risk=low spb:=120 cholesterol:=8 smoker:=false
@@ -53,7 +53,9 @@ Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service KO Servi
 integration testing with your API. It allows for repeatable, reliable tests
 that can be automated and used in a variety of environments.
 
-MORE TO COME!!!!
+Import Postman [Cardiovascular Risk Calculation Collection](./Cardiovascular_Risk_Calculation.postman_collection.json)
+into Postman. You will see two requests.  KO implementation request and KO service. Each
+request has a set of tests.
 
 ## Swagger Editor
 The [Swagger Editor](https://swagger.io/tools/swagger-editor/) is an open source editor to

@@ -19,7 +19,7 @@ The API is defined in a [OpenAPI](https://github.com/OAI/OpenAPI-Specification) 
 
 ## Resources
 
-#### Knowledge Objects
+### Knowledge Objects
 Knowledge Object represents one or more services (a micro API) organized as endpoints
 and operations (with media types, schemas, responses etc.).  Using the KOS services you can
 
