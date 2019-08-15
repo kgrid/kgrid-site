@@ -53,7 +53,7 @@ Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service using [H
 integration testing with your API. It allows for repeatable, reliable tests
 that can be automated and used in a variety of environments.
 
-Import Postman [Cardiovascular Risk Calculation Collection](./Cardiovascular_Risk_Calculation.postman_collection.json)
+Import Postman [Cardiovascular Risk Calculation Collection](/guides/Cardiovascular_Risk_Calculation.postman_collection.json)
 into Postman. You will see two requests.  KO implementation request and KO service. Each
 request has a set of tests.
 
