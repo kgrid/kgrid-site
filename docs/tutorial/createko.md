@@ -10,19 +10,15 @@ The core function is to compute the 10-year CVD risk based on the following pati
 
 ```json
 {
-  "age" : 86,           // age
-  "gender" : "female",  // gender
+  "age" : 86,           // age in years
+  "gender" : "female",  // gender - male or female
   "risk" : "low",       // European population risk model - high or low
   "sbp" : 140,          // systolic blood pressure in mmHg
   "cholesterol" : 8,    // total cholesterol in mmol/l
-  "smoker":true         // True if a current smoker
+  "smoker":true         // true if a current smoker; otherwise, false
 }
 
 ```
-
-
-
-
 
 ## Create a bundled KO using KGRID CLI
 
@@ -32,7 +28,7 @@ To create from the template of bundled KO, run the KGrid CLI command with the fl
 $ kgrid create myko --bundled
 ```
 
-You will notice a few more files in the created KO directory.
+Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the src files into an bundle, ready for Kgrid activator.
 
 ## Build the payload bundle
 

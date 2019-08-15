@@ -44,8 +44,8 @@ module.exports = {
             collapsable: false,
             children: [
               '/tutorial/buildko',
-              '/tutorial/deployko',
-              '/tutorial/packageko'
+              '/tutorial/packageko',
+              '/tutorial/deployko'
             ]
           },
           {
