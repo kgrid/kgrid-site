@@ -3,14 +3,14 @@
 
 ##  Curl
  [Curl](https://curl.haxx.se/)  is a command line tool and library for
-transferring data with URLs.  The following is examples of using  [curl](https://curl.haxx.se/)  to
+transferring data with URLs.  The following are examples of using  [curl](https://curl.haxx.se/)  to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
 
 Get the Ten-year Fatal Cardiovascular Risk Calculation KO Service implementation via [curl](https://curl.haxx.se/)
 
 ```
 curl -X GET \
-  http://kgrid-activator.herokuapp.com/score/calc/v0.3.0 \
+  http://activator.kgrid.org/kos/score/calc/v0.3.0 \
   -H 'Content-Type: application/json'
 ```
 
@@ -19,7 +19,7 @@ Executing the Ten-year Fatal Cardiovascular Risk Calculation KO Service via [cur
 
 ```
 curl -X POST \
-  http://kgrid-activator.herokuapp.com/score/calc/v0.3.0/score \
+  http://activator.kgrid.org/score/calc/v0.3.0/score \
   -H 'Content-Type: application/json' \
   -d '{"age": 48,"gender": "female","risk": "low","sbp": 120,"cholesterol": 8,"smoker": false}'
 ```
@@ -27,13 +27,13 @@ curl -X POST \
 ##  HTTPie
 [HTTPie](https://httpie.org)  is a command line HTTP client with an intuitive UI,
 JSON support, syntax highlighting, wget-like downloads, plugins, and more.
-HTTPie runs on windows, mac, linux, etc.  The following is examples of using  [HTTPie](https://httpie.org)   to
+HTTPie runs on windows, mac, linux, etc.  The following are examples of using  [HTTPie](https://httpie.org)   to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
 
 Get the Ten-year Fatal Cardiovascular Risk Calculation KO Service implementation via  [HTTPie](https://httpie.org)
 
 ```
- http GET  http://activator.kgrid.org/kos/score/calc/v0.3.0
+ http GET http://activator.kgrid.org/kos/score/calc/v0.3.0
 ```
 
 Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service KO Service via  [HTTPie](https://httpie.org)
