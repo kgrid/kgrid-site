@@ -2,9 +2,27 @@
 
 ## SCORE Project and the core function
 
-The SCORE Project utilizes high and low European population risk model for estimation of 10-year risk of fatal cardiovascular disease, as described in the paper:
+The SCORE Project utilizes high and low European population risk model for estimation of 10-year risk of fatal cardiovascular disease (CVD), as described in the paper:
 
 [Conroy, R.M., Pyörälä, K., Fitzgerald, A.P., Sans, S., Menotti, A., De Backer, G., De Bacquer, D., Ducimetière, P., Jousilahti, P., Keil, U., et al. (2003). Estimation of ten-year risk of fatal cardiovascular disease in Europe: The SCORE project. European Heart Journal 24, 987–1003.](https://academic.oup.com/eurheartj/article/24/11/987/427645)
+
+The core function is to compute the 10-year CVD risk based on the following patient features as inputs:
+
+```json
+{
+  "age" : 86,           // age
+  "gender" : "female",  // gender
+  "risk" : "low",       // European population risk model - high or low
+  "sbp" : 140,          // systolic blood pressure in mmHg
+  "cholesterol" : 8,    // total cholesterol in mmol/l
+  "smoker":true         // True if a current smoker
+}
+
+```
+
+
+
+
 
 ## Create a bundled KO using KGRID CLI
 
