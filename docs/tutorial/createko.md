@@ -28,7 +28,16 @@ To create from the template of bundled KO, run the KGrid CLI command with the fl
 $ kgrid create myko --bundled
 ```
 
-Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the src files into an bundle, ready for Kgrid activator.
+Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the source files into an bundle, ready for Kgrid activator.
+
+Looking in to the folder of `/src`, you will find a few more files in addition to `index.js`.
+
+`cvdscore.js` is a Javascript file containing the core function of SCORE computation.
+
+`beta.json` and `coefficients.json` are the data files containing coefficients for the SCORE models. They are referenced in `cvdscore.js` using `require()`.
+
+When we build the bundled KO, `index.js` will be the main entry for `webpack`.
+
 
 ## Build the payload bundle
 
@@ -46,3 +55,8 @@ npm run build
 ```
 
 The build process will create a file `main.js` in `/dist` directory. `service.yaml` is referring this file as the artifact for the service.
+
+
+## Try the bundled KO
+
+Now, the bundled KO is ready to be activated. The activation process is the same as described in the developer's guide. Once activated, you can use Swagger Editor to try out the KO service.
