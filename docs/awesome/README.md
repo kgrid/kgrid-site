@@ -11,22 +11,22 @@ A curated list of KGrid publications, presentations, and articles that shape and
 ### Published Papers
 
 - [Digital Knowledge Objects and Digital Knowledge Object Clusters: Unit
-Holdings in a Learning Health System Knowledge Repository](https://ieeexplore.ieee.org/document/7427597)
-
-- [ScriptNumerate: A Data-to-Advice Pipeline using Compound Digital Objects
-to Increase the Interoperability of Computable Biomedical Knowledge](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371244/)
+Holdings in a Learning Health System Knowledge Repository](https://ieeexplore.ieee.org/document/7427597) <i> The notion of a Knowledge Object is born in this early design paper. </i>
 
 - [The Knowledge Object Reference Ontology (KORO): A formalism to support
-management and sharing of computable biomedical knowledge for learning health systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6508779/)
+management and sharing of computable biomedical knowledge for learning health systems](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6508779/) <i> Knowledge Objects are formally defined for the first time here. </i>
 
 - [Architecture and Initial Development of a Digital Library Platform for
-Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/28423842)
+Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/28423842) <i> Where are we going to put Knowledge Objects to manage them as resources? The need for a repository-archive is addressed here. </i>
 
 - [Architecture and Initial Development of a Knowledge-as-a-Service Activator
- for Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/29677991)
+ for Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/29677991) <i> How are we going to run the payloads as Knowledge Objects via APIs and webservices? The service-side component of KGrid - called an Activator - is described here. </i>
+
+- [ScriptNumerate: A Data-to-Advice Pipeline using Compound Digital Objects
+to Increase the Interoperability of Computable Biomedical Knowledge](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371244/) <i> Can Knowledge Objects be created automatically by extending an analytic pipeline? Yes, they can. This finding opens the door to analytics that immediately result in manageable resources and active webservices. </i>
 
 - [The Knowledge Grid: A Platform to Increase the Interoperability of
-     Computable Knowledge and Produce Advice for Health](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/146073/ajflynn_1.pdf?sequence=1&isAllowed=y)
+     Computable Knowledge and Produce Advice for Health](https://deepblue.lib.umich.edu/bitstream/handle/2027.42/146073/ajflynn_1.pdf?sequence=1&isAllowed=y) <i> This dissertation emphasizes the Knowledge Grid as a distributed architecture for generating advice. </i>
 
 ### Presentations
 
@@ -46,15 +46,15 @@ Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/eve
 #### Library Science
 
 - [Digital Open Annotation with Hypothesis: Supplying the Missing Capability of the Web](https://www.utpjournals.press/doi/abs/10.3138/jsp.49.3.04)
-Here, the notion of open annotation for KGrid Knowledge Objects comes into play. 
+<i> Here, the notion of open annotation for KGrid Knowledge Objects comes into play. </i>
 
 - [Mobilizing Computable Biomedical Knowledge (CBK):A Manifesto
-](https://medicine.umich.edu/sites/default/files/content/downloads/MCBK%20Manifesto%20Ver%2010.7.18.pdf)
+](https://medicine.umich.edu/sites/default/files/content/downloads/MCBK%20Manifesto%20Ver%2010.7.18.pdf) <i> The payoads of Knowledge Objects are CBK artifacts. It is CBK that needs to flow openly and freely to advance biomedicine and have Learning Health Systems. </i>
 
 - [Mobilizing Computable Biomedical Knowledge for
-Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.duke.edu/files/field/attachments/GPMF_Richesson.09.27.2018.pdf)
+Precision Medicine](https://precisionmedicine.duke.edu/sites/precisionmedicine.duke.edu/files/field/attachments/GPMF_Richesson.09.27.2018.pdf) <i> All precision medicine depends on machine-executable algorithms - CBK - to do required precisionizing. </i>
 
-- [Stewardship in the “Age of Algorithm”](https://firstmonday.org/ojs/index.php/fm/article/view/8097/6583)
+- [Stewardship in the “Age of Algorithm”](https://firstmonday.org/ojs/index.php/fm/article/view/8097/6583) <i> The legal, social, and ethical impacts of algorithms must be considered. All CBK is biased and limited, and its biases and limits need to be well-understood. </i>
 
 #### Informatics
 
@@ -64,17 +64,15 @@ computer-based decision support](https://academic.oup.com/jamia/article/18/Suppl
 - [A “Fundamental Theorem” of Biomedical Informatics](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649317/) <i> Changing an information space for a person is not the same as improving it. </i>
 
 - [Ten Commandments for Effective Clinical Decision Support: Making the
-Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC264429/)
-
-- [What informatics is and isn't](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3638194/)
+Practice of Evidence-based Medicine a Reality](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC264429/) <i> The domain of biomedical informatics is keenly interested in using CBK for CDS. KGrid and Knowledge Objects enable CDS via webservices, providing the potential for designated communities of all sorts to bring forward their expertise and knowledge in machine-executable forms. </i>
 
 #### About Open Science
 
 - [Evidence-Based Medicine in the EMR Era](https://www.nejm.org/doi/full/10.1056/NEJMp1108726) <i> An important story of analyzing available data in real-time to gain knowledge to inform a single medical decision. </i>
 
-- [The unacknowledged convergence of open source, open access, and open science](https://ojphi.org/ojs/index.php/fm/article/view/1265/1185)
+- [The unacknowledged convergence of open source, open access, and open science](https://ojphi.org/ojs/index.php/fm/article/view/1265/1185) <i> The economics of the Knowledge Grid come into play in this article. </i>
 
-- [Ushering in a New Era of Open Science Through Data Sharing](https://jamanetwork.com/journals/jama/article-abstract/1668313)
+- [Ushering in a New Era of Open Science Through Data Sharing](https://jamanetwork.com/journals/jama/article-abstract/1668313) <i> Where data sharing goes, we believe machine-executable knowledge sharing must follow. </i>
 
 - [The science commons in health research: structure, function,
 and value](https://link.springer.com/article/10.1007/s10961-006-9016-9)
