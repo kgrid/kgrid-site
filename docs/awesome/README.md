@@ -2,9 +2,9 @@
 sidebarDepth: 6
 sidebar: auto
 ---
-# Awesome KGrid
+# Key KGrid Materials
 
-A curated list of KGrid publications, presentations, articles.
+A curated list of KGrid publications, presentations, and articles that shape and inspire our work.
 
 ## KGrid Team
 
@@ -110,6 +110,7 @@ Triple Helix of university–industry–government relations](https://www.scienc
 ### Relevant Web Sites
 
 - [Research Object](http://www.researchobject.org/)
+- [MAGIC - Making GRADE the Indespensible Choice](http://www.magicproject.org/)
 
 ### Documents
 
