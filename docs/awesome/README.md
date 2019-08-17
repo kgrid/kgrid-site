@@ -20,7 +20,7 @@ management and sharing of computable biomedical knowledge for learning health sy
 Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/28423842) <i> Where are we going to put Knowledge Objects to manage them as resources? The need for a repository-archive is addressed here. </i>
 
 - [Architecture and Initial Development of a Knowledge-as-a-Service Activator
- for Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/29677991) <i> How are we going to run the payloads as Knowledge Objects via APIs and webservices? The service-side component of KGrid - called an Activator - is described here. </i>
+ for Computable Knowledge Objects for Health](https://www.ncbi.nlm.nih.gov/pubmed/29677991) <i> How can we run the payloads in Knowledge Objects via APIs and webservices? The service-side component of KGrid - called an Activator - is described here. </i>
 
 - [ScriptNumerate: A Data-to-Advice Pipeline using Compound Digital Objects
 to Increase the Interoperability of Computable Biomedical Knowledge](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371244/) <i> Can Knowledge Objects be created automatically by extending an analytic pipeline? Yes, they can. This finding opens the door to analytics that immediately result in manageable resources and active webservices. </i>
@@ -107,7 +107,9 @@ Triple Helix of university–industry–government relations](https://www.scienc
 
 ### Relevant Web Sites
 
-- [Research Object](http://www.researchobject.org/)
+- [Research Object](http://www.researchobject.org/) <i> Improving the reproducibility of research is being advanced by using Research Objects, objects that can contain Knowledge Objects to convey results in machine-executable formats. </i>
+ 
+ 
 - [MAGIC - Making GRADE the Indespensible Choice](http://www.magicproject.org/)
 
 ### Documents
