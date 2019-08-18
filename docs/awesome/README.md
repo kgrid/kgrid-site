@@ -80,7 +80,7 @@ and value](https://link.springer.com/article/10.1007/s10961-006-9016-9)
 #### Perspectives on Knoweldge
 
 - [Big Data And New Knowledge In Medicine: The Thinking, Training, And
-Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2014.0053)
+Tools Needed For A Learning Health System](https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2014.0053) <i> To generate the knowledge we need, let inductive reasoning followed by validation complement deductive reasoning followed by hypothesis testing. </i>
 
 - [Desiderata for sharable computable biomedical knowledge for learning
 health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065) 
