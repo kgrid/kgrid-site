@@ -74,7 +74,7 @@ _click to enlarge_
 **Postman Resources**
 
  - [Sending the first request](https://learning.getpostman.com/docs/postman/launching_postman/sending_the_first_request)
- - [Writing tests in Postman](https://blog.getpostman.com/2017/10/25/writing-tests-in-postman/
+ - [Writing tests in Postman](https://blog.getpostman.com/2017/10/25/writing-tests-in-postman/)
  - [Test examples](https://learning.getpostman.com/docs/postman/scripts/test_examples/)
 
 ## Swagger Editor
