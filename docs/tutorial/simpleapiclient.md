@@ -35,6 +35,13 @@ HTTPie runs on windows, mac, linux, etc.  The following are examples of using
  [HTTPie](https://httpie.org)   to
 access the Knowledge Object Implementation and executing the Knowledge Object service.
 
+1. Install [HTTPie](https://httpie.org/#installation)
+1. Navigate to your terminal 
+1. type the GET or POST requests below
+
+<a href="/image/httpie.gif"> <img src="/image/httpie.gif"/></a>
+_click to enlarge_
+
 Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using
  [HTTPie](https://httpie.org)
 
@@ -48,16 +55,27 @@ Executing the Ten-year Fatal Cardiovascular Risk Calculation KO service using [H
  http POST http://activator.kgrid.org/score/calc/v0.3.0/score age:=48 gender=Female risk=low spb:=120 cholesterol:=8 smoker:=false
 ```
 
+
 ## Postman
 [Postman](https://www.getpostman.com/) is a powerful tool for performing
 integration testing with your API. It allows for repeatable, reliable tests
 that can be automated and used in a variety of environments.
 
-Import Postman [Cardiovascular Risk Calculation Collection](/guides/Cardiovascular_Risk_Calculation.postman_collection.json)
-into Postman. You will see two requests.  KO implementation request and KO service. Each
-request has a set of tests.
+1. Download [Postman](https://www.getpostman.com/downloads/)
+1. Download Postman [Cardiovascular Risk Calculation](/guides/Cardiovascular_Risk_Calculation.postman_collection.json) Collection
+1. Import Cardiovascular Risk Calculation collection [Postman](https://learning.getpostman.com/docs/postman/collections/intro_to_collections)
+1. Select the Get Cardiovascular Risk Knowledge Object Implementation request or 
+   Calculate Cardiovascular Risk request and _Send_
 
-MORE TO COME!!!!
+<a href="/image/postman.gif"> <img src="/image/postman.gif"/></a>
+_click to enlarge_
+
+
+**Postman Resources**
+
+ - [Sending the first request](https://learning.getpostman.com/docs/postman/launching_postman/sending_the_first_request)
+ - [Writing tests in Postman](https://blog.getpostman.com/2017/10/25/writing-tests-in-postman/
+ - [Test examples](https://learning.getpostman.com/docs/postman/scripts/test_examples/)
 
 ## Swagger Editor
 The [Swagger Editor](https://swagger.io/tools/swagger-editor/) is an open source editor to
