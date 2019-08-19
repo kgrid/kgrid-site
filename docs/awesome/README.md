@@ -36,9 +36,6 @@ to Increase the Interoperability of Computable Biomedical Knowledge](https://www
 - [The Knowledge Grid: Demo of a Platform to Manage and Disseminate Computable Biomedical
 Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/event/member/508140)
 
-### Documents
-- [Strategic Plan Summer 2017](https://drive.google.com/open?id=1LDR_Hf9yks0Mjr3B7IVkaEf9q3jkd9dB)
-
 ## Other Resources
 
 ### Papers Related to KGrid
