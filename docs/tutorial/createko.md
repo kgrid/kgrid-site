@@ -28,7 +28,7 @@ To create from the template of bundled KO, run the KGrid CLI command with the fl
 $ kgrid create myko --bundled
 ```
 
-Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the source files into an bundle, ready for Kgrid activator.
+Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the source files into a JAVASCRIPT bundle, ready for KGrid activator.
 
 Looking in to the folder of `/src`, you will find a few more files in addition to `index.js`.
 
