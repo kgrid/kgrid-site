@@ -18,7 +18,7 @@ module.exports = {
       { text: 'KGrid.org', link: 'https://kgrid.org' },
       { text: "Developer's Guide", link: '/developer/'},
       { text: "Integrator's Guide", link: '/integrator/'},
-      { text: "SCORE Tutorial", link: '/tutorial/'},
+      { text: "Advanced Tutorial", link: '/tutorial/'},
       { text: "KGrid API", link: '/api/'},
       { text: "Fall 2019 Workshop", link: '/workshop2019.md'}
     ],

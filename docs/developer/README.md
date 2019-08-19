@@ -251,7 +251,7 @@ For more information on the jest framework and unit testing in general see [Jest
 
 Let's make the object your own! There are several kinds of changes that you'll make as you work on an object.
 - The top-level and implementation specific metadata can be changed (and sometimes those changes need ot be coordinated with code and service changes.)
-- You may change the code (there are lots of ways to organize and write your code. See [Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
+- You may change the code (there are lots of ways to organize and write your code. See [KO Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
 - You can change the services description (which services are available, there names, the inputs and outputs, etc.) These changes also need to be coordinated with the code.
 
 Spend some time reviewing the structure and files in the KO you just created. See [KO Deep Dive](../tutorial/deepdive.md) for more info.
@@ -375,4 +375,4 @@ For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy
 
 
 ## What's next?
-Now, you learned the basics of Knowledge Grid. [KGRID SCORE tutorial](../tutorial/) will guide you through the process of developing a KO implementing SCORE risk calculation. The tutorial will also cover a wide range of advanced topics.
+Now, you learned the basics of Knowledge Grid. [KGRID Advanced Tutorial](../tutorial/) will guide you through the process of developing a KO implementing SCORE risk calculation. The tutorial will also cover a wide range of advanced topics.

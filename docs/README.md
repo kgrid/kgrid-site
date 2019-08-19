@@ -36,7 +36,7 @@ description: Knowledge Grid Guides
   </div>
   <div class="feature">
     <div class="action hero">
-      <a href="tutorial/" class="nav-link action-button">SCORE Tutorial</a>
+      <a href="tutorial/" class="nav-link action-button">KO Advanced Tutorial</a>
     </div>    
     <h2>KO Advanced Tutorial</h2>
     <p style="color: darkred;">(work in progress)</p>

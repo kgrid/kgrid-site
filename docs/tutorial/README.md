@@ -1,6 +1,6 @@
 ---
 sidebarDepth: 2
-description: KGrid SCORE Tutorial with advanced topics
+description: KO Advanced Tutorial digs deeper into additional topics 
 ---
 # Overview
 
