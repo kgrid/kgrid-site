@@ -39,7 +39,7 @@ access the Knowledge Object Implementation and executing the Knowledge Object se
 1. Navigate to your terminal 
 1. type the GET or POST requests below
 
-<a href="/image/httpie.gif"> <img src="/image/httpie.gif"/></a>
+<a href="/guides/image/httpie.gif"> <img src="/guides/image/httpie.gif"/></a>
 _click to enlarge_
 
 Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using
@@ -67,7 +67,7 @@ that can be automated and used in a variety of environments.
 1. Select the Get Cardiovascular Risk Knowledge Object Implementation request or 
    Calculate Cardiovascular Risk request and _Send_
 
-<a href="/image/postman.gif"> <img src="/image/postman.gif"/></a>
+<a href="/guides/image/postman.gif"> <img src="/guides/image/postman.gif"/></a>
 _click to enlarge_
 
 
