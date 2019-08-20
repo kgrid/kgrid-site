@@ -385,6 +385,10 @@ paths:
             200:
               description: OK
               content:
+                application/x-yaml:
+                  schema:
+                    type: object
+                    format: yaml
                 application/json:
                   schema:
                     type: object
