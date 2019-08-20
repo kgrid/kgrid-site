@@ -42,6 +42,14 @@ description: Knowledge Grid Guides
     <p style="color: darkred;">(work in progress)</p>
     <p>Learn how to develop a Knowledge Object implementing SCORE risk calculation and more advanced topics.</p>
   </div>
+  <div class="feature">
+  <div class="action hero">
+  <a href="awesome/" class="nav-link action-button">Awesome Stuff</a>
+  </div>    
+  <h2>A curated list of Key KGrid materials</h2>
+  <p style="color: darkred;">(Continually updating)</p>
+  <p> KGrid publications, presentations, and articles that shape and inspire our work.</p>
+  </div>
 </div>
 
 ----

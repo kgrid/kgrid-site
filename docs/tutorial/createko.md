@@ -59,4 +59,4 @@ The build process will create a file `main.js` in `/dist` directory. `service.ya
 
 ## Try the bundled KO
 
-Now, the bundled KO is ready to be activated. The activation process is the same as described in the developer's guide. Once activated, you can use Swagger Editor to try out the KO service.
+Now, the bundled KO is ready to be activated. The activation process is the same as described in [the developer's guide](../developer/#start-a-local-grid). Once activated, you can use Swagger Editor to try out the KO service.
