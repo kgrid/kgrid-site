@@ -30,16 +30,6 @@ module.exports = {
           '',
           'createko',
           {
-            title: 'Deep Dive into the KO',
-            collapsable: false,
-            children: [
-              '/tutorial/ko-intro',
-              '/tutorial/service',
-              '/tutorial/sourcecode',
-              '/tutorial/metadata'
-            ]
-          },
-          {
             title: 'Bring the KO to the Grid',
             collapsable: false,
             children: [
@@ -55,6 +45,16 @@ module.exports = {
               '/tutorial/shelfapi',
               '/tutorial/simpleapiclient',
               '/tutorial/executiveobject'
+            ]
+          },
+          {
+            title: 'Deep Dive into the KO',
+            collapsable: false,
+            children: [
+              '/tutorial/ko-intro',
+              '/tutorial/service',
+              '/tutorial/sourcecode',
+              '/tutorial/metadata'
             ]
           }
         ]
