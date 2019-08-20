@@ -70,15 +70,13 @@ that can be automated and used in a variety of environments.
 <a href="/guides/image/postman.gif"> <img src="/guides/image/postman.gif"/></a>
 _click to enlarge_
 
-**Automated Postman Testing**
-
-MORE TO COME!!!
 
 **Postman Resources**
 
  - [Sending the first request](https://learning.getpostman.com/docs/postman/launching_postman/sending_the_first_request)
  - [Writing tests in Postman](https://blog.getpostman.com/2017/10/25/writing-tests-in-postman/)
  - [Test examples](https://learning.getpostman.com/docs/postman/scripts/test_examples/)
+ - [Command Line Integration With Newman](https://learning.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman/)
 
 ## Swagger Editor
 The [Swagger Editor](https://swagger.io/tools/swagger-editor/) is an open source editor to
