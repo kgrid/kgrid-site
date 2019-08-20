@@ -80,17 +80,17 @@ _click to enlarge_
 
 ## Swagger Editor
 The [Swagger Editor](https://swagger.io/tools/swagger-editor/) is an open source editor to
-design, define and document RESTful APIs in the [OpenAPI](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) Specification. 
-[OpenAPI](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) definitions 
-are simple JSON or YAML files that you can create and edit with any text editor. 
+design, define and document RESTful APIs in the [OpenAPI](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) Specification.
+[OpenAPI](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md) definitions
+are simple JSON or YAML files that you can create and edit with any text editor.
 But the right tooling can make your job a lot easier.  The Swagger Editor can also added in
 testing of our KO Service.
 
-1. We will view the OpenAPI specification for the Cardiovascular Risk Calculation KO Implementation. 
-Each KO Implementation exposes its OpenAPI specifications via a 
+1. We will view the OpenAPI specification for the Cardiovascular Risk Calculation KO Implementation.
+Each KO Implementation exposes its OpenAPI specifications via a
 _/kos/naan/name/implementation/service_ endpoint for example [http://activator.kgrid.org/kos/score/calc/v0.3.0/service](http://activator.kgrid.org/kos/score/calc/v0.3.0/service)
 
-2. Now in the Swagger Editor we can reference this specification and access Swagger Editor 
+2. Now in the Swagger Editor we can reference this specification and access Swagger Editor
 [http://editor.swagger.io/?url=http://activator.kgrid.org/kos/score/calc/v0.3.0/service](http://editor.swagger.io/?url=http://activator.kgrid.org/kos/score/calc/v0.3.0/service).  
 You notice the we passed the OpenAPI spec via the url query parameter
 
