@@ -7,7 +7,7 @@ paths:
   /kos:
     get:
       tags:
-        - Knowledge Object Read/Update/Delete
+        - Knowledge Object
       summary: Finds all knowledge objects
       description: |
         Returns a collection of knowledge objects in the form of a JSON array. The JSON
@@ -75,7 +75,7 @@ paths:
   /kos/{naan}/{name}:
     get:
       tags:
-        - Knowledge Object Read/Update/Delete
+        - Knowledge Object
         - Knowledge Object Export
       summary: Find Knowledge Object based on
       operationId: findko
@@ -119,7 +119,7 @@ paths:
           description: Unexpected error.
     put:
       tags:
-        - Knowledge Object Read/Update/Delete
+        - Knowledge Object
       summary: Update Knowledge Object
       operationId: updateko
       parameters:
@@ -164,7 +164,7 @@ paths:
                   $ref: '#/components/examples/KnowledgeObject'
     delete:
       tags:
-        - Knowledge Object Read/Update/Delete
+        - Knowledge Object
       summary: Delete Knowledge Object
       operationId: deleteko
       parameters:
@@ -201,7 +201,7 @@ paths:
   /kos/{naan}/{name}/{implementation}:
     get:
       tags:
-        - Knowledge Object Implementation Read/Update/Delete
+        - Knowledge Object Implementation
         - Knowledge Object Export
       summary: Find Knowledge Object based on
       operationId: findkoimplementation
@@ -250,7 +250,7 @@ paths:
                 format: binary
     put:
       tags:
-        - Knowledge Object Implementation Read Update Delete
+        - Knowledge Object Implementation
       summary: Update Knowledge Object
       operationId: updatekoimplementation
       parameters:
@@ -304,7 +304,7 @@ paths:
                   $ref: '#/components/examples/KnowledgeObjectImplementation'
     delete:
       tags:
-        - Knowledge Object Implementation Read/Update/Delete
+        - Knowledge Object Implementation
       summary: Delete Knowledge Object Implementation
       operationId: deletekoimplementation
       parameters:
@@ -346,6 +346,49 @@ paths:
               example:
                 KnowledgeObject:
                   $ref: '#/components/examples/KnowledgeObject'
+
+  /kos/{naan}/{name}/{implementation}/service:
+    get:
+      tags:
+        - Knowledge Object Implementation
+      summary: Find Knowledge Object Implementation OpenAPI Service Specification
+      operationId: findkoimplementationservice
+      parameters:
+          - name: naan
+            in: path
+            description: Name Assigning Authority unique number
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: hello
+          - name: name
+            in: path
+            description: Name Assigning Authority name
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: world
+          - name: implementation
+            in: path
+            description: Specific Implementation of the KO
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: v0.1.0
+      responses:
+            200:
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    format: json
 
   /kos/manifest:
     post:
