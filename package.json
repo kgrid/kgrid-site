@@ -14,5 +14,8 @@
     "vuepress": "^1.0.2",
     "webpack": "^4.39.1",
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@dovyp/vuepress-plugin-clipboard-copy": "^1.0.0-alpha.7"
   }
 }
