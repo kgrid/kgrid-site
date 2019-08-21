@@ -22,8 +22,10 @@ If packaging a specific implementation of the KO, the filename will be
 
 KGRID CLI provides a command to help the packaging process.
 
+To package the KO created in the previous section, run
+
 ```
-$ kgrid package [ARK]
+ kgrid package ark:/<username>/myko
 ```
 
 Details for the command can be found in [KGRID-CLI Documentation](http://kgrid.org/kgrid-cli/#kgrid-package-ark)
