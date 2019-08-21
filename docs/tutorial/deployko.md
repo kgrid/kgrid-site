@@ -4,7 +4,10 @@ When a KO is packaged into a ZIP file complying with the KGrid packaging specifi
 
 ## Deploy using KGRID CLI
 
-If you have a ZIP file as the packaged KO, you can deploy the KO using KGRID CLI. The command to use is `kgrid upload`.
+If you have a ZIP file as the packaged KO, you can deploy the KO using KGRID CLI. The command to use is
+```
+$ kgrid upload [ARK]
+```
 
 By default, the KO will be deployed to the locally running KGrid Activator at http://localhost:8080.
 
@@ -27,7 +30,7 @@ In the request body, assign the zip file name to the key of `ko`.
 
 Details for the service can be found in [KGRID-API Documentation](http://kgrid.org/guides/api/#kgrid-activator-api)
 
-## Try the deployed KO after its activation
+## Try the deployed KO
 
 If your packaged KO has been deployed to a KGRID Activator, you can activate the KO and try it with KGRID CLI command `kgrid play`
 

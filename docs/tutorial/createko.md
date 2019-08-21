@@ -43,6 +43,44 @@ When we build the bundled KO, `index.js` will be the main entry for `webpack`.
 
 Similar with the simple KO, the bundled KO under development is basically a Javascript project which follows the development pattern of node.js/npm.
 
+In our example template, `webpack` is used to build the bundled script. We use default values for the webpack configuration wherever possible to keep it simple.
+
+This shows the configuration file from the template.
+
+```
+let path = require('path');
+module.exports = {
+
+  entry: './src/index.js',
+
+  output: {
+    library: "score",
+    path: path.resolve(__dirname, 'dist')
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
+};
+```
+
+By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for Nashorn Script Engine, only 'var', 'assign' and 'this' are valid options.
+
+By default, the output file is set as 'main.js' in the folder defined in `path`. In the example template, it will be `/dist`.
+
+For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
+
 You need to change to the implementation directory and run
 ```
 npm install

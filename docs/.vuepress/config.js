@@ -30,24 +30,10 @@ module.exports = {
         '/tutorial/':[
           '',
           'createko',
-          {
-            title: 'Bring the KO to the Grid',
-            collapsable: false,
-            children: [
-              '/tutorial/buildko',
-              '/tutorial/packageko',
-              '/tutorial/deployko'
-            ]
-          },
-          {
-            title: 'Use the KO',
-            collapsable: false,
-            children: [
-              '/tutorial/shelfapi',
-              '/tutorial/simpleapiclient',
-              '/tutorial/executiveobject'
-            ]
-          },
+          'packageko',
+          'deployko',
+          'simpleapiclient',
+          'executiveobject',
           {
             title: 'Deep Dive into the KO',
             collapsable: false,

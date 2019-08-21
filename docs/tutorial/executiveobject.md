@@ -1,4 +1,4 @@
-# Use the KO as dependency
+# KO calling other KOs
 
 An executive Knowledge Object can call the functions from other knowledge Objects, orchestrating the data flow and process among these KOs.
 
