@@ -11,36 +11,29 @@ description: Knowledge Grid Guides
     <h2>For developers of knowledge objects</h2>
     <p>Develop new knowledge objects and collections from a simple set of starter objects in the language of your choice.</p>
   </div>
+
+  <div class="feature">
+  <div class="action hero">
+  <a href="tutorial/" class="nav-link action-button">KO Advanced Tutorial</a>
+  </div>    
+  <h2>KO Advanced Tutorial</h2>
+  <p style="color: darkred;">(work in progress)</p>
+  <p>Learn how to develop a Knowledge Object implementing SCORE risk calculation and more advanced topics.</p>
+  </div>
+  <div class="feature">
+    <div class="action hero">
+        <a href="api/" class="nav-link action-button">KGrid API</a>
+    </div>    
+    <h2>KGRID Activator API </h2>
+    <p>KGRID Activator API Documentations</p>
+  </div>
   <div class="feature">
     <div class="action hero">
         <a href="integrator/" class="nav-link action-button">Integrator's Guide</a>
     </div>    
     <h2>For system integrators running grids in research and health care settings</h2>
     <p style="color: darkred;">(work in progress)</p>
-    <p>Learn how to set up and configure the Knowledge Grid components — Library, Activator, Publisher — and configure them for your environment.</p>
-  </div>
-  <div class="feature">
-    <div class="action hero">
-        <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
-    </div>    
-    <h2>For Librarians managing the Knowledge Objects and For Users finding the Knowledge Objects</h2>
-    <p style="color: darkred;">(coming soon)</p>
-    <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
-  </div>
-  <div class="feature">
-    <div class="action hero">
-        <a href="api/" class="nav-link action-button">KGrid API</a>
-    </div>    
-    <h2>KGRID Activator API and KO Service API</h2>
-    <p>KGRID Activator API and KO service API Documentations</p>
-  </div>
-  <div class="feature">
-    <div class="action hero">
-      <a href="tutorial/" class="nav-link action-button">KO Advanced Tutorial</a>
-    </div>    
-    <h2>KO Advanced Tutorial</h2>
-    <p style="color: darkred;">(work in progress)</p>
-    <p>Learn how to develop a Knowledge Object implementing SCORE risk calculation and more advanced topics.</p>
+    <p>Learn how to set up and configure the Knowledge Grid components and configure them for your environment.</p>
   </div>
   <div class="feature">
   <div class="action hero">
@@ -49,6 +42,14 @@ description: Knowledge Grid Guides
   <h2>A curated list of Key KGrid materials</h2>
   <p style="color: darkred;">(Continually updating)</p>
   <p> KGrid publications, presentations, and articles that shape and inspire our work.</p>
+  </div>
+  <div class="feature">
+  <div class="action hero">
+  <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
+  </div>    
+  <h2>For Librarians managing the Knowledge Objects and For Users finding the Knowledge Objects</h2>
+  <p style="color: darkred;">(coming soon)</p>
+  <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
   </div>
 </div>
 

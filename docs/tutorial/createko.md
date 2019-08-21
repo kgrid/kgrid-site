@@ -25,7 +25,7 @@ The core function is to compute the 10-year CVD risk based on the following pati
 To create from the template of bundled KO, run the KGrid CLI command with the flag of `--bundled`:
 
 ```
-$ kgrid create myko --bundled
+ kgrid create myko --bundled
 ```
 
 Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the source files into a JAVASCRIPT bundle, ready for KGrid activator.

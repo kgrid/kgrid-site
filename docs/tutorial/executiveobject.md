@@ -37,7 +37,7 @@ As shown in the above code, the result returned from the child KOs will be aggre
 KGRID CLI includes an example template so that you can use `kgrid create` to create an executive object to try it. It will call the simple KO you created during going through the developer's guide.
 
 ``` bash
-$ kgrid create newko --executive
+  kgrid create newko --executive
 ```
 
 After `newko` is created, change to the directory of the implementation folder, modify the file `/src/index.js` to get the executor for the simple KO you created.

@@ -6,9 +6,9 @@ Let's take a look at what's inside a knowledge object, starting from the top lev
 
 ```
 ├── hello-world
-    ├── metadata.json 
+    ├── metadata.json
     └── v0.1.0
-        ├── metadata.json 
+        ├── metadata.json
         ├── service.yaml
         └── welcome.js
 ```
@@ -22,7 +22,7 @@ In the packaged object metadata is kept in two `json` files, one for the object 
 Metadata at the top level includes an identifier, minimal description data, and required knowledge object properties from the [Knowledge Object Information Ontology (KOIO)](koio)
 
 `hello-world/metadata.json`
-```json 
+```json
 {
   "@id": "hello-world",
   "@type":"koio:KnowledgeObject",
@@ -58,7 +58,7 @@ Just as in the top-level object, the implementation has it's own metadata. THe i
 One of the difficulties in versioning knowledge objects arises from their dual nature. They are both code objects *and* small services. Versioning code and versioning service APIs each have their own set of drivers. Don't worry about that for now; the topic is addressed further in [Packaging and Publishing]().
 :::
 
-and the implementation metadata 
+and the implementation metadata
 `hello-world/v0.1.0/metadata.json`
 ```json
 {
@@ -73,4 +73,3 @@ and the implementation metadata
   ]
 }
 ```
-
