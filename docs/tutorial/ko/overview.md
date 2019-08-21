@@ -1,4 +1,4 @@
-# Overview
+# Knowledge Object Overview
 
 Conceptually, a knowledge object represents computable knowledge as both a resource and a service. That is, it contains description of what it does, and the code to do it. Also, in order to make the object findable, accessible, interoperable, and reusable, the KO has enough metadata to describe itself as both resource and service.
 
@@ -17,7 +17,7 @@ Let's take a look at what's inside a knowledge object, starting from the top lev
 
 ### Metadata
 
-In the packaged object metadata is kept in two `json` files, one for the object as a whole, and the other for each implementatio(KOs can have multiple implementations, **BUT JUST DON'T!** That's a packaging thing, so see [Organizing your code]() and [Packaging and publishing]() )
+In the packaged object metadata is kept in two `json` files, one for the object as a whole, and the other for each implementation(KOs can have multiple implementations, **BUT JUST DON'T!** )
 
 Metadata at the top level includes an identifier, minimal description data, and required knowledge object properties from the [Knowledge Object Information Ontology (KOIO)](koio)
 
@@ -38,9 +38,9 @@ Metadata at the top level includes an identifier, minimal description data, and 
 }
 ```
 
-Descriptive metadata elements like `title` or `description`, administrative metadata like `identifier`, and technical metadata like the `koio:KnowledgeObject` the element are described in the section [More about Metadata]() may be repeated at the implementation level. We recommend using standard *dcterms* metadata elements, or similar. Some items may be required (see [KO Metadata standard]()). You may add additional descriptive or domain specific metadata elements as needed. We recommend you use standard vocabularies and express them in the `context` element so as to enable metadata use in linked data scenarios.
+Descriptive metadata elements like `title` or `description`, administrative metadata like `identifier`, and technical metadata like the `koio:KnowledgeObject` the element are described in the section [More about Metadata](moreaboutmetadata.md) may be repeated at the implementation level. We recommend using standard *dcterms* metadata elements, or similar. Some items may be required (see [KO Metadata standard](moreaboutmetadata.md)). You may add additional descriptive or domain specific metadata elements as needed. We recommend you use standard vocabularies and express them in the `context` element so as to enable metadata use in linked data scenarios.
 
-### The `hasImplementation` element
+**Has Implementation element**
 
 Notice that the top-level metadata uses the `hasImplementation` element to point to one or more implementations. In the KO package an implementation is represented by a folder containing all the required and optional files needed to deploy the object in a suitable runtime and route requests to the service it exposes.
 

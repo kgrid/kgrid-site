@@ -34,12 +34,30 @@ module.exports = {
             collapsable: false,
             children: [
               '/tutorial/ko/overview',
+              '/tutorial/ko/moreaboutmetadata',
               '/tutorial/ko/koio'
             ]
           },
           'createko',
           'packageko',
           'deployko',
+          {
+            title: 'KO Service OpenAPI',
+            collapsable: false,
+            children: [
+              '/tutorial/openapi/overview',
+              '/tutorial/openapi/tools'
+            ]
+          },
+          {
+            title: 'KO Service Testing',
+            collapsable: false,
+            children: [
+              '/tutorial/testing/testing',
+              '/tutorial/testing/unit',
+              '/tutorial/testing/integration',
+            ]
+          },
           {
             title: 'KO Service Clients',
             collapsable: false,
@@ -50,14 +68,7 @@ module.exports = {
               '/tutorial/clients/swagger'
             ]
           },
-          {
-            title: 'KO Service OpenAPI',
-            collapsable: false,
-            children: [
-              '/tutorial/openapi/overview',
-              '/tutorial/openapi/tools'
-            ]
-          },
+
           'executiveobject',
           {
             title: 'Deep Dive into the KO',
