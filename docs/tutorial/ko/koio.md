@@ -9,8 +9,9 @@ KOIO is defined by KOIO JSON-LD Context, which has these elements:
 computable knowledge and therefore comprised of at least one Knowledge Object Implementation. 
 
 - [Knowledge Object Implementation](http://kgrid.org/koio/contexts/implementation.jsonld) - an Information Artifact that describes a functional instance of the Knowledge Object. 
-    - Implementation Service Specification is an Information Artifact that describes a computational 
+    - _Implementation Service Specification_ is an Information Artifact that describes a computational 
     service that is enabled by a KnowledgeObject
-    - Implementation Deployment Specification a relation that holds between a whole KnowledgeObject 
+    - _Implementation Deployment Specification_ a relation that holds between a whole KnowledgeObject 
     and its Deployment Instruction parts
-    - Implementation Payload - Computable Knowledge Resource represented in manner that is machine-interpretable 
+    - _Implementation Payload_ - Computable Knowledge Resource represented in manner that is machine-interpretable 
+ 

@@ -34,7 +34,6 @@ module.exports = {
             collapsable: false,
             children: [
               '/tutorial/ko/overview',
-              '/tutorial/ko/moreaboutmetadata',
               '/tutorial/ko/koio'
             ]
           },
@@ -69,16 +68,7 @@ module.exports = {
             ]
           },
 
-          'executiveobject',
-          {
-            title: 'Deep Dive into the KO',
-            collapsable: false,
-            children: [
-              '/tutorial/ko-intro',
-              '/tutorial/sourcecode',
-              '/tutorial/metadata'
-            ]
-          }
+          'executiveobject'
         ]
       }
 
