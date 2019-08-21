@@ -29,6 +29,14 @@ module.exports = {
     sidebar: {
         '/tutorial/':[
           '',
+          {
+            title: 'Anatomy of a KO',
+            collapsable: false,
+            children: [
+              '/tutorial/ko/overview',
+              '/tutorial/ko/koio'
+            ]
+          },
           'createko',
           'packageko',
           'deployko',
