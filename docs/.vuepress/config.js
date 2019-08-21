@@ -32,14 +32,30 @@ module.exports = {
           'createko',
           'packageko',
           'deployko',
-          'simpleapiclient',
+          {
+            title: 'KO Service Clients',
+            collapsable: false,
+            children: [
+              '/tutorial/clients/curl',
+              '/tutorial/clients/httpie',
+              '/tutorial/clients/postman',
+              '/tutorial/clients/swagger'
+            ]
+          },
+          {
+            title: 'KO Service OpenAPI',
+            collapsable: false,
+            children: [
+              '/tutorial/openapi/overview',
+              '/tutorial/openapi/tools'
+            ]
+          },
           'executiveobject',
           {
             title: 'Deep Dive into the KO',
             collapsable: false,
             children: [
               '/tutorial/ko-intro',
-              '/tutorial/service',
               '/tutorial/sourcecode',
               '/tutorial/metadata'
             ]
