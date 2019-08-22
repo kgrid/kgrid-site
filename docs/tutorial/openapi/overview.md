@@ -20,6 +20,9 @@ info:
 ### Servers
 The servers section specifies the API server and base URL. for KO Services we use the [Archival Resource Key](https://en.wikipedia.org/wiki/Archival_Resource_Key) (ark id) which is name/naan/implementation.
 ```yaml
+
+...
+
 servers:
   - url: /score/calc/v0.3.0
     description: SCORE risk calculation.
@@ -28,6 +31,9 @@ servers:
 ### Paths
 The paths section defines individual endpoints (paths) in your API.  Currently KO Services support the _POST_ HTTP method.
 ```yaml
+
+...
+
 paths:
   /score:
     post:
@@ -38,8 +44,11 @@ paths:
         
 ```
 ### Request Body
-The requestBody keyword to describe the body content and media type. KO Services use json inputs.  I this example the json format is defined in the _input_ scheme defined in the document.
+The requestBody keyword describes the body content and media type. KO Services use json inputs.  The json format is defined in the _input_ scheme components section of the  document.
 ```yaml
+
+...
+
       requestBody:
         description: inputs
         required: true
@@ -49,9 +58,12 @@ The requestBody keyword to describe the body content and media type. KO Services
               $ref: '#/components/schemas/input'
  ```
 
-Here is the input json definition with type and examples.
+Here is the _input_ json definition with type and examples.
 
 ```yaml
+
+...
+
 components:
   schemas:
     input:
@@ -89,9 +101,12 @@ components:
           example: false
 ```
 ### Responses
-To response definition is by status code.  The content defines the type and format via a scheme. 
+To response definition is categorized by status code.  The content defines the type and format via a scheme _output_. 
 
 ```yaml
+
+...
+
       responses:
         '200':
           description: response
@@ -102,9 +117,12 @@ To response definition is by status code.  The content defines the type and form
 ```
 
 
-Here is the output json definition with type and examples.
+Here is the _output_ json definition with type and examples.
 
 ```yaml
+
+...
+
 components:
   schemas:
      ...
@@ -125,6 +143,9 @@ Extensions, or vendor extensions, are custom properties that start with _x-_.   
 - entry - the function name 
         
 ```yaml
+
+...
+
       x-kgrid-activation:
         artifact: dist/main.js
         adapter: JAVASCRIPT
