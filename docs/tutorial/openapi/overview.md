@@ -1,7 +1,8 @@
-# Using OpenAPI
+# KO Service OpenAPI
 
 KO Service interfaces are describe using the [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification.  This specification defines the path(s) to the service, the request and response scheme and much more.  Here we will briefly describe the minimal information needed to describe a KO Service.  You can write OpenAPI definitions in YAML or JSON, our templates in KGrid CLI and our examples all use the YAML format, we found the format easier.  
 
+## Structure 
 The following describes the basic structure of OpenAPI 3.0 definition for the [Cardiovascular Risk Calculation KO Implementaion v0.3.0](http://activator.kgrid.org/kos/score/calc/v0.3.0/service)
 
 
@@ -129,5 +130,8 @@ Extensions, or vendor extensions, are custom properties that start with _x-_.   
         adapter: JAVASCRIPT
         entry: score
 ```
+## Resources
 
-
+- [OpenAPI Basic Structure](https://swagger.io/docs/specification/openapi-extensions/)
+- [OpenAPI Extensions](https://swagger.io/docs/specification/openapi-extensions/)
+- [OpenAPI Tools](https://openapi.tools/)

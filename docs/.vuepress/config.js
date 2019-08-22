@@ -45,15 +45,12 @@ module.exports = {
             collapsable: false,
             children: [
               '/tutorial/openapi/overview',
-              '/tutorial/openapi/tools',
-              '/tutorial/openapi/resources'
             ]
           },
           {
             title: 'KO Service Testing',
             collapsable: false,
             children: [
-              '/tutorial/testing/testing',
               '/tutorial/testing/unit',
               '/tutorial/testing/integration',
             ]
