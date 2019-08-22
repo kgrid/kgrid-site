@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 2
+sidebarDepth: 1
 description: KO Advanced Tutorial digs deeper into additional topics
 ---
 # Overview
