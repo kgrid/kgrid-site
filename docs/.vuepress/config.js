@@ -45,7 +45,8 @@ module.exports = {
             collapsable: false,
             children: [
               '/tutorial/openapi/overview',
-              '/tutorial/openapi/tools'
+              '/tutorial/openapi/tools',
+              '/tutorial/openapi/resources'
             ]
           },
           {
