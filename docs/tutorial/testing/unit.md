@@ -40,6 +40,9 @@ test('Female non-smoker 65', () => {
 
 ```
 
+## Resources
 
 
+- [Jest](https://jestjs.io/)
+- [Rewire](https://github.com/jhnns/rewire)
 
