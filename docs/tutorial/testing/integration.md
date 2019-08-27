@@ -3,7 +3,7 @@ The KGrid Team does both manual and automated Integration Testing testing fof KO
 [Newman](https://learning.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman/)*[]: 
 
 ## Postman
-Postman is a great tool when trying to slicing and dicing RESTful APIs.  It helps in creating, editing and testing APIs.  Please review our short demonstration of the KGrid Teams dive into [Postman](https://kgrid.org/guides/tutorial/clients/postman.html). 
+Postman is a great tool when trying to slice and dice RESTful APIs.  It helps in creating, editing and testing APIs.  Please review our short demonstration of the KGrid Teams dive into [Postman](https://kgrid.org/guides/tutorial/clients/postman.html). 
 
 KGrid Team's KO collections use Postman in their Integration Testing 
 
@@ -18,7 +18,7 @@ KGrid Team's KO collections use Postman in their Integration Testing
 For KO Service Integration Testing the KGrid Team develops some packing scripting to handle the process.  The following process comes from the [Opioid Collection](https://github.com/kgrid-objects/opioid-collection).  
 
 1. A _start_ script will download an KGid Activator if needed and start the activator pointing to the collection of KOs
-1. The _test:integration_ calls the _start_ script calls and wait for the KGrid activator to come online, when it does it call the _postman_ script
+1. The _test:integration_ calls the _start_ script and waits for the KGrid activator to come online, when it does it call the _postman_ script
 1. The _postman_ script runs a newman command using the Postman collection
 
 
