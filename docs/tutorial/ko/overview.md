@@ -19,7 +19,7 @@ Let's take a look at what's inside a knowledge object, starting from the top lev
 
 In the packaged object metadata is kept in two `json` files, one for the object as a whole, and the other for each implementation(KOs can have multiple implementations, **BUT JUST DON'T!** )
 
-Metadata at the top level includes an identifier, minimal description data, and required knowledge object properties from the [Knowledge Object Information Ontology (KOIO)](koio)
+Metadata at the top level includes an identifier, minimal description data, and required knowledge object properties from the [Knowledge Object Implementation Ontology (KOIO)](koio)
 
 `hello-world/metadata.json`
 ```json
