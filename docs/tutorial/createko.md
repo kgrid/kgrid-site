@@ -1,24 +1,13 @@
-# Create the bundled KO
+# KO Service with Dependencies
 
-## SCORE Project and the core function
+Many of the functions developed for KO Services are simple and require no external libraries or files.  However the use of these libraries and files can simplify design, increase maintainability and create a better solution.  
 
-The SCORE Project utilizes high and low European population risk model for estimation of 10-year risk of fatal cardiovascular disease (CVD), as described in the paper:
+Currently the KGrid Activator uses the [Nashorn](https://openjdk.java.net/projects/nashorn/) JavaScript engine for execution of JavaScript Objects. Nashorn implements [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) which doesn't support external dependencies without _bundling_ your function using [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
 
-[Conroy, R.M., Pyörälä, K., Fitzgerald, A.P., Sans, S., Menotti, A., De Backer, G., De Bacquer, D., Ducimetière, P., Jousilahti, P., Keil, U., et al. (2003). Estimation of ten-year risk of fatal cardiovascular disease in Europe: The SCORE project. European Heart Journal 24, 987–1003.](https://academic.oup.com/eurheartj/article/24/11/987/427645)
+The [10-Year Risk of Cardiovascular Disease KO](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc) is a object the could be developed using a function the has not dependencies ( [score-calc v0.1.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.1.0)).  However the introduction of external dependencies in the form of libraries and files creates a more testable, adaptable and maintainable function ([score-calc v0.3.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.3.0)).  
 
-The core function is to compute the 10-year CVD risk based on the following patient features as inputs:
+The use of [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) allows the function to be transpiled to [Nashorn](https://openjdk.java.net/projects/nashorn/) compliant [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) artifact.
 
-```json
-{
-  "age" : 86,           // age in years
-  "gender" : "female",  // gender - male or female
-  "risk" : "low",       // European population risk model - high or low
-  "sbp" : 140,          // systolic blood pressure in mmHg
-  "cholesterol" : 8,    // total cholesterol in mmol/l
-  "smoker":true         // true if a current smoker; otherwise, false
-}
-
-```
 
 ## Create a bundled KO using KGRID CLI
 
