@@ -66,8 +66,7 @@ By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for 
 
 
 ::: danger
-Note score in the output element _library: "score"_ must match the  x-kgrid-activation element _entry: score_ the [OpenAPI](
-/openapi/overview.html#extensions)
+Note score in the output element _library: "score"_ must match the  x-kgrid-activation element _entry: score_ the [OpenAPI](/tutorial/openapi/overview.html#extensions)
 :::
 
 For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
