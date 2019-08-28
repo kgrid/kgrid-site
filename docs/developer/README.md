@@ -15,7 +15,7 @@ The **Knowledge Grid** (KGrid) is an open-source platform for managing and runni
 The kind of knowledge that works well in the KGrid might be risk calculators, computable guidelines, or reference and lookup tables — anything that can be represented as a set of services. A researcher or developer writes code to implement the knowledge as one or more functions, and the resulting code is packaged along with service and deployment descriptions as a **knowledge object** (KO).
 
 ::: tip
-The fundamental thing the Knowledge Grid does is allow you to externalize key pieces of computable biomedical knowledge that would otherwise be embedded in applications, EHRs, databases, and backend services. This makes it easier to reuse and update that knowledge, across time, for multiple channels, and in many organizations.  
+The fundamental thing the Knowledge Grid does is allow you to externalize key pieces of computable biomedical knowledge that would otherwise be embedded in applications, EHRs, databases, and backend services. This makes it easier to reuse and update that knowledge, across time, for multiple channels, and in many organizations.
 :::
 
 ### Basics
@@ -316,7 +316,7 @@ Open up `myobject/impl/src/index.js` in your favorite editor.
 ```javascript
 function welcome(inputs){
  name = inputs.name
-  return "Welcome to Knowledge Grid, " + name.split(" ").reverse().join("");
+  return "Welcome to Knowledge Grid, " + name.split("").reverse().join("");
  }
 ```
 
