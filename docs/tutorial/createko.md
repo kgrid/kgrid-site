@@ -62,9 +62,12 @@ module.exports = {
 };
 ```
 
-By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for Nashorn Script Engine, only 'var', 'assign' and 'this' are valid options.
+By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for Nashorn Script Engine, only 'var', 'assign' and 'this' are valid options. By default, the output file is set as 'main.js' in the folder defined in `path`. In the example template, it will be `/dist`.
 
-By default, the output file is set as 'main.js' in the folder defined in `path`. In the example template, it will be `/dist`.
+
+::: danger
+Note score in the output element _library: "score"_ must match the  x-kgrid-activation element _entry: score_ the [OpenAPI](tutorial/openapi/overview.html#extensions)
+:::
 
 For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
 
