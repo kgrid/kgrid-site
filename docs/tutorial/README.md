@@ -6,8 +6,8 @@ description: KO Advanced Tutorial digs deeper into additional topics
 
 This tutorial will dig deeper into more advance topics surrounding KO development. The following topics are discussed.
 
-- We will start with a more detailed description of the []Anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html).
-- We will look at the development of more complex KO Services.  These KO services that have additional dependencies and require them to be _bundled_, []KO Service with Dependencies](https://kgrid.org/guides/tutorial/createko.html).
+- We will start with a more detailed description of the [Anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html).
+- We will look at the development of more complex KO Services.  These KO services that have additional dependencies and require them to be _bundled_, [KO Service with Dependencies](https://kgrid.org/guides/tutorial/createko.html).
 - We we will look using the KGrid CLI tool the packaging and deployment of our KO Services, [Package the KO](https://kgrid.org/guides/tutorial/packageko.html), [Deploy the packaged KO
 ](https://kgrid.org/guides/tutorial/deployko.html)
 - Review the OpenAPI specification and out it is used in the KO Service, [KO Service OpenAPI](https://kgrid.org/guides/tutorial/openapi/overview.html#structure)
