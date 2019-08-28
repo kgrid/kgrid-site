@@ -94,15 +94,15 @@ health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
 
 #### Sociotechnical Infrastructure Perspectives
 
-- [Steps Toward an Ecology of Infrastructure: Design and Access for Large Information Spaces](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.876.8789&rep=rep1&type=pdf)
+- [Steps Toward an Ecology of Infrastructure: Design and Access for Large Information Spaces](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.876.8789&rep=rep1&type=pdf) The concept of infrastructure is addressed here in fundamental ways.
 
 - [Demonstrating Cloud-based Clinical Decision Support at Scale: The
-Clinical Decision Support Consortium](http://ebooks.iospress.nl/publication/34506)
+Clinical Decision Support Consortium](http://ebooks.iospress.nl/publication/34506) Scale stories like this one reveal aspects of infrastructure. 
 
 - [The dynamics of innovation: from National Systems and “Mode 2” to a
-Triple Helix of university–industry–government relations](https://www.sciencedirect.com/science/article/pii/S0048733399000554)
+Triple Helix of university–industry–government relations](https://www.sciencedirect.com/science/article/pii/S0048733399000554) The sociotechnical infrastructures of scholarly production and scholarly communication are changing. Here is a view of some of the changes in these areas through the lens of innovation. 
 
-- [Toward an Information Infrastructure for Global Health Improvement](https://www.thieme-connect.com/products/ejournals/html/10.15265/IY-2017-004)
+- [Toward an Information Infrastructure for Global Health Improvement](https://www.thieme-connect.com/products/ejournals/html/10.15265/IY-2017-004) Learning Health Systems require high-functioning sociotechnical infrastructures along the lines described here. 
 
 ### Relevant Project Web Sites
 
