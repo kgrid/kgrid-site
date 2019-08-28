@@ -1,15 +1,13 @@
 # KO Service with Dependencies
 
-Many of the functions developed for KO Services are simple and require no external libraries or files.  However the use of these libraries and files can simplify design, increase maintainability and create a better solution.  
+Many of the functions developed for KO Services are simple and require no external libraries or files.  However the use of these libraries and files can simplify design, increase maintainability and create a better solution.
 
-Currently the KGrid Activator uses the [Nashorn](https://openjdk.java.net/projects/nashorn/) JavaScript engine for execution of JavaScript Objects. Nashorn implements [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) which doesn't support external dependencies without _bundling_ your function using [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).
+The [10-Year Risk of Cardiovascular Disease KO](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc) is a object the could be developed using a function the has not dependencies ( [score-calc v0.1.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.1.0)).  However the introduction of external dependencies in the form of libraries and files creates a more testable, adaptable and maintainable function ([score-calc v0.3.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.3.0)).
 
-The [10-Year Risk of Cardiovascular Disease KO](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc) is a object the could be developed using a function the has not dependencies ( [score-calc v0.1.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.1.0)).  However the introduction of external dependencies in the form of libraries and files creates a more testable, adaptable and maintainable function ([score-calc v0.3.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.3.0)).  
-
-The use of [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) allows the function to be transpiled to [Nashorn](https://openjdk.java.net/projects/nashorn/) compliant [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) artifact.
+Currently the KGrid Activator uses the [Nashorn](https://openjdk.java.net/projects/nashorn/) JavaScript engine for execution of JavaScript Objects. Nashorn implements [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) which doesn't support external dependencies without _bundling_ your function using [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).  The use of [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) allows the function to be transpiled to [Nashorn](https://openjdk.java.net/projects/nashorn/) compliant [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) artifact.
 
 
-## Create a bundled KO using KGRID CLI
+## Create bundled KO Service
 
 To create from the template of bundled KO, run the KGrid CLI command with the flag of `--bundled`:
 
@@ -28,7 +26,7 @@ Looking in to the folder of `/src`, you will find a few more files in addition t
 When we build the bundled KO, `index.js` will be the main entry for `webpack`.
 
 
-## Build the payload bundle
+## Build bundled KO Service
 
 Similar with the simple KO, the bundled KO under development is basically a Javascript project which follows the development pattern of node.js/npm.
 
@@ -84,7 +82,7 @@ npm run build
 The build process will create a file `main.js` in `/dist` directory. `service.yaml` is referring this file as the artifact for the service.
 
 
-## Try the bundled KO
+## Activate bundled KO Service
 
 Now, the bundled KO is ready to be activated. The activation process is the same as described in [the developer's guide](../developer/#start-a-local-grid).
 
