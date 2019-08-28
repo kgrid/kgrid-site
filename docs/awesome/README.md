@@ -6,7 +6,7 @@ sidebar: auto
 
 A curated list of KGrid publications, presentations, and articles that shape and inspire our work.
 
-## KGrid Team
+## KGrid Team Works
 
 ### Published Papers
 
@@ -38,7 +38,7 @@ Knowledge using digital Knowledge Objects](https://symposium2018.zerista.com/eve
 
 ## Other Resources
 
-### Papers Related to KGrid
+### Topics Related to KGrid
 
 #### Library Science
 
@@ -94,6 +94,8 @@ health systems](https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10065)
 
 #### Sociotechnical Infrastructure Perspectives
 
+- [Steps Toward an Ecology of Infrastructure: Design and Access for Large Information Spaces](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.876.8789&rep=rep1&type=pdf)
+
 - [Demonstrating Cloud-based Clinical Decision Support at Scale: The
 Clinical Decision Support Consortium](http://ebooks.iospress.nl/publication/34506)
 
@@ -102,14 +104,14 @@ Triple Helix of university–industry–government relations](https://www.scienc
 
 - [Toward an Information Infrastructure for Global Health Improvement](https://www.thieme-connect.com/products/ejournals/html/10.15265/IY-2017-004)
 
-### Relevant Web Sites
+### Relevant Project Web Sites
 
 - [Research Object](http://www.researchobject.org/) <i> Improving the reproducibility of research is being advanced by using Research Objects, objects that can contain Knowledge Objects to convey results in machine-executable formats. </i>
  
  
 - [MAGIC - Making GRADE the Indespensible Choice](http://www.magicproject.org/)
 
-### Documents
+### Principles, Manifestos, and Stuff Like That
 
 - [FAIR Principles](https://www.force11.org/group/fairgroup/fairprinciples)
 
