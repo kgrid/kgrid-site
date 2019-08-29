@@ -24,7 +24,7 @@ module.exports = {
       { text: "API", link: '/api/'},
       { text: "Awesome", link: '/awesome/'},
       { text: "Help", items: [
-        { text: "FAQ", link: '/faq'},
+        { text: "FAQ", link: '/faq/'},
         { text: "Chat", link:'https://kgrid-team.slack.com/app_redirect?channel=general'}
       ]},
       { text: "Event", items:[
