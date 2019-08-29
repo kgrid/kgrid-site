@@ -5,8 +5,6 @@ description: frequently asked questions
 ---
 # FAQ
 
-Here are some frequently asked questions:
-
 ## Set up KGrid
 
 #### :milky_way: Can I use OpenJDK to meet the JAVA requirement?
@@ -18,6 +16,12 @@ The LTS version of [Node.js](hhtps://www.nodejs.org) is highly recommended. (Cur
 ::: warning
 Certain packages, such as `gulp3`, have issues with Node.js v12. Avoid v12 if you has module dependencies on those packages.
 :::
+
+#### :milky_way: How do I check if I have the latest version of KGRID components?
+
+The easiest way is to use KGRID CLI. Run `kgrid --version` will check and show the versions for KGRID components as well as JAVA, Node.js.
+
+If you 'd like to check a remote KGrid Library or Activator, call `/info` of the server. For details, please refer to the [KGRID API documentation](http://kgrid.org/guides/swagger/).
 
 
 ## Develop a Knowledge Object
@@ -39,6 +43,7 @@ If the `auto-reload` feature is not turned on for the activator, you will need t
 You can create a manifest file containing a list of urls pointing to the artifacts. These KOs should be packaged in ZIP format and retrievable from the host. You can then `POST` your manifest `/kos/manifest`. For details, please refer to the [KGRID API documentation](http://kgrid.org/guides/swagger/).
 
 
+#### :milky_way:
 
 
 ## Miscellaneous
