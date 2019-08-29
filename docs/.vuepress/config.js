@@ -12,16 +12,24 @@ module.exports = {
     // ['meta', { property: 'og:image', content: '/guides/assets/image/KGridLogo_Blue.jpg' }]
   ],
   themeConfig: {
-    repo: 'kgrid/guides',
+    //repo: 'kgrid/guides',
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'KGrid.org', link: 'https://kgrid.org' },
-      { text: "Developer's Guide", link: '/developer/'},
-      { text: "Integrator's Guide", link: '/integrator/'},
-      { text: "KGrid API", link: '/api/'},
-      { text: "Advanced Tutorial", link: '/tutorial/'},
+      { text: 'Guide', items: [
+        { text: "Developer's Guide", link: '/developer/'},
+        { text: "Integrator's Guide", link: '/integrator/'},
+        { text: "Advanced Tutorial", link: '/tutorial/'}
+      ]},
+      { text: "API", link: '/api/'},
       { text: "Awesome", link: '/awesome/'},
-      { text: "Fall 2019 Workshop", link: '/workshop2019.md'}
+      { text: "Help", items: [
+        { text: "FAQ", link: '/faq'},
+        { text: "Chat", link:'https://kgrid-team.slack.com/app_redirect?channel=general'}
+      ]},
+      { text: "Event", items:[
+        { text: "Fall 2019 Workshop", link: '/workshop2019'}
+      ]},
     ],
     search: true,
     searchMaxSuggestions: 10,
