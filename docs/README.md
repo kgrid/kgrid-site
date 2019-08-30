@@ -31,7 +31,7 @@ description: Guides, Tutorials, API Documentations and more
         <a href="integrator/" class="nav-link action-button">Integrator's Guide</a>
     </div>    
     <h2>For integrating KGrid into healthcare/research settings</h2>
-    <p style="color: darkred;">(work in progress)</p>
+    <!-- <p style="color: darkred;">(work in progress)</p> -->
     <p>Learn how to set up and configure the Knowledge Grid components and configure them for your environment.</p>
   </div>
   <div class="feature">
@@ -39,7 +39,7 @@ description: Guides, Tutorials, API Documentations and more
   <a href="awesome/" class="nav-link action-button">Awesome Stuff</a>
   </div>    
   <h2>A curated list of Key KGrid materials</h2>
-  <p style="color: darkred;">(Continually updating)</p>
+  <!-- <p style="color: darkred;">(Continually updating)</p> -->
   <p> KGrid publications, presentations, and articles that shape and inspire our work.</p>
   </div>
   <div class="feature">
@@ -47,7 +47,7 @@ description: Guides, Tutorials, API Documentations and more
   <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
   </div>    
   <h2>For managing the KOs and finding the KOs</h2>
-  <p style="color: darkred;">(coming soon)</p>
+  <!-- <p style="color: darkred;">(coming soon)</p> -->
   <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
   </div>
 </div>
