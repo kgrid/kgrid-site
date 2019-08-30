@@ -171,6 +171,24 @@ paths:
                       href: 'http://localhost:8080/hello/world/v0.1.0/welcome'
                     swagger_editor:
                       href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.1.0/service'
+          '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  format: json
+                example:
+                  title: Implementation koio v1 of Hello World
+                  endpointPath: hello/world/v0.1.0/welcome
+                  servicePath: hello/world/v0.1.0/service
+                  activated: '2019-07-03T09:26:34.355'
+                  _links:
+                    self:
+                      href: 'http://localhost:8080/hello/world/v0.1.0/welcome'
+                    swagger_editor:
+                      href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.1.0/service'
+
 
   /{naan}/{name}/{implementation}/{endpoint}:
     post:
@@ -247,6 +265,18 @@ paths:
                         - 'http://kgrid.org/koio/contexts/implementation.jsonld'
                     inputs:
                       name: George Jetson
+        '500':
+          description: KO Service Execution Error
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Status: 500 Internal Server Error
+                Instance: uri=/hello/world/v0.1.0/score
+                Title: Error
+                Time: Fri Aug 30 12:43:49 EDT 2019
+                Detail: No endpoint found for hello-world/v0.1.0/score
   /kos:
     $ref: 'kos.yaml#/paths/~1kos'
 
