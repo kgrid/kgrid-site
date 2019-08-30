@@ -17,6 +17,10 @@ The LTS version of [Node.js](hhtps://www.nodejs.org) is highly recommended. (Cur
 Certain packages, such as `gulp3`, have issues with Node.js v12. Avoid v12 if you has module dependencies on those packages.
 :::
 
+#### :milky_way: I'm having problems with permissions when I tried to install or run npm. It suggests I use `sudo`. How do I fix?
+
+You should not have to use `sudo` to install `node`, `npm`, or any additional packages. If you run into trouble see [https://timonweb.com/posts/install-npm-packages-without-sudo/](https://timonweb.com/posts/install-npm-packages-without-sudo/)
+
 #### :milky_way: How do I check if I have the latest version of KGRID components?
 
 The easiest way is to use KGRID CLI. Run `kgrid --version` will check and show the versions for KGRID components as well as JAVA, Node.js.
@@ -50,4 +54,4 @@ You can create a manifest file containing a list of urls pointing to the artifac
 
 #### :milky_way: How can I get technical support?
 You can browse through the guides, tutorials and other materials on this website.
-If your question remains unanswered, you can send an email to: [dlhs.knowledge.grid@umich.edu](mailto:dlhs.knowledge.grid@umich.edu?subject=[KGrid]Support)
+If your question remains unanswered, you can send an email to: [kgrid-developers@umich.edu](mailto:kgrid-developers@umich.edu?subject=[KGrid]Support)

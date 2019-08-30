@@ -24,7 +24,7 @@ description: Guides, Tutorials, API Documentations and more
         <a href="api/" class="nav-link action-button">KGrid API</a>
     </div>    
     <h2>Specifications of Knowledge Grid Service API</h2>
-    <p>KGrid API Documentations</p>
+    <p>KGrid API Documentation</p>
   </div>
   <div class="feature">
     <div class="action hero">
