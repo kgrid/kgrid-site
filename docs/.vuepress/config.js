@@ -25,7 +25,8 @@ module.exports = {
       { text: "Awesome", link: '/awesome/'},
       { text: "Help", items: [
         { text: "FAQ", link: '/faq/'},
-        { text: "Chat", link:'https://kgrid-team.slack.com/app_redirect?channel=general'}
+        { text: "Chat", link:'https://kgrid-team.slack.com/app_redirect?channel=general'},
+        { text: "Email", link: 'mailto:dlhs.knowledge.grid@umich.edu'}
       ]},
       { text: "Event", items:[
         { text: "Fall 2019 Workshop", link: '/workshop2019'}

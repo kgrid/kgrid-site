@@ -1,6 +1,6 @@
 ---
 home: true
-description: Knowledge Grid Guides
+description: Guides, Tutorials, API Documentations and more
 ---
 
 <div class="features">
@@ -8,7 +8,7 @@ description: Knowledge Grid Guides
     <div class="action hero">
           <a href="developer/" class="nav-link action-button">Developer's Guide</a>
     </div>    
-    <h2>For developers of knowledge objects</h2>
+    <h2>For developing Knowledge Objects</h2>
     <p>Develop new knowledge objects and collections from a simple set of starter objects in the language of your choice.</p>
   </div>
 
@@ -16,22 +16,21 @@ description: Knowledge Grid Guides
   <div class="action hero">
   <a href="tutorial/" class="nav-link action-button">KO Advanced Tutorial</a>
   </div>    
-  <h2>KO Advanced Tutorial</h2>
-  <p style="color: darkred;">(work in progress)</p>
+  <h2>A real-world example and advanced topics</h2>
   <p>Learn how to develop a Knowledge Object implementing SCORE risk calculation and more advanced topics.</p>
   </div>
   <div class="feature">
     <div class="action hero">
         <a href="api/" class="nav-link action-button">KGrid API</a>
     </div>    
-    <h2>KGRID Activator API </h2>
-    <p>KGRID Activator API Documentations</p>
+    <h2>Specifications of Knowledge Grid Service API</h2>
+    <p>KGrid API Documentations</p>
   </div>
   <div class="feature">
     <div class="action hero">
         <a href="integrator/" class="nav-link action-button">Integrator's Guide</a>
     </div>    
-    <h2>For system integrators running grids in research and health care settings</h2>
+    <h2>For integrating KGrid into healthcare/research settings</h2>
     <p style="color: darkred;">(work in progress)</p>
     <p>Learn how to set up and configure the Knowledge Grid components and configure them for your environment.</p>
   </div>
@@ -47,7 +46,7 @@ description: Knowledge Grid Guides
   <div class="action hero">
   <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
   </div>    
-  <h2>For Librarians managing the Knowledge Objects and For Users finding the Knowledge Objects</h2>
+  <h2>For managing the KOs and finding the KOs</h2>
   <p style="color: darkred;">(coming soon)</p>
   <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
   </div>
