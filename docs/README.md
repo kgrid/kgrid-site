@@ -1,6 +1,6 @@
 ---
 home: true
-description: Guides, Tutorials, API Documentations and more
+description: Guides, Tutorials, API Documentation and more
 ---
 
 <div class="features">
