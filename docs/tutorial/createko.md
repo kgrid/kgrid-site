@@ -2,7 +2,7 @@
 
 Many of the functions developed for KO Services are simple and require no external libraries or files.  However the use of these libraries and files can simplify design, increase maintainability and create a better solution.
 
-The [10-Year Risk of Cardiovascular Disease KO](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc) is a object the could be developed using a function the has not dependencies ( [score-calc v0.1.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.1.0)).  However the introduction of external dependencies in the form of libraries and files creates a more testable, adaptable and maintainable function ([score-calc v0.3.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.3.0)).
+The [10-Year Risk of Cardiovascular Disease KO](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc) is an object the could be developed using a function the has not dependencies ( [score-calc v0.1.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.1.0)).  However the introduction of external dependencies in the form of libraries and files creates a more testable, adaptable and maintainable function ([score-calc v0.3.0](https://github.com/kgrid-objects/example-collection/tree/master/collection/score-calc/v0.3.0)).
 
 Currently the KGrid Activator uses the [Nashorn](https://openjdk.java.net/projects/nashorn/) JavaScript engine for execution of JavaScript Objects. Nashorn implements [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) which doesn't support external dependencies without _bundling_ your function using [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/).  The use of [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/) allows the function to be transpiled to [Nashorn](https://openjdk.java.net/projects/nashorn/) compliant [ECMAScript 5.1 specification](https://www.ecma-international.org/ecma-262/5.1/) artifact.
 
@@ -66,7 +66,7 @@ By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for 
 
 
 ::: danger WARNING
-Note library name in the output element _library: "score"_ must match the x-kgrid-activation element _entry: score_ the [OpenAPI](/tutorial/openapi/overview.html#extensions).
+Note library name in the output element _library: "score"_ must match the x-kgrid-activation element _entry: score_ found in the KGrid extensions of the [OpenAPI](/tutorial/openapi/overview.html#extensions) specification.
 :::
 
 For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
