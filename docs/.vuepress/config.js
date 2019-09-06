@@ -36,6 +36,12 @@ module.exports = {
     searchMaxSuggestions: 10,
     displayAllHeaders: true,
     sidebar: {
+        '/integrator/':[
+            '',
+          'activator',
+          'library',
+          'docker',
+        ],
         '/tutorial/':[
           '',
           {
