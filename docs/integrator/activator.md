@@ -75,8 +75,6 @@ the [activators health endpoint](http://localhost:8080/health).  The health of t
 
 ```
 
-### Hello World KO on the Activator
-
 The Hello World is a very simple KO with a Javascript based service that takes in a name and displays
  a _Welcome to the Knowledge Grid_ message.
 

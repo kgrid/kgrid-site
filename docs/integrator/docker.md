@@ -5,7 +5,7 @@ Each release of the Activator or Library creates a Docker image of that release.
 ## KGrid Instances
 The KGrid environments (test, staging, production) are managed as docker instances created with docker compose.  Details about the instances can be found at [KGrid Instances](https://github.com/kgrid/kgrid-instances)
 
-### Play With Docker
+## Play With Docker
 Play-with-Docker (PWD) is an in-browser free online docker sandbox.  We spin up an Activator and Library utilizing a docker compose file seen below.   
 
 ```
