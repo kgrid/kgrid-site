@@ -31,4 +31,4 @@ services:
 ```
 
 The Play-with-Docker (PWD) sandbox allows us to spin up a KGrid enviroment on demand for demos, testing, etc.  
-Give it try.... [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/kgrid/kgrid-instances/master/pwd/docker-compose.yml)
+Give it a try.... [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/kgrid/kgrid-instances/master/pwd/docker-compose.yml)
