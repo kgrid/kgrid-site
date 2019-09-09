@@ -1,4 +1,4 @@
-# Docker
+# KGrid Dockerization
 
 Each release of the [Activator](https://github.com/kgrid/kgrid-activator) or [Library](https://github.com/kgrid/kgrid-library#docker-imagecontainer) creates a Docker image of that release.  Our docker images are stored in [KGrid Docker Hub](https://hub.docker.com/u/kgrid). KGrid utilizes those images to create instances of KGrid. 
 
