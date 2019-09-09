@@ -1,6 +1,6 @@
 # Docker
 
-Each release of the Activator or Library creates a Docker image of that release.  Our docker images are stored in [KGrid Docker Hub](https://hub.docker.com/u/kgrid). KGrid utilizes those images to create instances of KGrid. 
+Each release of the [Activator](https://github.com/kgrid/kgrid-activator) or [Library](https://github.com/kgrid/kgrid-library#docker-imagecontainer) creates a Docker image of that release.  Our docker images are stored in [KGrid Docker Hub](https://hub.docker.com/u/kgrid). KGrid utilizes those images to create instances of KGrid. 
 
 ## KGrid Instances
 The KGrid environments (test, staging, production) are managed as docker instances created with docker compose.  Details about the instances can be found at [KGrid Instances](https://github.com/kgrid/kgrid-instances)
@@ -32,3 +32,6 @@ services:
 
 The Play-with-Docker (PWD) sandbox allows us to spin up a KGrid enviroment on demand for demos, testing, etc.  
 Give it a try.... [![Try in PWD](https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png)](https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/kgrid/kgrid-instances/master/pwd/docker-compose.yml)
+::: tip
+PWD does require you to have a Docker login
+:::
