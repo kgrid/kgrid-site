@@ -254,7 +254,7 @@ Let's make the object your own! There are several kinds of changes that you'll m
 - You may change the code (there are lots of ways to organize and write your code. See [KO Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
 - You can change the services description (which services are available, there names, the inputs and outputs, etc.) These changes also need to be coordinated with the code.
 
-Spend some time reviewing the structure and files in the KO you just created. See [KO Intro](../tutorial/ko-intro.md) for more info.
+Spend some time reviewing the structure and files in the KO you just created. See [KO Intro](../tutorial/ko/overview.md) for more info.
 
 
 ### Metadata
