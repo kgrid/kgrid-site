@@ -2,6 +2,14 @@
 
 Conceptually, a knowledge object represents computable knowledge as both a resource and a service. That is, it contains a description of what it does, and the code to do it. Also, in order to make the object findable, accessible, interoperable, and reusable, the KO has enough metadata to describe itself as both resource and service.
 
+Here's a picture....
+
+----
+
+![KO Layout](../assets/img/ko-layout.png)
+
+----
+
 Let's take a look at what's inside a knowledge object, starting from the top level folder....
 ```
 99999-fk4a1s2d3 
