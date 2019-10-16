@@ -1,6 +1,7 @@
 ---
 home: true
 description: Guides, Tutorials, API Documentation and more
+footer: GPL Licensed | Copyright © 2019-present University of Michigan 
 ---
 
 <div class="features">
