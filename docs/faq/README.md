@@ -47,7 +47,7 @@ If the `auto-reload` feature is not turned on for the activator, you will need t
 You can create a manifest file containing a list of urls pointing to the artifacts. These KOs should be packaged in ZIP format and retrievable from the host. You can then `POST` your manifest `/kos/manifest`. For details, please refer to the [KGRID API documentation](http://kgrid.org/guides/swagger/).
 
 
-#### :milky_way: 
+#### :milky_way:
 
 
 ## Miscellaneous

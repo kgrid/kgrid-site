@@ -103,7 +103,7 @@ KGRID Components are installed at: /Users/pboisver/dev/foof/.kgrid
   KGRID Activator: version 1.1.5
 
 =========================================================
-@kgrid/cli/0.2.1 darwin-x64 node-v10.15.3
+@kgrid/cli/0.4.0 darwin-x64 node-v10.15.3
 ```
 ### Start a local grid
 
@@ -111,8 +111,8 @@ Start KGrid & verify in the browser that the activator and library are running
 
 ```bash
 > kgrid start
-java -jar .../kgrid-library-1.2.0.jar ...  --server.port=8081
-java -jar .../kgrid-activator-1.1.0.jar ... --server.port=8080
+java -jar .../kgrid-library-1.2.3.jar ...  --server.port=8081
+java -jar .../kgrid-activator-1.1.5.jar ... --server.port=8080
 library: You have the latest version.
 Starting KGrid library...
 activator: You have the latest version.
@@ -165,12 +165,12 @@ Please go to the folder by `cd myobject`.
 Run `npm install` before deploying to the activator.
 ```
 
-The `kgrid create` command sets up a KO source code folder called `myobject`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and a default version of `1.0.0` will be assigned for the knowledge objcet.
+The `kgrid create` command sets up a KO source code folder called `myobject`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and a default version of `1.0.0` will be assigned for the knowledge object.
 
 In general, the ARK is used to refer to the activated object running in the activator, the source code folder names are ignored. (Later when the KO is packaged and published the source folder names are replaced with names derived from the actual ARK).
 
 ::: tip
-Verify in browser that the new object is displayed in the the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)). (Restart the grid with `kgrid start` if it's not running.)
+Verify in browser that the new object is displayed in the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)). (Restart the grid with `kgrid start` if it's not running.)
 :::
 
 ### Try out the object
