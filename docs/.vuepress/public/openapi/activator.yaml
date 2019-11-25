@@ -108,13 +108,13 @@ paths:
 
 
 
-  /endpoints/{naan}/{name}/{implementation}/{endpoint}:
+  /endpoints/{naan}/{name}/{version}/{endpoint}:
     get:
       tags:
         - Knowledge Object Endpoint
       summary: Finds a knowledge object's endpoint resource
       description: |
-        Returns the Endpoint Resource which has access to the knowledge object implementation, the service description in the form of an Open Api specification, etc
+        Returns the Endpoint Resource which has access to the knowledge object, the service description in the form of an Open Api specification, etc
       operationId: findkoendpoint
       parameters:
         - name: naan
@@ -135,9 +135,9 @@ paths:
           schema:
             type: string
           example: world
-        - name: implementation
+        - name: version
           in: path
-          description: Specific Implementation of the KO
+          description: Version of the KO
           required: true
           style: simple
           explode: false
@@ -190,13 +190,13 @@ paths:
                       href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.1.0/service'
 
 
-  /{naan}/{name}/{implementation}/{endpoint}:
+  /{naan}/{name}/{version}/{endpoint}:
     post:
       tags:
         - Knowledge Object Endpoint
-      summary: Executes the service provide by the Knowledge Object Implementation
+      summary: Executes the service provide by the Knowledge Object
       description: |
-        Executes the service provide by the Knowledge Object Implementation as defined in the Knowledge Object Implementation’s Open Api specification
+        Executes the service provide by the Knowledge Object as defined in the Knowledge Object’s Open Api specification
       operationId: serverendpoint
       parameters:
         - name: naan
@@ -217,9 +217,9 @@ paths:
           schema:
             type: string
             example: world
-        - name: implementation
+        - name: version
           in: path
-          description: Specific Implementation of the KO
+          description: Version of the KO
           required: true
           style: simple
           explode: false
@@ -256,13 +256,13 @@ paths:
                   info:
                     ko:
                       '@id': v0.1.0
-                      '@type': 'koio:Implementation'
+                      '@type': 'koio:KnowledgeObject'
                       identifier: 'ark:/hello/world/v0.1.0'
                       title: Implementation koio v1 of Hello World
                       hasServiceSpecification: v0.1.0/service.yaml
                       hasPayload: v0.1.0/welcome.js
                       '@context':
-                        - 'http://kgrid.org/koio/contexts/implementation.jsonld'
+                        - 'http://kgrid.org/koio/contexts/knowledgeobject.jsonld'
                     inputs:
                       name: George Jetson
         '500':
@@ -283,11 +283,11 @@ paths:
   /kos/{naan}/{name}:
     $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}'
 
-  /kos/{naan}/{name}/{implementation}:
-    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{implementation}'
+  /kos/{naan}/{name}/{version}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{version}'
 
-  /kos/{naan}/{name}/{implementation}/service:
-    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{implementation}~1service'
+  /kos/{naan}/{name}/{version}/service:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{version}~1service'
 
   '/kos/manifest':
     $ref: 'kos.yaml#/paths/~1kos~1manifest'
@@ -297,12 +297,6 @@ components:
   examples:
     KnowledgeObject:
        $ref: 'shelf.yaml#/components/examples/KnowledgeObject'
-
-    KnowledgeObjectImplementation:
-       $ref: 'kos.yaml#/components/examples/KnowledgeObjectImplementation'
   schemas:
     importKO:
        $ref: 'kos.yaml#/components/schemas/importKO'
-
-
-

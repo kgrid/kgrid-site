@@ -25,20 +25,18 @@ paths:
                     '@id': hello-world
                     '@type': koio:KnowledgeObject
                     identifier: ark:/hello/world
+                    version: 1.0.0
                     title: Hello World Title
                     contributors: Kgrid Team
                     description: 'Test Hello World '
                     keywords: test hello world
-                    hasImplementation:
-                      - hello-world/v0.1.0
-                      - hello-world/v0.2.0
-                      - hello-world/v0.3.0
                     '@context':
                       - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
                   ark:/score/calc:
                     '@id': score-calc
                     '@type': koio:KnowledgeObject
                     identifier: ark:/score/calc
+                    version: 1.0.0
                     title: 'Ten-year Fatal Cardiovascular Risk Calculation based on
                       SCORE project (Example KO) '
                     contributors: KGRID TEAM
@@ -46,10 +44,6 @@ paths:
                     citations:
                       - https://academic.oup.com/eurheartj/article/24/11/987/427645
                     keywords: SCORE, ten-year, Cardiovascular risk, calculation
-                    hasImplementation:
-                      - score-calc/v0.1.0
-                      - score-calc/v0.2.0
-                      - score-calc/v0.3.0
                     '@context':
                       - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
     post:
@@ -77,7 +71,7 @@ paths:
       tags:
         - Knowledge Object
         - Knowledge Object Export
-      summary: Find Knowledge Object based on
+      summary: Find Knowledge Object based on arkid
       operationId: findko
       parameters:
         - name: naan
@@ -198,13 +192,13 @@ paths:
                 KnowledgeObject:
                   $ref: '#/components/examples/KnowledgeObject'
 
-  /kos/{naan}/{name}/{implementation}:
+  /kos/{naan}/{name}/{version}:
     get:
       tags:
-        - Knowledge Object Implementation
+        - Knowledge Object version
         - Knowledge Object Export
       summary: Find Knowledge Object based on
-      operationId: findkoimplementation
+      operationId: findkoversion
       parameters:
         - name: naan
           in: path
@@ -224,9 +218,9 @@ paths:
           schema:
             type: string
           example: world
-        - name: implementation
+        - name: version
           in: path
-          description: Specific Implementation of the KO
+          description: Version of the KO
           required: true
           style: simple
           explode: false
@@ -241,18 +235,15 @@ paths:
               schema:
                 type: object
                 format: json
-              example:
-                KnowledgeObjectImplementation:
-                  $ref: '#/components/examples/KnowledgeObjectImplementation'
             application/zip:
               schema:
                 type: string
                 format: binary
     put:
       tags:
-        - Knowledge Object Implementation
+        - Knowledge Object Version
       summary: Update Knowledge Object
-      operationId: updatekoimplementation
+      operationId: updatekoversion
       parameters:
         - name: naan
           in: path
@@ -272,9 +263,9 @@ paths:
           schema:
             type: string
           example: world
-        - name: implementation
+        - name: version
           in: path
-          description: Specific Implementation of the KO
+          description: Version of the KO
           required: true
           style: simple
           explode: false
@@ -287,9 +278,6 @@ paths:
           application/json:
             schema:
               type: object
-            example:
-              KnowledgeObjectImplementation:
-                $ref: '#/components/examples/KnowledgeObjectImplementation'
         required: true
       responses:
         200:
@@ -299,14 +287,11 @@ paths:
               schema:
                 type: object
                 format: json
-              example:
-                KnowledgeObjectImplementation:
-                  $ref: '#/components/examples/KnowledgeObjectImplementation'
     delete:
       tags:
-        - Knowledge Object Implementation
-      summary: Delete Knowledge Object Implementation
-      operationId: deletekoimplementation
+        - Knowledge Object version
+      summary: Delete Knowledge Object version
+      operationId: deletekoversion
       parameters:
         - name: naan
           in: path
@@ -326,9 +311,9 @@ paths:
           schema:
             type: string
           example: world
-        - name: implementation
+        - name: version
           in: path
-          description: Specific Implementation of the KO
+          description: Specific version of the KO
           required: true
           style: simple
           explode: false
@@ -347,12 +332,12 @@ paths:
                 KnowledgeObject:
                   $ref: '#/components/examples/KnowledgeObject'
 
-  /kos/{naan}/{name}/{implementation}/service:
+  /kos/{naan}/{name}/{version}/service:
     get:
       tags:
-        - Knowledge Object Implementation
-      summary: Find Knowledge Object Implementation OpenAPI Service Specification
-      operationId: findkoimplementationservice
+        - Knowledge Object version
+      summary: Find Knowledge Object version OpenAPI Service Specification
+      operationId: findkoversionservice
       parameters:
           - name: naan
             in: path
@@ -372,9 +357,9 @@ paths:
             schema:
               type: string
             example: world
-          - name: implementation
+          - name: version
             in: path
-            description: Specific Implementation of the KO
+            description: Specific version of the KO
             required: true
             style: simple
             explode: false
@@ -440,24 +425,11 @@ components:
         contributors: Kgrid Team
         description: 'Test Hello World '
         keywords: test hello world
-        hasImplementation:
-          - hello-world/v0.1.0
-          - hello-world/v0.2.0
-          - hello-world/v0.3.0
+        hasServiceSpecification: service.yaml
+        hasPayload: welcome.js
         '@context':
           - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
 
-    KnowledgeObjectImplementation:
-      value:
-        '@id': v0.1.0
-        '@type': koio:Implementation
-        identifier: ark:/hello/world/v0.1.0
-        title: Implementation koio v1 of Hello World
-        hasServiceSpecification: v0.1.0/service.yaml
-        hasPayload: v0.1.0/welcome.js
-        '@context':
-          - http://kgrid.org/koio/contexts/implementation.jsonld
-          - http://kgrid.org/koio/contexts/implementation.jsonld
 
   schemas:
     importKO:

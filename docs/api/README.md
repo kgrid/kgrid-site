@@ -41,7 +41,7 @@ specifications in each Knowledge Object.  Please review <a href="/guides/swagger
 
 ### Knowledge Objects Services
 Each Knowledge Object has services/endpoints defined by their OpenAPI specifications. The path
-to these services/endpoints follows _/{naan}/{name}/{implementation}/{endpoint}_ pattern, e.g. (_/hello/world/v0.1.0/welcome_).
+to these services/endpoints follows _/{naan}/{name}/{version}/{endpoint}_ pattern, e.g. (_/hello/world/v0.1.0/welcome_).
 Please review <a href="/guides/swagger/#/Knowledge%20Object%20Endpoint/serverendpoint" target="_blank" >Knowledge Objects Service</a>
 
 ### Knowledge Objects Service Response
@@ -49,7 +49,7 @@ All Knowledge Objects Services will return a KGrid reponse which consists of
 a result, info and inputs
 
 - **result** element is defined and controlled by the service.
-- **info** is the Knowledge Object Implementation where this service is defined
+- **info** is the Knowledge Object where this service is defined
 - **inputs** describes the incoming information to the service
 
 
@@ -58,14 +58,15 @@ a result, info and inputs
   "result": "Welcome to Knowledge Grid, George Jetson",
   "info": {
     "ko": {
-      "@id": "v0.1.0",
-      "@type": "koio:Implementation",
-      "identifier": "ark:/hello/world/v0.1.0",
+      "@id": "hello-world",
+      "@type": "koio:KnowledgeObject",
+      "identifier": "ark:/hello/world/",
+      "version":"v0.1.0",
       "title": "Implementation koio v1 of Hello World",
-      "hasServiceSpecification": "v0.1.0/service.yaml",
-      "hasPayload": "v0.1.0/welcome.js",
+      "hasServiceSpecification": "service.yaml",
+      "hasPayload": "welcome.js",
       "@context": [
-        "http://kgrid.org/koio/contexts/implementation.jsonld"
+        "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
       ]
     },
     "inputs": {
@@ -86,4 +87,3 @@ using JavaScript served from any domain.
 Failing responses will have an appropriate status and a JSON body containing more details about a p
 articular error. Codes in the 2xx range indicate success. Codes in the 4xx range indicate
 an error that failed given the information provided. Codes in the 5xx range indicate an error with KGrid servers.
-

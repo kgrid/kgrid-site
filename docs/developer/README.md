@@ -33,12 +33,11 @@ For more information see [Integrator's guide](../integrator) and [Kgrid platform
 
 Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
 
- - a top level metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
- - one or more **implementation** folders with:
-   - code artifact(s)
-   - an OpenAPI `.yaml` document describing the service interface(s) the object provides
-   - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
-   - additional metadata specific to the **implementation**
+ - a metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
+ - code artifact(s)
+ - an OpenAPI `.yaml` document describing the service interface(s) the object provides
+ - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
+ - additional metadata if applicable
 
 The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) Single Page Application (SPA). They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
 
@@ -83,7 +82,7 @@ Use KGrid CLI to install a micro-grid in your project directory
 
 ```bash
 > kgrid setup
-KGrid CLI v0.2.1
+KGrid CLI v0.4.0
 
 Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
 Downloading kgrid components... done
@@ -100,8 +99,8 @@ v10.15.3
 
 Checking KGrid Components Version ...
 KGRID Components are installed at: /Users/pboisver/dev/foof/.kgrid
-  KGRID Library:   version 1.2.0
-  KGRID Activator: version 1.1.0
+  KGRID Library:   version 1.2.3
+  KGRID Activator: version 1.1.5
 
 =========================================================
 @kgrid/cli/0.2.1 darwin-x64 node-v10.15.3
@@ -141,23 +140,32 @@ For more information on configuring and running local grids see [the KGrid CLI d
 
 Open additional terminal tab or window and navigate to the `myproject` folder that you created
 
-Create a new knowledge object using the kgrid-cli. (You will be prompted for an implementation/version identifier — accept any defaults.)
+Create a new knowledge object using the kgrid-cli. (You will be prompted for an template type.)
 
-```bash
+``` bash
 > kgrid create myobject
-KGrid CLI v0.3.3
+KGrid CLI v0.4.0
 
-====  Create the Knowledge Object  ====
-
-====  Initialize the implementation  ====
-? Implementation:  impl
-The implementation of impl has been initialized.
-
-
-The knowledge object <username>/foo is ready.
+? Please select the template type:  (Use arrow keys)
+> Simple
+  Bundled
+  Executive
 ```
 
-The `kgrid create` command sets up a KO source code folder called `myobject` with a subfolder `impl`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and the implementation is accessed with `ark:/<username>/myobject/impl`.
+Once you select the template type, the knowledge object will be created.
+
+
+```bash
+? Please select the template type:  Simple
+
+The knowledge object 99999/myobject has been created.
+
+Please go to the folder by `cd myobject`.
+
+Run `npm install` before deploying to the activator.
+```
+
+The `kgrid create` command sets up a KO source code folder called `myobject`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and a default version of `1.0.0` will be assigned for the knowledge objcet.
 
 In general, the ARK is used to refer to the activated object running in the activator, the source code folder names are ignored. (Later when the KO is packaged and published the source folder names are replaced with names derived from the actual ARK).
 
@@ -168,19 +176,19 @@ Verify in browser that the new object is displayed in the the Library ([http://l
 ### Try out the object
 
 ::: warning
-You may have to reload the Activator after creating or modifying code or metadata. Go to the [`/activate`](http://localhost:8080/activate) endoint in a browser or use `curl localhost:8080/activate` from the command line
+You may have to reload the Activator after creating or modifying code or metadata. Go to the [`/activate`](http://localhost:8080/activate) endpoint in a browser or use `curl localhost:8080/activate` from the command line
 :::
 
 ```bash
-> kgrid play ark:/<username>/myobject/impl
+> kgrid play ark:/<username>/myobject
 ```
 
 ::: tip
 By default`kgrid play` queries the local activator [http://localhost:8080](http://localhost:8080) and
-prompts you to select an implementation. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
+prompts you to select a knowledge object. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
 :::
 
-Once the the Swagger Editor is pointed to `myobject/impl`, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
+Once the Swagger Editor is pointed to the service specification of the knowledge object, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
 
 ![The Swagger Editor](../assets/img/SwaggerEditor.png)
 
@@ -217,20 +225,20 @@ Scroll back up to the inputs section and change the `"name"`.
 
 For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [API guide](../api)
 
-## Unit test the implementation
+## Unit test
 
-Make sure you're in the implementation directory and set up the Javascript project.
+Make sure you're in the knowledge object directory and set up the Javascript project.
 
 ```bash
-> cd myobject/impl
+> cd myobject
 > npm install
 ```
-When the KO was created a simple unit test was added to your object implementation and specifies Jest as a testing dependency (in package.json).
+When the KO was created, a simple unit test was added to your object and specifies Jest as a testing dependency (in package.json).
 
 ```bash
 > npm test
 
-> Implementation@1.0.0 test ../myobject/metadata
+> @kgrid/99999-myobject@1.0.0 test ..\myobject
 > jest
 
  PASS  test/welcome.test.js
@@ -243,14 +251,14 @@ Time:        1.513s
 Ran all test suites.
 ```
 
-You can add your own tests (in `myobject/metadata/test` directory), and you'll need to update the existing tests in the next section when you change the code.
+You can add your own tests (in `myobject/test` directory), and you'll need to update the existing tests in the next section when you change the code.
 
 For more information on the jest framework and unit testing in general see [Jest project](https://jestjs.io/).
 
 ## Edit the object
 
 Let's make the object your own! There are several kinds of changes that you'll make as you work on an object.
-- The top-level and implementation specific metadata can be changed (and sometimes those changes need ot be coordinated with code and service changes.)
+- The  metadata can be changed (and sometimes those changes need to be coordinated with code and service changes.)
 - You may change the code (there are lots of ways to organize and write your code. See [KO Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
 - You can change the services description (which services are available, there names, the inputs and outputs, etc.) These changes also need to be coordinated with the code.
 
@@ -259,7 +267,7 @@ Spend some time reviewing the structure and files in the KO you just created. Se
 
 ### Metadata
 
-Open the top-level `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
+Open the `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
 
 ```json
 {
@@ -273,19 +281,7 @@ Open the top-level `myobject/metadata.json` file in your favorite editor (try [A
 ```
 Make sure that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
 
-Now change the implementation metadata (`myobject/metadata/metadata.json`) to remove title and add a description and keywords
-
-```json
-{
-    ...
-    "description": "First try",
-    "keywords": "over, easy",
-    ...
-}
-```
- Check again that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
-
-For more info on the metadata for KOs and implementations and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko)
+For more info on the metadata for KOs and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko)
 
 ### Changing the code
 
@@ -312,7 +308,7 @@ Rerun the test (`npm test`). It should fail.
 
 #### Update the welcome() function
 
-Open up `myobject/impl/src/index.js` in your favorite editor.
+Open up `myobject/src/index.js` in your favorite editor.
 ```javascript
 function welcome(inputs){
  name = inputs.name
@@ -346,7 +342,7 @@ function byebye(inputs){
 
 Reactivate the object and test it out in the Swagger Editor. **It doesn't work!**
 
-The problem is our object's microAPI endpoint still says `/welcome`. Let's update the OpenAPI service description. Find the `paths:` element in the `myobject/impl/service.yaml` file, and change `/welcome` to `/byebye`:
+The problem is our object's microAPI endpoint still says `/welcome`. Let's update the OpenAPI service description. Find the `paths:` element in the `myobject/service.yaml` file, and change `/welcome` to `/byebye`:
 ```yaml
 ...
 paths:

@@ -12,10 +12,10 @@ Nashorn script Engine has `context` where the objects and functions are stored. 
 
 ## Get the executor
 
-In the script of the executive object, the following code will retrieve the executor for the KO of `ark:/99999/helloworld/implA`. You will replace this ARK id with the Ark ID of the KO you'd like to call.
+In the script of the executive object, the following code will retrieve the executor for the KO of `ark:/99999/helloworld/`. You will replace this ARK id with the Ark ID of the KO you'd like to call.
 
 ``` javascript
-  var executor = context.getExecutor("99999-helloworld/implA/welcome")
+  var executor = context.getExecutor("99999-helloworld/welcome")
 ```
 
 ## Pass in the inputs
@@ -40,7 +40,7 @@ KGRID CLI includes an example template so that you can use `kgrid create` to cre
   kgrid create newko --executive
 ```
 
-After `newko` is created, change to the directory of the implementation folder, modify the file `/src/index.js` to get the executor for the simple KO you created.
+After `newko` is created, change to the directory of the ko folder, modify the file `/src/index.js` to get the executor for the simple KO you created.
 
 You can now try the executive object in your local activator.
 

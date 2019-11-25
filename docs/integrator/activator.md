@@ -101,13 +101,14 @@ The Hello World KO will return the following
   "result" : "Welcome to Knowledge Grid, Fred Flintstone",
   "info" : {
     "ko" : {
-      "@id" : "v0.1.0",
-      "@type" : "koio:Implementation",
-      "identifier" : "ark:/hello/world/v0.1.0",
+      "@id" : "hello-world",
+      "@type" : "koio:KnowledgeObject",
+      "identifier" : "ark:/hello/world",
+      "version":"v0.1.0",
       "title" : "Implementation koio v1 of Hello World",
-      "hasServiceSpecification" : "v0.1.0/service.yaml",
-      "hasPayload" : "v0.1.0/welcome.js",
-      "@context" : [ "http://kgrid.org/koio/contexts/implementation.jsonld" ]
+      "hasServiceSpecification" : "service.yaml",
+      "hasPayload" : "welcome.js",
+      "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
     },
     "inputs" : {
       "name" : "Fred Flintstone"
@@ -138,14 +139,14 @@ To change the origins allowed:
 ```java -jar kgrid-activator-1.1.2.jar --cors.url=https://myservice.com```
 
 
-**Activator Server Port** 
+**Activator Server Port**
 
 To change the port:
 
 ```java -jar kgrid-activator-1.1.2.jar --server.port=9090```
 
 
-**Activator Server Path** 
+**Activator Server Path**
 
 By default the endpoints of the activator at the root of the activator server.  To change the server root path:
 
@@ -153,9 +154,6 @@ By default the endpoints of the activator at the root of the activator server.  
 
 **Activator Object Auto-Reload**
 
-By default the activator does not automatically reload objects but it can be configured to activate an object or
-implementation when it detects a change to a file on the shelf by setting this property:
+By default the activator does not automatically reload objects but it can be configured to activate an object when it detects a change to a file on the shelf by setting this property:
 
 ```java -jar kgrid-activator-1.1.2.jar --kgrid.activator.autoreload=true```
-
-

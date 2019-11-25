@@ -9,9 +9,7 @@ If you have a ZIP file as the packaged KO, you can deploy the KO using KGRID CLI
  kgrid upload ark:/<username>/myko
 ```
 
-By default, the KO will be deployed to the locally running KGrid Activator at http://localhost:8080.
-
-To deploy to a KGrid Library, use the command `kgrid upload:library`.
+By default, the KO will be deployed to the locally running KGrid Activator or Library at http://localhost:8080.
 
 You can specify the URL or the port where the activator or library is hosted, by using the respective flags, `--url` and `--port`.
 

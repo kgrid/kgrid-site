@@ -9,13 +9,13 @@ Currently the KGrid Activator uses the [Nashorn](https://openjdk.java.net/projec
 
 ## Create bundled KO Service
 
-To create from the template of bundled KO, run the KGrid CLI command with the flag of `--bundled`:
+To create from the template of bundled KO, run the KGrid CLI command and select the template type of `bundled`:
 
 ```
- kgrid create myko --bundled
+ kgrid create myko
 ```
 
-Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO implementation folder. This file will configure the webpack tool to build the source files into a JAVASCRIPT bundle, ready for KGrid activator.
+Comparing with the project created as a simple KO in the developer's guide, you will notice an additional file `webpack.config.js` in the created KO folder. This file will configure the webpack tool to build the source files into a JAVASCRIPT bundle, ready for KGrid activator.
 
 Looking in to the folder of `/src`, you will find a few more files in addition to `index.js`.
 
@@ -71,7 +71,7 @@ Note library name in the output element _library: "score"_ must match the x-kgri
 
 For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
 
-You need to change to the implementation directory and run
+You need to change to the ko directory and run
 ```
 npm install
 ```

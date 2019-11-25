@@ -55,8 +55,8 @@ paths:
   /kos/{naan}/{name}:
     $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}'
 
-  /kos/{naan}/{name}/{implementation}:
-    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{implementation}'
+  /kos/{naan}/{name}/{version}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{version}'
 
   '/kos/manifest':
     $ref: 'kos.yaml#/paths/~1kos~1manifest'
@@ -67,9 +67,6 @@ components:
     KnowledgeObject:
       $ref: 'kos.yaml#/components/examples/KnowledgeObject'
 
-    KnowledgeObjectImplementation:
-      $ref: 'kos.yaml#/components/examples/KnowledgeObjectImplementation'
   schemas:
     importKO:
       $ref: 'kos.yaml#/components/schemas/importKO'
-

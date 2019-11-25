@@ -2,8 +2,8 @@
 
 KO Service interfaces are describe using the [OpenAPI](https://github.com/OAI/OpenAPI-Specification) specification.  This specification defines the path(s) to the service, the request and response scheme and much more.  Here we will briefly describe the minimal information needed to describe a KO Service.  You can write OpenAPI definitions in YAML or JSON, our templates in KGrid CLI and our examples all use the YAML format, we found the format easier.  
 
-## Structure 
-The following describes the basic structure of OpenAPI 3.0 definition. We will use the [Cardiovascular Risk Calculation KO Implementaion v0.3.0](http://activator.kgrid.org/kos/score/calc/v0.3.0/service) OpenAPI 3.0 definition for this example.
+## Structure
+The following describes the basic structure of OpenAPI 3.0 definition. We will use the [Cardiovascular Risk Calculation KO v0.3.0](http://activator.kgrid.org/kos/score/calc/v0.3.0/service) OpenAPI 3.0 definition for this example.
 
 
 ### Metadata
@@ -18,13 +18,13 @@ info:
 ```  
 
 ### Servers
-The servers section specifies the API server and base URL. for KO Services we use the [Archival Resource Key](https://en.wikipedia.org/wiki/Archival_Resource_Key) (ark id) which is name/naan/implementation.  Using the ark id ensures the paths are unique. 
+The servers section specifies the API server and base URL. for KO Services we use the [Archival Resource Key](https://en.wikipedia.org/wiki/Archival_Resource_Key) (ark id) which is naan/name.  Using the ark id ensures the paths are unique. 
 ```yaml
 
 ...
 
 servers:
-  - url: /score/calc/v0.3.0
+  - url: /score/calc
     description: SCORE risk calculation.
 ```
 
@@ -41,7 +41,7 @@ paths:
         - KO Endpoints
       description: SCORE risk calculation.
       operationId: cvdriskscore
-        
+
 ```
 ### Request Body
 The requestBody keyword describes the body content and media type. KO Service use json inputs.  The json format is defined in the _input_ scheme components section of the  definition.
@@ -101,7 +101,7 @@ components:
           example: false
 ```
 ### Responses
-To response definition is categorized by status code.  The content defines the type and format via a scheme _output_. 
+To response definition is categorized by status code.  The content defines the type and format via a scheme _output_.
 
 ```yaml
 
@@ -140,8 +140,8 @@ Extensions, or vendor extensions, are custom properties that start with _x-_.   
 
 - artifact - path to the file where the function can be found.  
 - adapter - type of adapter to use
-- entry - the function name 
-        
+- entry - the function name
+
 ```yaml
 
 ...

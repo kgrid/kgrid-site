@@ -1,13 +1,13 @@
 #  Curl
 [Curl](https://curl.haxx.se/)  is a command line tool and library for
 transferring data with URLs.  The following are examples of using  [curl](https://curl.haxx.se/)  to
-access the Knowledge Object Implementation and executing the Knowledge Object service. 
+access the Knowledge Object and executing the Knowledge Object service.
 Below examples of using [Curl](https://curl.haxx.se/) to access the
 [Ten-year Fatal Cardiovascular Risk Calculation KO Service](https://library.kgrid.org/#/object/score%2Fcalc)
 KO Service.
 
 
-Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using [curl](https://curl.haxx.se/)
+Get the Ten-year Fatal Cardiovascular Risk Calculation KO metadata using [curl](https://curl.haxx.se/)
 
 ```
 curl -X GET \

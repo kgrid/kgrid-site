@@ -6,17 +6,10 @@ A Knowledge Object can be packaged into a zip file for deployment and distributi
 
 The resulting ZIP file containing the KO is named based on the KO's ARK ID.
 
-If packaging the whole KO, the filename will be
-
 ```
-{naan}-{name}.zip
+{naan}-{name}-{version}.zip
 ```
 
-If packaging a specific implementation of the KO, the filename will be
-
-```
-{naan}-{name}-{implementation}.zip
-```
 
 ## Using KGRID CLI
 

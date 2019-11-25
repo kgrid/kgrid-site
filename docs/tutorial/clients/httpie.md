@@ -3,7 +3,7 @@
 JSON support, syntax highlighting, wget-like downloads, plugins, and more.
 HTTPie runs on windows, mac, linux, etc.  The following are examples of using
  [HTTPie](https://httpie.org) to
-access the Knowledge Object Implementation and executing the Knowledge Object service.
+access the Knowledge Object and executing the Knowledge Object service.
 Below examples of using [HTTPie](https://httpie.org) to access the
 [Ten-year Fatal Cardiovascular Risk Calculation KO Service](https://library.kgrid.org/#/object/score%2Fcalc)
 KO Service.
@@ -14,7 +14,7 @@ KO Service.
 1. Navigate to your terminal
 1. type the GET or POST requests below
 
-Get the Ten-year Fatal Cardiovascular Risk Calculation KO Implementation metadata using
+Get the Ten-year Fatal Cardiovascular Risk Calculation KO metadata using
  [HTTPie](https://httpie.org)
 
 ```
