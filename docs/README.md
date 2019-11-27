@@ -1,7 +1,7 @@
 ---
 home: true
 description: Guides, Tutorials, API Documentation and more
-footer: GPL Licensed | Copyright © 2019-present University of Michigan 
+footer: GPL Licensed | Copyright © 2019-present University of Michigan
 ---
 
 <div class="features">
@@ -45,11 +45,11 @@ footer: GPL Licensed | Copyright © 2019-present University of Michigan
   </div>
   <div class="feature">
   <div class="action hero">
-  <a href="comingsoon.html" class="nav-link action-button">KGrid Library Guide</a>
+  <a href="latest" class="nav-link action-button">What's New</a>
   </div>    
-  <h2>For managing the KOs and finding the KOs</h2>
+  <h2>The latest development in Knowledge Grid</h2>
   <!-- <p style="color: darkred;">(coming soon)</p> -->
-  <p>Learn how to use KGRID Library to manage the Knowledge Objects</p>
+  <p></p>
   </div>
 </div>
 
