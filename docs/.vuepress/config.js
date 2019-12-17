@@ -17,6 +17,7 @@ module.exports = {
     nav: [
       { text: 'KGrid.org', link: 'https://kgrid.org' },
       { text: 'Guide', items: [
+        { text: "Quick Start", link: '/quickstart/'},
         { text: "Developer's Guide", link: '/developer/'},
         { text: "Integrator's Guide", link: '/integrator/'},
         { text: "Advanced Tutorial", link: '/tutorial/'}
