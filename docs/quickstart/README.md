@@ -23,12 +23,16 @@ description: KGrid Developer's Guide - Get Started
 > mkdir myproject
 > cd myproject
 > kgrid setup
-KGrid CLI v0.4.0
-
-Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
-Downloading kgrid components... done
-kgrid setup complete
 ```
+The terminal might show the following messages:
+> KGrid CLI v0.4.0
+>
+> Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
+>
+> Downloading kgrid components... done
+>
+> kgrid setup complete
+
 
 ## Step 3 - Start a local grid
 
@@ -36,14 +40,23 @@ Start KGrid & verify in the browser that the activator and library are running
 
 ```bash
 > kgrid start
-java -jar .../kgrid-library-1.2.3.jar ...  --server.port=8081
-java -jar .../kgrid-activator-1.1.5.jar ... --server.port=8080
-library: You have the latest version.
-Starting KGrid library...
-activator: You have the latest version.
-Starting KGrid activator...
-...
 ```
+
+The terminal might show the following messages:
+> java -jar .../kgrid-library-1.2.3.jar ...  --server.port=8081
+>
+> java -jar .../kgrid-activator-1.1.5.jar ... --server.port=8080
+>
+> library: You have the latest version.
+>
+> Starting KGrid library...
+>
+> activator: You have the latest version.>
+>
+> Starting KGrid activator...
+>
+> ...
+
 ::: tip
 You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
 :::
