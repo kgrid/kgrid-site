@@ -44,12 +44,25 @@ activator: You have the latest version.
 Starting KGrid activator...
 ...
 ```
+::: tip
+You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
+:::
 
 ::: tip
 Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
 
 The Library will be empty and the Activator should show an empty KO list, `{}`.
-
 :::
 
-You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
+## What's next?
+
+If you'd like to load existing Knowledge Objects to the Activator or Library, KGrid team has developed several collections of KOs you can try:
+
+[Example Collection](https://kgrid-objects.github.io/example-collection/)
+
+[CPIC Collection](https://kgrid-objects.github.io/cpic-collection/deployment/)
+
+More information on KO collections can be found at [https://kgrid-objects.github.io/](https://kgrid-objects.github.io/)
+
+
+If you'd like to create a new Knowledge Object, please refer to [Developer's Guide](https://kgrid.org/guides/developer/)
