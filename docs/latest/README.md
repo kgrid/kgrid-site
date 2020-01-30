@@ -8,6 +8,31 @@ Knowledge Grid is still in its early stage; therefore, our team and the communit
 
 We will update this page frequently to reflect our thinking and understandings. More importantly, document the development in the specifications, the ontology and the reference implementation of KGrid components.
 
+
+## January 2020
+
+### KO collections
+As of January 2020, more KO collections have been updated and released:
+- [IPP collections](https://github.com/kgrid-objects/ipp-collection)
+- [Opioid collections](https://github.com/kgrid-objects/cpic-collection)
+- [Cancer Risk collections](https://github.com/kgrid-objects/cancer-risk-collection)
+- [Post PCI collections](https://github.com/kgrid-objects/postpci)
+- [Labwise collections](https://github.com/kgrid-objects/labwise)
+- [Script Numerate collections](https://github.com/kgrid-objects/script-numerate)
+
+### KO Collection Manifest
+For each of the released KO collection, a manifest file is generated containing the URL for the packaged KOs on GitHub. Currently, the manifest files are hosted on https://demo.kgrid.org.
+
+- https://demo.kgrid.org/manifests/kgrid.json
+- https://demo.kgrid.org/manifests/cpic.json
+- https://demo.kgrid.org/manifests/example.json
+- https://demo.kgrid.org/manifests/ipp.json
+- https://demo.kgrid.org/manifests/postpci.json
+- https://demo.kgrid.org/manifests/labwise.json
+- https://demo.kgrid.org/manifests/opioid.json
+- https://demo.kgrid.org/manifests/cancer-risk.json
+- https://demo.kgrid.org/manifests/script-numerate.json
+
 ## November 2019
 
 ### Knowledge Object Structure
