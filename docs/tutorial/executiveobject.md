@@ -47,3 +47,15 @@ You can now try the executive object in your local activator.
 ## Note
 
 The section shows the concept of 'Executive Object' which orchestrating and calling other KOs. For different implementations of Activator, the actual code structure and syntax for constructing the Executive Object will be different.
+
+
+## Node.js Proxy Adapter example:
+
+As above you can referece other objects through the global context but this time using the node.js context as shown:
+
+```js
+  var hello = global.cxt.getExecutorByID("ark:/hello/proxy", "v1.0", "welcome")
+```
+Note the parameters are arkId, version, and endpoint.
+
+You can then call `hello.execute()` to invoke the main function of the other knowledge object.

@@ -28,33 +28,43 @@ Type in the following.
 By default the activator will run  on port 8080. You can validate the activator is up and running using
 the [library health endpoint](http://localhost:8080/health).  The health of the Library should display a status of **UP**.  
 
-```yaml
+```json
 {
-   status: "UP",
-   userDetailService: {
-     status: "UP",
-     number of users: 2
-    }  ,
-    ezidService: {
-      status: "UP",
-      ezid.base.url: "https://ezid.lib.purdue.edu/",
-      ezid.mock: "false"
+  "status": "UP",
+  "components": {
+    "db": {
+      "status": "UP",
+      "details": {
+        "database": "H2",
+        "validationQuery": "isValid()"
+      }
     },
-    shelf: {
-      status: "UP",
-      kgrid.shelf.cdostore.url: "/Users/me/library/shelf"
+    "diskSpace": {
+      "status": "UP",
+      "details": {
+        "total": 499514339328,
+        "free": 28116086784,
+        "threshold": 10485760,
+        "exists": true
+      }
     },
-    diskSpace: {
-      status: "UP",
-      total: 402672611328,
-      free: 269428576256,
-      threshold: 10485760
+    "ping": {
+      "status": "UP"
     },
-      db: {
-      status: "UP",
-      database: "H2",
-      hello: 1
+    "shelf": {
+      "status": "UP",
+      "details": {
+        "numberOfKOs": 0,
+        "kgrid.shelf.cdostore.url": "/shelf"
+      }
+    },
+    "userDetailService": {
+      "status": "UP",
+      "details": {
+        "number of users": 2
+      }
     }
+  }
 }
 
 ```
@@ -68,15 +78,15 @@ There are several settings that you can control on the Library.
 By default the activator will look for a _shelf_ in jar execution directory but the location the _shelf_ can be configured:
 
 ```bash
-java -jar kgrid-library-1.2.2.jar --kgrid.shelf.cdostore.url=filesystem:file:///data/myshelf
+java -jar kgrid-library-1.3.1.jar --kgrid.shelf.cdostore.url=filesystem:file:///data/myshelf
 
-java -jar kgrid-library-1.2.2.jar --kgrid.shelf.cdostore.url=filesystem:file:///c:/Users/me/myshelf
+java -jar kgrid-library-1.3.1.jar --kgrid.shelf.cdostore.url=filesystem:file:///c:/Users/me/myshelf
 ```
 
 **Library Server Port** 
 
 To change the port:
 
-```java -jar kgrid-library-1.2.2.jar --server.port=9090```
+```java -jar kgrid-library-1.3.1.jar --server.port=9090```
 
 

@@ -31,7 +31,7 @@ For more information see [Integrator's guide](../integrator) and [Kgrid platform
 
 ### How it works
 
-Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)). Additional runtimes are planned including external Node.js and Python environments, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
+Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)), and a [remote Node.js runtime](https://github.com/kgrid/kgrid-node-express-adapter). Additional runtimes are planned including an external Python environment, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
 
  - a metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
  - code artifact(s)
@@ -40,7 +40,6 @@ Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.w
  - additional metadata if applicable
 
 The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) Single Page Application (SPA). They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
-
 
 
 ## Setup

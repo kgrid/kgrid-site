@@ -43,9 +43,9 @@ Start KGrid & verify in the browser that the activator and library are running
 ```
 
 The terminal might show the following messages:
-> java -jar .../kgrid-library-1.2.3.jar ...  --server.port=8081
+> java -jar .../kgrid-library-1.2.6.jar ...  --server.port=8081
 >
-> java -jar .../kgrid-activator-1.1.5.jar ... --server.port=8080
+> java -jar .../kgrid-activator-1.3.1.jar ... --server.port=8080
 >
 > library: You have the latest version.
 >
@@ -76,6 +76,5 @@ If you'd like to load existing Knowledge Objects to the Activator or Library, KG
 [CPIC Collection](https://kgrid-objects.github.io/cpic-collection/deployment/)
 
 More information on KO collections can be found at [https://kgrid-objects.github.io/](https://kgrid-objects.github.io/)
-
 
 If you'd like to create a new Knowledge Object, please refer to [Developer's Guide](https://kgrid.org/guides/developer/)
