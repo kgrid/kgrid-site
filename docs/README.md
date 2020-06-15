@@ -35,13 +35,13 @@ footer: GPL Licensed | Copyright © 2019-present University of Michigan
     <h2>Specifications of Knowledge Grid Service API</h2>
     <p>KGrid API Documentation</p>
   </div>
-  <!-- <div class="feature">
+  <div class="feature">
     <div class="action hero">
         <a href="integrator/" class="nav-link action-button">Integrator's Guide</a>
     </div>    
     <h2>For integrating KGrid into healthcare/research settings</h2>
     <p>Learn how to set up and configure the Knowledge Grid components and configure them for your environment.</p>
-  </div> -->
+  </div>
   <div class="feature">
   <div class="action hero">
   <a href="awesome/" class="nav-link action-button">Awesome Stuff</a>
@@ -49,14 +49,6 @@ footer: GPL Licensed | Copyright © 2019-present University of Michigan
   <h2>A curated list of Key KGrid materials</h2>
   <!-- <p style="color: darkred;">(Continually updating)</p> -->
   <p> KGrid publications, presentations, and articles that shape and inspire our work.</p>
-  </div>
-  <div class="feature">
-  <div class="action hero">
-  <a href="latest" class="nav-link action-button">What's New</a>
-  </div>    
-  <h2>The latest development in Knowledge Grid</h2>
-  <!-- <p style="color: darkred;">(coming soon)</p> -->
-  <p></p>
   </div>
 </div>
 
