@@ -64,6 +64,13 @@ module.exports = {
             ]
           },
           {
+            title: 'Deployment Specification',
+            collapsable: false,
+            children: [
+              '/tutorial/deployment/deployment',
+            ]
+          },
+          {
             title: 'KO Service Testing',
             collapsable: false,
             children: [

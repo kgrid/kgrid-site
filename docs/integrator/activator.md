@@ -1,10 +1,10 @@
 # KGrid Activator
 
-## Running the Activator
+## Running With Embedded JS Engine
 
 Download the latest activator jar from GitHub [Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest).
 
-1. Create a activator directory
+1. Create an activator directory
 1. Create a directory named shelf in the new activator directory
 1. Download [kgrid-activator-#.#.#.jar](https://github.com/kgrid/kgrid-activator/releases/latest)  
 1. Place the kgrid-activator-#.#.#.jar into the activator
@@ -140,56 +140,7 @@ To use the remote environment you must download and start up the remote javascri
 
 Note the configuration options at the end of this page.
 
-**Running the hello-proxy object**
-
-1. Follow the same steps as above for downloading and starting up an activator.
-1. Download the [hello proxy object](https://github.com/kgrid-objects/example-collection/releases/download/2.0.0/hello-proxy-v1.0.zip) and unzip it in your shelf directory
-1. Download the javascript runtime by running `npm install -g @kgrid/noderuntime`
-1. Start the javascript runtime with the command `kgrid-node`
-1. You can use the same commands as above for inspecting and running the object. For example:
-
-```bash
-curl -X POST -H "Content-Type:application/json"  \
-    -d "{\"name\": \"Fred Flintstone\"}" \
-     http://localhost:8080/hello/proxy/v1.0/welcome
-```
-
-returns
-```json
-{
-  "result": {
-    "result": "Welcome to Knowledge Grid, Fred Flintstone",
-    "request_id": "b75c5846-af22-499a-8547-2e9e1d85ea70"
-  },
-  "info": {
-    "ko": {
-      "@id": "hello-proxy",
-      "@type": "koio:KnowledgeObject",
-      "title": "the best hello world ever",
-      "identifier": "ark:/hello/proxy",
-      "version": "v1.0",
-      "description": "A native node js object run through the proxy adapter with one artifact",
-      "contributors": "Kgrid Team",
-      "keywords": [
-        "Hello",
-        "example"
-      ],
-      "hasServiceSpecification": "service.yaml",
-      "hasDeploymentSpecification": "deployment.yaml",
-      "hasPayload": "src/index.js",
-      "@context": [
-        "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
-      ]
-    },
-    "inputs": {
-      "name": "Fred Flintstone"
-    }
-  }
-}
-```
-
-
-## Configuration
+## Activator Configuration
 There are several settings that you can control on the Activator.
 
 **Activator Knowledge Object Shelf Location**
@@ -253,7 +204,60 @@ For example a manifest file for the example collection would look like this:
   "https://github.com/kgrid-objects/example-collection/releases/download/2.0.0/score-calc-v0.3.0.zip"
 ]}
 ```
- ####Configuring the remote runtime
+
+## Running With External Runtime
+
+The activator also has a proxy adapter which can connect to an external runtime and execute code natively in that environment instead of in the embedded javascript engine. Currently we have created a Node.js remote environment which can be used to execute javascript code:
+
+1. Follow the same steps as above for downloading and starting up an activator.
+1. Download the javascript runtime by running `npm install -g @kgrid/noderuntime`
+1. Start the javascript runtime with the command `kgrid-node` Note: you may need to configuring the runtime, see below.
+1. Download the [hello proxy object](https://github.com/kgrid-objects/example-collection/releases/download/2.0.0/hello-proxy-v1.0.zip) and unzip it in your shelf directory
+1. You can use the same commands as above for inspecting and running the object. For example:
+
+```bash
+curl -X POST -H "Content-Type:application/json"  \
+    -d "{\"name\": \"Fred Flintstone\"}" \
+     http://localhost:8080/hello/proxy/v1.0/welcome
+```
+
+returns
+```json
+{
+  "result": {
+    "result": "Welcome to Knowledge Grid, Fred Flintstone",
+    "request_id": "b75c5846-af22-499a-8547-2e9e1d85ea70"
+  },
+  "info": {
+    "ko": {
+      "@id": "hello-proxy",
+      "@type": "koio:KnowledgeObject",
+      "title": "the best hello world ever",
+      "identifier": "ark:/hello/proxy",
+      "version": "v1.0",
+      "description": "A native node js object run through the proxy adapter with one artifact",
+      "contributors": "Kgrid Team",
+      "keywords": [
+        "Hello",
+        "example"
+      ],
+      "hasServiceSpecification": "service.yaml",
+      "hasDeploymentSpecification": "deployment.yaml",
+      "hasPayload": "src/index.js",
+      "@context": [
+        "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+      ]
+    },
+    "inputs": {
+      "name": "Fred Flintstone"
+    }
+  }
+}
+```
+
+ ## Configuring the Remote Runtime
+ 
+ These settings apply to the Node.js runtime environment
  
  **Adapter Location**
  

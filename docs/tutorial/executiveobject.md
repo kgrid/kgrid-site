@@ -51,7 +51,7 @@ The section shows the concept of 'Executive Object' which orchestrating and call
 
 ## Node.js Proxy Adapter example:
 
-As above you can referece other objects through the global context but this time using the node.js context as shown:
+As above you can reference other objects through the global context but this time using the node.js context as shown:
 
 ```js
   var hello = global.cxt.getExecutorByID("ark:/hello/proxy", "v1.0", "welcome")

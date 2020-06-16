@@ -135,40 +135,7 @@ components:
           type: object
 ```
 
-### Extensions
-Extensions, or vendor extensions, are custom properties that start with _x-_.   KGrid defines a small set of attributes used in the activation process in the Activator.
 
-- artifact - path to the file where the function can be found.  
-- adapter - type of adapter to use
-- entry - the function name
-
-```yaml
-
-...
-
-      x-kgrid-activation:
-        artifact: dist/main.js
-        adapter: JAVASCRIPT
-        entry: score
-```
-
-**External Runtime Activation**
-
-For objects using an external remote runtime more information is required:
-- engine - specifies the type of remote environment
-- function - specifies the 'main' function where code execution begins
-- entry - now specifies the code file containing the main function
-- also note that artifact can be an array containing multiple files to be used by the remote environment
-
-```yaml
-      x-kgrid-activation:
-        artifact:
-          - 'src/welcome.js'
-        adapter: 'PROXY'
-        engine: 'node'
-        entry: 'src/welcome.js'
-        function: 'welcome'
-```
 ## Resources
 
 - [OpenAPI Basic Structure](https://swagger.io/docs/specification/openapi-extensions/)
