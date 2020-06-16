@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 2
 sidebar: auto
-description: KGrid Developer's Guide - Get Started
+description: Instruction for Deploying R01 KO collection in KGRID
 ---
 # KGrid Quick Start
 
@@ -17,7 +17,7 @@ description: KGrid Developer's Guide - Get Started
 > npm install -g @kgrid/cli
 ```
 
-## Step 2 - Install a micro-grid in your project directory(KGrid workspace)
+## Step 2 - Install a micro-grid in your project directory (KGrid workspace)
 
 ```bash
 > mkdir myproject
@@ -25,37 +25,53 @@ description: KGrid Developer's Guide - Get Started
 > kgrid setup
 ```
 The terminal might show the following messages:
-> KGrid CLI v0.4.0
+> KGrid CLI v0.5.0
 >
-> Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
+> Setting up kgrid at {path}/myproject/.kgrid
 >
 > Downloading kgrid components... done
 >
 > kgrid setup complete
 
 
-## Step 3 - Start a local grid
+## Step 3 - Install KGrid NodeJS runtime (Optional)
+
+__This step is required only if you will develop, test or try the knowledge objects for NodeJS runtime.__
+
+```bash
+> npm install -g @kgrid/noderuntime
+```
+
+## Step 4 - Start a local grid
 
 Start KGrid & verify in the browser that the activator and library are running
 
 ```bash
-> kgrid start
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
 ```
 
 The terminal might show the following messages:
-> java -jar .../kgrid-library-1.2.6.jar ...  --server.port=8081
+> java -jar .../kgrid-library-1.2.6.jar ...  --server.port=8081 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
 >
-> java -jar .../kgrid-activator-1.3.1.jar ... --server.port=8080
->
-> library: You have the latest version.
 >
 > Starting KGrid library...
 >
-> activator: You have the latest version.>
+> java -jar .../kgrid-activator-1.3.1.jar ... --server.port=8080 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
+>
 >
 > Starting KGrid activator...
 >
 > ...
+
+
+## Step 5 - Start KGrid NodeJS runtime (Optional)
+
+```bash
+> kgrid-node
+```
+
+This will start the NodeJS runtime, the runtime will register with the activator. The activator will then activate those KOs if their deployment descriptor indicates the need of `node` engine through `proxy` adapter.
+
 
 ::: tip
 You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
@@ -64,14 +80,14 @@ You can stop the local micro-grid with `ctrl-C` or open an additional terminal t
 ::: tip
 Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
 
-The Library will be empty and the Activator should show an empty KO list, `{}`.
+The Library will be loaded with the example KO collection.
+
+The Activator will show a list of links for detailed information.
 :::
 
 ## What's next?
 
 If you'd like to load existing Knowledge Objects to the Activator or Library, KGrid team has developed several collections of KOs you can try:
-
-[Example Collection](https://kgrid-objects.github.io/example-collection/)
 
 [CPIC Collection](https://kgrid-objects.github.io/cpic-collection/deployment/)
 
