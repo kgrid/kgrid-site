@@ -70,7 +70,7 @@ the [library health endpoint](http://localhost:8080/health).  The health of the 
 ```
 Now simply navigate to the [KGrid Library](http://localhost:8080).
 
-## Configuration
+## Library Configuration
 There are several settings that you can control on the Library.
 
 **Library Knowledge Object Shelf Location**
@@ -83,10 +83,8 @@ java -jar kgrid-library-1.3.1.jar --kgrid.shelf.cdostore.url=filesystem:file:///
 java -jar kgrid-library-1.3.1.jar --kgrid.shelf.cdostore.url=filesystem:file:///c:/Users/me/myshelf
 ```
 
-**Library Server Port** 
+**Library Server Port**
 
 To change the port:
 
 ```java -jar kgrid-library-1.3.1.jar --server.port=9090```
-
-

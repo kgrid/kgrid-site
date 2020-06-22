@@ -136,7 +136,7 @@ The Hello World KO will return the following
 
 The hello world example object uses the embedded javascript runtime. There is also a remote javascript runtime service which is more powerful and is used for the hello proxy example.
 
-To use the remote environment you must download and start up the remote javascript runtime environment project by running `npm install -g @kgrid/noderuntime` and running the command `kgrid-node` 
+To use the remote environment you must download and start up the remote javascript runtime environment project by running `npm install -g @kgrid/noderuntime` and running the command `kgrid-node`
 
 Note the configuration options at the end of this page.
 
@@ -168,12 +168,6 @@ To change the port:
 
 ```java -jar kgrid-activator-1.3.1.jar --server.port=9090```
 
-
-**Activator Server Path**
-
-By default the endpoints of the activator at the root of the activator server.  To change the server root path:
-
-```java -jar kgrid-activator-1.3.1.jar --server.contextPath=/activator```
 
 **Activator Object Auto-Reload**
 
@@ -207,7 +201,7 @@ For example a manifest file for the example collection would look like this:
 
 ## Running With External Runtime
 
-The activator also has a proxy adapter which can connect to an external runtime and execute code natively in that environment instead of in the embedded javascript engine. Currently we have created a Node.js remote environment which can be used to execute javascript code:
+The activator also has a proxy adapter which can connect to an external runtime and execute code natively in that environment. Currently we have created a reference implementation of a Node.js remote environment which can be used to execute JavaScript code. To use the [KGrid Node.js runtime](https://www.npmjs.com/package/@kgrid/noderuntime), here is the step-by-step instruction.
 
 1. Follow the same steps as above for downloading and starting up an activator.
 1. Download the javascript runtime by running `npm install -g @kgrid/noderuntime`
@@ -255,20 +249,18 @@ returns
 }
 ```
 
- ## Configuring the Remote Runtime
- 
- These settings apply to the Node.js runtime environment
- 
+#### Configuring the Remote Runtime
+
+These settings apply to the Node.js runtime environment communicating with the proxy adapter in the KGrid Activator. More details on the communication message format, please refer to the documentation of the activator and the proxy adapter.
+
  **Adapter Location**
- 
+
  This property has to point to the adapter that the remote environment will register with and be used in
- 
+
  `KGRID_ADAPTER_PROXY_URL = http://path-to-adapter`
- 
+
 **Self Location**
 
-This has to point to the public url that can be used to access this runtime environment
+This has to point to the public URL that can be used to access this runtime environment
 
 `ENVIRONMENT_SELF_URL = http://path-to-this-runtime`
-
-
