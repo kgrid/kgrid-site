@@ -9,7 +9,7 @@ footer: GPL Licensed | Copyright © 2019-present University of Michigan
     <div class="action hero">
         <a href="quickstart/" class="nav-link action-button">Quick Start</a>
     </div>    
-    <h2>Start your GRID in 3 steps</h2>
+    <h2>Start your GRID in as little as 3 steps</h2>
     <p>Learn how to set up and configure the Knowledge Grid components for your environment.</p>
   </div>
 
