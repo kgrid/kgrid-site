@@ -88,6 +88,13 @@ module.exports = {
               '/tutorial/clients/swagger'
             ]
           },
+          {
+            title: 'Remote Runtimes',
+            collapsable: false,
+            children: [
+              '/tutorial/runtimes/overview',
+            ]
+          },
 
           'executiveobject'
         ]
