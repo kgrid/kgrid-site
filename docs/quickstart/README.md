@@ -94,3 +94,5 @@ If you'd like to load existing Knowledge Objects to the Activator or Library, KG
 More information on KO collections can be found at [https://kgrid-objects.github.io/](https://kgrid-objects.github.io/)
 
 If you'd like to create a new Knowledge Object, please refer to [Developer's Guide](https://kgrid.org/guides/developer/)
+
+For more information on remote runtimes and developing your own look in the [advanced tutiorials](/guides/tutorial/runtimes).

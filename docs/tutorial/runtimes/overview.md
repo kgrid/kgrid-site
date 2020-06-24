@@ -4,12 +4,12 @@ External runtimes allow the knowledge grid to execute code in a native environme
 
 ## Using an external runtime
 
-To activate objects that require an external runtime first start the activator then start up the remote runtime making sure to set up the runtime to point to your activator. See the [integrator setup docs](/integrator/activator) for more info.
-Create your knowledge object as normal but remeber to include all the necessary [deployment](/tutorial/deployment/deployment) information.
+To activate objects that require an external runtime first start the activator then start up the remote runtime making sure to set up the runtime to point to your activator. See the [integrator setup docs](/guides/integrator/activator) for more info.
+Create your knowledge object as normal but remember to include all the necessary [deployment](/guides/tutorial/deployment/deployment) information. Check with the documentation included with your runtime for any additional setup you may need to perform.
 
 The runtimes register themselves with the proxy adapter included in the activator and then assume responsibility of handling execution, storage, and communication for the executable portion (payload) of the knowledge object.
 
-## Creating a new remote runtime
+## Developing a new remote runtime
 
 This describes the API your runtime will have to use to communicate with the proxy adapter. Using this api you can create an environment that uses the common Kgrid activator api but executes objects in any given remote environment.
 
