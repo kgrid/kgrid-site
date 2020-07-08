@@ -19,6 +19,7 @@ Directory structure should look similar to the following
       │   └── hello-world-v1.0  
       │       ├── metadata.json
       │       ├── service.yaml
+      │       ├── deployment.yaml
       │       └── src
       │           └── index.js
       └── kgrid-activator-#.#.#.jar
@@ -120,7 +121,7 @@ The Hello World KO will return the following
         "example"
       ],
       "hasServiceSpecification": "service.yaml",
-      "hasDeploymentSpecification": "service.yaml",
+      "hasDeploymentSpecification": "deployment.yaml",
       "hasPayload": "src/index.js",
       "@context": [
         "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"

@@ -11,11 +11,7 @@ description: frequently asked questions
 Yes. OpenJDK 12 can be found [here](https://jdk.java.net/12/).
 
 #### :milky_way: Which Node.js version shall I install to run KGrid CLI ?
-The LTS version of [Node.js](hhtps://www.nodejs.org) is highly recommended. (Currently, v10.16.3)
-
-::: warning
-Certain packages, such as `gulp3`, have issues with Node.js v12. Avoid v12 if you has module dependencies on those packages.
-:::
+The LTS version of [Node.js](hhtps://www.nodejs.org) is highly recommended.
 
 #### :milky_way: I'm having problems with permissions when I tried to install or run npm. It suggests I use `sudo`. How do I fix?
 

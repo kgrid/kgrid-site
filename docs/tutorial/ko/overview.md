@@ -26,20 +26,19 @@ In the packaged object metadata is kept in a `json` file.
 
 Metadata includes an identifier, minimal description data, and required knowledge object properties from the [Knowledge Object Implementation Ontology (KOIO)](koio)
 
-`hello-world/metadata.json`
+`hello-world-v1.0/metadata.json`
 ```json
 {
   "@id": "hello-world",
   "@type":"koio:KnowledgeObject",
   "identifier":"ark:/hello/world",
-  "version":"1.0.0",
-  "title":"Hello World Title",
-  "contributors": "Kgrid Team",
-  "description": "Test Hello World ",
-  "keywords": ["test", "hello world"],
+  "version":"v1.0",
+  "title": "Hello world",
+  "description":"An example of Knowledge Object",
+  "keywords":["Hello","example"],
   "hasServiceSpecification": "service.yaml",
-  "hasDeploymentSpecification": "deploy.yaml",
-  "hasPayload": "welcome.js",
+  "hasDeploymentSpecification": "deployment.yaml",
+  "hasPayload": "src/index.js",
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }
 ```

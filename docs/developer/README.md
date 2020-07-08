@@ -21,7 +21,7 @@ The fundamental thing the Knowledge Grid does is allow you to externalize key pi
 ### Basics
 KGrid uses a "plugin" model. An **activator** component loads KOs at runtime, extracts and deploys the code to a suitable runtime environment, exposes the service the code implements as a simple RESTful API, and routes requests and responses. The service description (using OpenAPI 3) also specifies the inputs and outputs for the KO.
 
-There is also a **library** component that can be used to manage and browse KOs stored in an archive. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
+There is also a **library** component that can be used to manage and browse KOs. Since the activator and the library share a storage mechanism, they are typically deployed together. But one library can serve as a source of KOs for many activators, and one activator can import KOs from many libraries.
 
 <img alt="Kgrid overview" src="../assets/img/kgridoverview.png" width="90%">
 
@@ -36,7 +36,7 @@ Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.w
  - a metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
  - code artifact(s)
  - an OpenAPI `.yaml` document describing the service interface(s) the object provides
- - a deployment descriptor specifying the runtime environment(s), the entry point, etc.
+ - a deployment descriptor `.yaml` document specifying the runtime environment(s), the entry point, etc.
  - additional metadata if applicable
 
 The activator and library are Spring Boot microservices written in Java. The library frontend is a [Vue](https://vuejs.org) Single Page Application (SPA). They can be deployed directly in most environments. We also provide `docker` images for container scenarios.
@@ -169,6 +169,10 @@ Select `Nashorn` for the embedded runtime.
 
 ```
 ? Please select the target runtime:  Nashorn
+
+? Please select the target runtime:  (Use arrow keys)
+> Nashorn
+  NodeJS
 
 ? Please select the template type:  (Use arrow keys)
 > Simple
