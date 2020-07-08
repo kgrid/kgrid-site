@@ -119,19 +119,33 @@ Starting KGrid activator...
 
 ...
 ```
-
 ::: tip
+You can use the shelf option to point to a different folder where KOs are stored. The value can be either an absolute path or a relative path.
+
+For example:
+
+If you cloned our example KO collection repo, you will find the KOs in a subfolder of `collection`.
+
+After setting up the kgrid components at the root directory, run
+
+``` bash
+> kgrid start -s collection
+```
+
+:::
+
 Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
 
 The Library will be empty and the Activator should show an empty KO list, `{}`.
-![Empty Library](../assets/img/EmptyLibrary.png)
-:::
+  ![Empty Library](../assets/img/EmptyLibrary.png)
 
-You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
 
 ::: tip
-For more information on configuring and running local grids see [the KGrid CLI docs](http://kgrid.org/kgrid-cli/#kgrid-setup) or [the Integrator's Guide](../integrator)
+You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
 :::
+
+For more information on configuring and running local grids see [the KGrid CLI docs](http://kgrid.org/kgrid-cli/#kgrid-setup) or [the Integrator's Guide](../integrator)
+
 
 ## My first object
 
@@ -139,16 +153,28 @@ For more information on configuring and running local grids see [the KGrid CLI d
 
 Open additional terminal tab or window and navigate to the `myproject` folder that you created
 
-Create a new knowledge object using the kgrid-cli. (You will be prompted for an template type.)
+Create a new knowledge object using the kgrid-cli. (You will be prompted for a target runtime and a template type if applicable.)
 
 ``` bash
 > kgrid create myobject
-KGrid CLI v0.4.0
+KGrid CLI v0.5.1
+
+? Please select the target runtime:  (Use arrow keys)
+> Nashorn
+  NodeJS
+
+```
+
+Select `Nashorn` for the embedded runtime.
+
+```
+? Please select the target runtime:  Nashorn
 
 ? Please select the template type:  (Use arrow keys)
 > Simple
   Bundled
   Executive
+
 ```
 
 Once you select the template type, the knowledge object will be created.

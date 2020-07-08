@@ -17,17 +17,17 @@ description: Instruction for Deploying R01 KO collection in KGRID
 > npm install -g @kgrid/cli
 ```
 
-## Step 2 - Install a micro-grid in your project directory (KGrid workspace)
+## Step 2 - Install a micro-grid in your directory storing the KOs (KGrid workspace)
 
 ```bash
-> mkdir myproject
-> cd myproject
+> mkdir mycollection
+> cd mycollection
 > kgrid setup
 ```
 The terminal might show the following messages:
 > KGrid CLI v0.5.0
 >
-> Setting up kgrid at {path}/myproject/.kgrid
+> Setting up kgrid at {path}/mycollection/.kgrid
 >
 > Downloading kgrid components... done
 >

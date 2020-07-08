@@ -14,18 +14,17 @@ Download the latest activator jar from GitHub [Latest Activator Release](https:/
 Directory structure should look similar to the following
 
 ```text  
- ├── activator   
- │  └──  shelf
- │     └── hello-world-v1.0  
- │          ├── metadata.json
- │          ├── service.yaml
- │          └── src
- │             └── index.js
-
- └── kgrid-activator-#.#.#.jar
+ └─── activator   
+      ├─  shelf
+      │   └── hello-world-v1.0  
+      │       ├── metadata.json
+      │       ├── service.yaml
+      │       └── src
+      │           └── index.js
+      └── kgrid-activator-#.#.#.jar
 ```
 
-The activator is executable jar and can be run from the command line.  Open a terminal window and navigate to the direcoty where the jar and shelf are located.  
+The activator is executable jar and can be run from the command line.  Open a terminal window and navigate to the directory where the jar and shelf are located.  
 
 Type in the following.
 
