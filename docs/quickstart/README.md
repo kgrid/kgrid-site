@@ -10,7 +10,8 @@ description: Instruction for Deploying R01 KO collection in KGRID
 [![CircleCI](https://circleci.com/gh/kgrid/guides.svg?style=svg)](https://circleci.com/gh/kgrid/guides)
 
 ::: tip
-**Confirm [Node and NPM (version 10+)](https://nodejs.org) are installed, and [Java 11+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.**
+**Confirm [Node and NPM (version 10+)](https://nodejs.org) are 
+installed, and [Java 11+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.**
 :::
 
 ### Step 1 - Install the [KGrid CLI](https://kgrid.org/kgrid-cli)
@@ -19,9 +20,10 @@ description: Instruction for Deploying R01 KO collection in KGRID
 > npm install -g @kgrid/cli
 ```
 
-### Step 2 - Install a micro-grid in your directory storing the KOs (KGrid workspace)
+### Step 2 - Install a Kgrid in your directory storing the KOs (KGrid workspace)
 
-You will create a new directory for a local grid and install the Kgrid Library and Activator
+You will create a new directory for a local grid and install the 
+Kgrid Library and Activator
 
 ```bash
 > mkdir mygrid
@@ -34,7 +36,8 @@ Downloading kgrid components... done
 kgrid setup complete
 >
 ```
-You can check that everything is installed:  
+You can check that everything has been installed with the 
+following command:  
 ```
 > kgrid --version
 Checking JAVA Version ...
@@ -57,7 +60,9 @@ ______________________________________________________________
 ```
 ### Step 3 - Start a local grid
 
-Start KGrid & verify in the browser that the activator and library are running. You will point to a manifest file to tell the Activator to load example objects.
+Start KGrid & verify in the browser that the activator and 
+library are running. You will point to a manifest file to tell 
+the Activator to load example objects.
 
 ```bash
 > kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
@@ -70,33 +75,43 @@ KGRID Components are installed at: /Users/pboisver/dev/42/.kgrid
 
   KGRID Activator: version 1.3.6    Latest Version
 
-java -jar ./.kgrid/kgrid-library-1.2.8.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/pboisver/dev/42 --server.port=8081 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+java -jar ./.kgrid/kgrid-library-1.2.8.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/username/mygrid --server.port=8081 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
 
 Starting KGrid library...
-java -jar ./.kgrid/kgrid-activator-1.3.6.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/pboisver/dev/42 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+java -jar ./.kgrid/kgrid-activator-1.3.6.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/username/mygrid --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
 
 Starting KGrid activator...
 ```
 
 ### Kicking the tires and taking it for a spin
 
-We should now have a Kgrid Activator running with a single Knowledge Object activated.
+We should now have a Kgrid Activator running with a single 
+Javascript Knowledge Object activated.
 We can go to `http://localhost:8080` to check its status.
+Going to `http://localhost:8080/endpoints` will display 
+information about the activated objects and give us a link 
+with which to execute the KO
 
 ## Using a remote runtime
-Currently, the Kgrid Activator natively supports Knowledge Objects written in Javascript, however the Activator has the ability to support more languages by connecting to runtimes that can be built to handle them.
+Currently, the Kgrid Activator natively supports Knowledge 
+Objects written in Javascript, however the Activator has 
+the ability to support more languages by connecting to 
+runtimes that can be built to handle them.
 ##### The runtimes must be started after the activator
 ### Step 1 - Install KGrid NodeJS runtime
 
-Here, we will install and run the Kgrid NodeJS Runtime, which will allow the Activator to handle objects written in NodeJS.
+Here, we will install and run the Kgrid NodeJS Runtime, 
+which will allow the Activator to handle objects written in NodeJS.
 Install the runtime globally with the following command:
 
 ```bash
 > npm install -g @kgrid/noderuntime
 ```
 ### Step 2 - Stop and restart the Activator
-Here, we will stop the Activator by pressing `ctrl + C` in the terminal.
-Now, we will start it again pointed to a manifest that contains some Knowledge Objects written in NodeJS.
+Here, we will stop the Activator by pressing `ctrl + C` 
+in the terminal.
+Now, we will start it again pointed to a manifest that 
+contains some Knowledge Objects written in NodeJS.
 ```bash
 > kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-node-manifest.json
 ```
@@ -118,12 +133,17 @@ The Activator will show a list of links for detailed information.
 
 ## What's next?
 
-If you'd like to load existing Knowledge Objects to the Activator or Library, KGrid team has developed several collections of KOs you can try:
+If you'd like to load existing Knowledge Objects to the 
+Activator or Library, KGrid team has developed several 
+collections of KOs you can try:
 
 [CPIC Collection](https://kgrid-objects.github.io/cpic-collection/deployment/)
 
-More information on KO collections can be found at [https://kgrid-objects.github.io/](https://kgrid-objects.github.io/)
+More information on KO collections can be found at 
+[https://kgrid-objects.github.io/](https://kgrid-objects.github.io/)
 
-If you'd like to create a new Knowledge Object, please refer to [Developer's Guide](https://kgrid.org/guides/developer/)
+If you'd like to create a new Knowledge Object, please refer 
+to [Developer's Guide](https://kgrid.org/guides/developer/)
 
-For more information on remote runtimes and developing your own look in the [advanced tutiorials](/guides/tutorial/runtimes/overview).
+For more information on remote runtimes and developing your 
+own look in the [advanced tutiorials](/guides/tutorial/runtimes/overview).
