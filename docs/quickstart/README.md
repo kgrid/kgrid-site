@@ -1,40 +1,90 @@
 ---
 sidebarDepth: 2
-sidebar: auto
+sidebar: false
 description: Instruction for Deploying R01 KO collection in KGRID
----
-# KGrid Quick Start
+--- 
+# KGrid Quick Start 
+
+## Using the internal runtime
 
 [![CircleCI](https://circleci.com/gh/kgrid/guides.svg?style=svg)](https://circleci.com/gh/kgrid/guides)
 
 ::: tip
-**Confirm [Node and NPM (version 10+)](https://nodejs.org) are installed, and [Java 8+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.**
+**Confirm [Node and NPM (version 10+)](https://nodejs.org) are installed, and [Java 11+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.**
 :::
 
-## Step 1 - Install the [KGrid CLI](https://kgrid.org/kgrid-cli)
+### Step 1 - Install the [KGrid CLI](https://kgrid.org/kgrid-cli)
 
 ```bash
 > npm install -g @kgrid/cli
 ```
 
-## Step 2 - Install a micro-grid in your directory storing the KOs (KGrid workspace)
+### Step 2 - Install a micro-grid in your directory storing the KOs (KGrid workspace)
+
+You will create a new directory for a local grid and install the Kgrid Library and Activator
 
 ```bash
-> mkdir mycollection
-> cd mycollection
+> mkdir mygrid
+> cd mygrid
 > kgrid setup
+KGrid CLI v0.5.0
+
+Setting up kgrid at {path}/mycollection/.kgrid
+Downloading kgrid components... done
+kgrid setup complete
+>
 ```
-The terminal might show the following messages:
-> KGrid CLI v0.5.0
->
-> Setting up kgrid at {path}/mycollection/.kgrid
->
-> Downloading kgrid components... done
->
-> kgrid setup complete
+You can check that everything is installed:  
+```
+> kgrid --version
+Checking JAVA Version ...
+java version "11.0.1" 2018-10-16 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
 
+Checking Node Version ...
+v10.15.3
 
-## Step 3 - Install KGrid NodeJS runtime (Optional)
+KGrid Components Version ...
+KGRID Components are installed at: ../mygrid/.kgrid
+
+  KGRID Library:   version 1.2.8    Latest Version
+
+  KGRID Activator: version 1.3.6    Latest Version
+
+______________________________________________________________
+@kgrid/cli/0.5.6 darwin-x64 node-v10.15.3
+```
+### Step 3 - Start a local grid
+
+Start KGrid & verify in the browser that the activator and library are running. You will point to a manifest file to tell the Activator to load example objects.
+
+```bash
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+KGrid CLI v0.5.6
+
+Checking KGrid Components Version ...
+KGRID Components are installed at: /Users/pboisver/dev/42/.kgrid
+
+  KGRID Library:   version 1.2.8    Latest Version
+
+  KGRID Activator: version 1.3.6    Latest Version
+
+java -jar ./.kgrid/kgrid-library-1.2.8.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/pboisver/dev/42 --server.port=8081 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+
+Starting KGrid library...
+java -jar ./.kgrid/kgrid-activator-1.3.6.jar --kgrid.shelf.cdostore.url=filesystem:file:////Users/pboisver/dev/42 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+
+Starting KGrid activator...
+```
+
+### Kicking the tires and taking it for a spin
+
+> ???
+
+## Using a remote runtime
+
+### Step 4 - Install KGrid NodeJS runtime (Optional)
 
 __This step is required only if you will develop, test or try the knowledge objects for NodeJS runtime.__
 
@@ -42,29 +92,7 @@ __This step is required only if you will develop, test or try the knowledge obje
 > npm install -g @kgrid/noderuntime
 ```
 
-## Step 4 - Start a local grid
-
-Start KGrid & verify in the browser that the activator and library are running
-
-```bash
-> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
-```
-
-The terminal might show the following messages:
-> java -jar .../kgrid-library-1.2.6.jar ...  --server.port=8081 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
->
->
-> Starting KGrid library...
->
-> java -jar .../kgrid-activator-1.3.1.jar ... --server.port=8080 --kgrid.shelf.manifest=https://github.com/kgrid-objects/example-collection/releases/latest/download/manifest.json
->
->
-> Starting KGrid activator...
->
-> ...
-
-
-## Step 5 - Start KGrid NodeJS runtime (Optional)
+### Step 5 - Start KGrid NodeJS runtime (Optional)
 
 ```bash
 > kgrid-node
