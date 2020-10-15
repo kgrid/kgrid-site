@@ -60,7 +60,7 @@ ______________________________________________________________
 Start KGrid & verify in the browser that the activator and library are running. You will point to a manifest file to tell the Activator to load example objects.
 
 ```bash
-> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/start-up-manifest.json
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
 KGrid CLI v0.5.6
 
 Checking KGrid Components Version ...
@@ -98,7 +98,7 @@ Install the runtime globally with the following command:
 Here, we will stop the Activator by pressing `ctrl + C` in the terminal.
 Now, we will start it again pointed to a manifest that contains some Knowledge Objects written in NodeJS.
 ```bash
-> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/start-up-node-manifest.json
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-node-manifest.json
 ```
 ### Step 3 - Start KGrid NodeJS runtime
 Now, we will start the NodeJS runtime. 
