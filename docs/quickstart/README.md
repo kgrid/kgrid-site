@@ -60,7 +60,7 @@ ______________________________________________________________
 Start KGrid & verify in the browser that the activator and library are running. You will point to a manifest file to tell the Activator to load example objects.
 
 ```bash
-> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/manifest.json
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/start-up-manifest.json
 KGrid CLI v0.5.6
 
 Checking KGrid Components Version ...
@@ -80,30 +80,33 @@ Starting KGrid activator...
 
 ### Kicking the tires and taking it for a spin
 
-> ???
+We should now have a Kgrid Activator running with a single Knowledge Object activated.
+We can go to `http://localhost:8080` to check its status.
 
 ## Using a remote runtime
+Currently, the Kgrid Activator natively supports Knowledge Objects written in Javascript, however the Activator has the ability to support more languages by connecting to runtimes that can be built to handle them.
+##### The runtimes must be started after the activator
+### Step 1 - Install KGrid NodeJS runtime
 
-### Step 4 - Install KGrid NodeJS runtime (Optional)
-
-__This step is required only if you will develop, test or try the knowledge objects for NodeJS runtime.__
+Here, we will install and run the Kgrid NodeJS Runtime, which will allow the Activator to handle objects written in NodeJS.
+Install the runtime globally with the following command:
 
 ```bash
 > npm install -g @kgrid/noderuntime
 ```
-
-### Step 5 - Start KGrid NodeJS runtime (Optional)
-
+### Step 2 - Stop and restart the Activator
+Here, we will stop the Activator by pressing `ctrl + C` in the terminal.
+Now, we will start it again pointed to a manifest that contains some Knowledge Objects written in NodeJS.
+```bash
+> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/3.0.0/download/start-up-node-manifest.json
+```
+### Step 3 - Start KGrid NodeJS runtime
+Now, we will start the NodeJS runtime. 
+The runtime will register with the activator, 
+and the activator will then activate the NodeJS KOs.
 ```bash
 > kgrid-node
 ```
-
-This will start the NodeJS runtime, the runtime will register with the activator. The activator will then activate those KOs if their deployment descriptor indicates the need of `node` engine through `proxy` adapter.
-
-
-::: tip
-You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
-:::
 
 ::: tip
 Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
