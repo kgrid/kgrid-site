@@ -120,6 +120,8 @@ Now, we will start the NodeJS runtime.
 The runtime will register with the activator, 
 and the activator will then activate the NodeJS KOs.
 ```bash
+> mkdir kgrid_node_runtime
+> cd kgrid_node_runtime
 > kgrid-node
 ```
 
