@@ -30,10 +30,10 @@ footer: GPL Licensed | Copyright © 2019-present University of Michigan
   </div>
   <div class="feature">
     <div class="action hero">
-        <a href="api/" class="nav-link action-button">KGrid Technical Docs</a>
+        <a href="api/" class="nav-link action-button">KGrid Docs</a>
     </div>    
-    <h2>Knowledge Grid User and Technical Documentation</h2>
-    <p>KGrid Technical Documentation</p>
+    <h2>Knowledge Grid User and Developer Documentation</h2>
+    <p>KGrid Docs</p>
   </div>
   <div class="feature">
     <div class="action hero">
