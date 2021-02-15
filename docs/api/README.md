@@ -5,7 +5,9 @@ sidebar: auto
 
 # KGrid Technical Documentation
 
-## Activator [[link]](https://kgrid.org/kgrid-activator/)
+## Activator 
+- [User Documentation](https://kgrid.org/kgrid-activator/)
+- [Developer Documentation](https://github.com/kgrid/kgrid-activator/)
 
 ## Library Front End [[link]](https://kgrid.org/kgrid-library/)
 
