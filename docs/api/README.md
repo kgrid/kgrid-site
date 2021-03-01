@@ -1,34 +1,64 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 3 
 sidebar: auto
 ---
 
 # KGrid Technical Documentation
 
-## Activator 
+## Activator
+
 - [User Documentation](https://kgrid.org/kgrid-activator/)
-- [Developer Documentation](https://github.com/kgrid/kgrid-activator/)
+- [Github](https://github.com/kgrid/kgrid-activator/)
 
-## Library Front End [[link]](https://kgrid.org/kgrid-library/)
+## Library Front End
 
-## Shelf [[link]](https://kgrid.org/kgrid-shelf/)
+- [User Documentation](https://kgrid.org/kgrid-library/)
+- [Github](https://github.com/kgrid/kgrid-library/)
 
-## Kgrid CLI [[link]](https://kgrid.org/kgrid-cli/)
+## Shelf
 
-## Adapters & Runtimes [[link]](https://kgrid.org/kgrid-adapter/)
+- [User Documentation](https://kgrid.org/kgrid-shelf/)
+- [Github](https://github.com/kgrid/kgrid-shelf/)
 
-Brief note
+## Kgrid CLI
 
-### Javascript adapter [[link]](https://kgrid.org/javascript-v8-adapter/)
+- [User Documentation](https://kgrid.org/kgrid-cli/)
+- [Github](https://github.com/kgrid/kgrid-cli/)
 
-### Resource adapter [[link]](https://kgrid.org/resource-adapter/)
+## Adapters & Runtimes
 
-### Proxy Adapter and external runtimes [[link]](https://kgrid.org/kgrid-adapter/proxy-adapter/)
+### Adapter API
 
-### Node runtime [[link]](https://kgrid.org/kgrid-node-runtime/)
+- [User Documentation](https://kgrid.org/kgrid-adapter/)
+- [Github](https://github.com/kgrid/kgrid-adapter/)
 
-### Python Runtime [[link]](https://kgrid.org/kgrid-python-runtime/)
+### Javascript adapter
 
-### Example KO Collection [[link]](https://kgrid-objects.github.io/example-collection/)
+- [User Documentation](https://kgrid.org/javascript-v8-adapter/)
+- [Github](https://github.com/kgrid/javascript-v8-adapter/)
 
+### Resource adapter
+
+- [User Documentation](https://kgrid.org/resource-adapter/)
+- [Github](https://github.com/kgrid/resource-adapter/)
+
+### Proxy Adapter
+
+- [User Documentation](https://kgrid.org/kgrid-adapter/proxy-adapter/)
+- [Github](https://github.com/kgrid/kgrid-adapter/tree/main/proxy-adapter)
+
+### Node runtime
+
+- [User Documentation](https://kgrid.org/kgrid-node-runtime/)
+- [Github](https://github.com/kgrid/kgrid-node-runtime/)
+
+### Python Runtime
+
+- [User Documentation](https://kgrid.org/kgrid-python-runtime/)
+- [Github](https://github.com/kgrid/kgrid-python-runtime/)
+
+## Example KO Collection
+
+- [User Documentation](https://kgrid-objects.github.io/example-collection/)
+- [Github](https://github.com/kgrid-objects/example-collection/)
 
