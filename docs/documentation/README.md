@@ -34,12 +34,10 @@ sidebar: auto
 
 ### Javascript adapter
 
-- [User Documentation](https://kgrid.org/javascript-v8-adapter/)
 - [Github](https://github.com/kgrid/javascript-v8-adapter/)
 
 ### Resource adapter
 
-- [User Documentation](https://kgrid.org/resource-adapter/)
 - [Github](https://github.com/kgrid/resource-adapter/)
 
 ### Proxy Adapter
