@@ -22,7 +22,7 @@ module.exports = {
         { text: "Integrator's Guide", link: '/integrator/'},
         { text: "Advanced Tutorial", link: '/tutorial/'}
       ]},
-      { text: "API", link: '/api/'},
+      { text: "Documentation", link: '/documentation/'},
       { text: "Awesome", link: '/awesome/'},
       { text: "Help", items: [
         { text: "FAQ", link: '/faq/'},

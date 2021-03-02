@@ -252,7 +252,7 @@ Scroll back up to the inputs section and change the `"name"`.
 }
 ```
 
-For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [API guide](../api)
+For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [documentation](docs/documentation)
 
 ## Unit test
 
