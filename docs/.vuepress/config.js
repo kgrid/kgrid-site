@@ -39,9 +39,7 @@ module.exports = {
     sidebar: {
         '/integrator/':[
             '',
-          'activator',
-          'library',
-          'docker',
+          'activator'
         ],
         '/tutorial/':[
           '',
