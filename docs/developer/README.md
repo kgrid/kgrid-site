@@ -31,7 +31,7 @@ For more information see [Integrator's guide](../integrator) and [Kgrid platform
 
 ### How it works
 
-Currently, KGrid supports the embedded JavaScript engine, [Nashorn](https://en.wikipedia.org/wiki/Nashorn_(JavaScript_engine)), and a [remote Node.js runtime](https://github.com/kgrid/kgrid-node-express-adapter). Additional runtimes are planned including an external Python environment, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
+Currently, KGrid supports the embedded [Graal JavaScript V8 engine](https://www.graalvm.org/reference-manual/js/FAQ/), an [embedded resource adapter](https://github.com/kgrid/resource-adapter), a remote [python runtime](https://github.com/kgrid/kgrid-python-runtime), and a [remote Node.js runtime](https://github.com/kgrid/kgrid-node-express-adapter). Additional runtimes are planned including an r environment, and cloud services like AWS Lambda and Google Cloud for serverless deployments. Knowledge objects are packaged as `.zip` files containing:
 
  - a metadata file (`metadata.json`) containing identifiers and simple descriptive elements; the structural metadata follows the Knowledge Object Information Ontology (KOIO)
  - code artifact(s)
@@ -44,180 +44,188 @@ The activator and library are Spring Boot microservices written in Java. The lib
 
 ## Setup
 
-### What you'll need
-
-**Confirm [Node and NPM (version 10+)](https://nodejs.org) are installed, and [Java 8+ JDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html) is installed.**
-
-```bash
-> node --version
-v10.15.3
-
-> java -version
-java version "11.0.1" 2018-10-16 LTS
-...
-```
-
-::: warning
-You should not have to use `sudo` to install `node`, `npm`, or any additional packages. If you run into trouble see [https://timonweb.com/posts/install-npm-packages-without-sudo/](https://timonweb.com/posts/install-npm-packages-without-sudo/)
-:::
-
-**You will also need a good code editor.** You can use your development IDE, or try [Atom](https://atom.io). It's useful to open up an editor for browsing the workspace we'll create in the next step. You'll also be creating and working with a number of source files as we build knowledge objects.
-
-
-### Install the [KGrid CLI](https://kgrid.org/kgrid-cli) and set up a workspace
-
-```bash
-> npm install -g @kgrid/cli
-```
-
-Create a directory to hold your knowledge objects (Kgrid workspace)
-
-```bash
-> mkdir myproject
-> cd myproject
-```
-
-Use KGrid CLI to install a micro-grid in your project directory
-
-```bash
-> kgrid setup
-KGrid CLI v0.4.0
-
-Setting up kgrid at /Users/pboisver/dev/foof/.kgrid
-Downloading kgrid components... done
-kgrid setup complete
-
-> kgrid --version
-Checking JAVA Version ...
-java version "11.0.1" 2018-10-16 LTS
-Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
-Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
-
-Checking Node Version ...
-v10.15.3
-
-Checking KGrid Components Version ...
-KGRID Components are installed at: /Users/pboisver/dev/foof/.kgrid
-  KGRID Library:   version 1.2.3
-  KGRID Activator: version 1.1.5
-
-=========================================================
-@kgrid/cli/0.4.0 darwin-x64 node-v10.15.3
-```
-### Start a local grid
-
-Start KGrid & verify in the browser that the activator and library are running
-
-```bash
-> kgrid start
-java -jar .../kgrid-library-1.2.3.jar ...  --server.port=8081
-java -jar .../kgrid-activator-1.1.5.jar ... --server.port=8080
-library: You have the latest version.
-Starting KGrid library...
-activator: You have the latest version.
-Starting KGrid activator...
-
-...
-```
-::: tip
-You can use the shelf option to point to a different folder where KOs are stored. The value can be either an absolute path or a relative path.
-
-For example:
-
-If you cloned our example KO collection repo, you will find the KOs in a subfolder of `collection`.
-
-After setting up the kgrid components at the root directory, run
-
-``` bash
-> kgrid start -s collection
-```
-
-:::
-
-Once the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)) are running you can open a browser window verify that both are running
-
-The Library will be empty and the Activator should show an empty KO list, `{}`.
-  ![Empty Library](../assets/img/EmptyLibrary.png)
-
-
-::: tip
-You can stop the local micro-grid with `ctrl-C` or open an additional terminal tab or window to continue.
-:::
-
-For more information on configuring and running local grids see [the KGrid CLI docs](http://kgrid.org/kgrid-cli/#kgrid-setup) or [the Integrator's Guide](../integrator)
-
+See the [kgrid activator documentation](http://kgrid.org/kgrid-activator/#activator-quick-start) for instructions on getting an activator running locally.
 
 ## My first object
 
 ### Create an object
 
-Open additional terminal tab or window and navigate to the `myproject` folder that you created
+Clone the [example collection](https://github.com/kgrid-objects/example-collection) to get example objects of every type the knowledge grid currently supports.
+For your first object editing the js-simple-v1.0 object in the `/collection` directory is a good place to start and will allow you to run javascript in the V8 engine in the activator.
 
-Create a new knowledge object using the kgrid-cli. (You will be prompted for a target runtime and a template type if applicable.)
+First copy the js-simple-v1.0 directory and rename it to something that describes your object.
 
-``` bash
-> kgrid create myobject
-KGrid CLI v0.5.1
+In that directory open the `metadata.json` file. It should look like this:
+```json
+{
+  "@id": "js/simple/v1.0",                                ← rename using same format
+  "@type":"koio:KnowledgeObject",
+  "identifier": "ark:/js/simple/v1.0",                    ← match with @id
+  "version":"v1.0",                                       ← match version at end of id
+  "title": "Hello world",                                 ← descriptive title
+  "description":"An example of simple Knowledge Object",  ← more info about object
+  "keywords":["Hello","example"],                         ← categories or main features
+  "hasServiceSpecification": "service.yaml",              ← point to service spec
+  "hasDeploymentSpecification": "deployment.yaml",        ← point to deployment spec
+  "hasPayload": "src/index.js",                           ← point to main code artifact
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
+```
+Change the `@id` to an ark id and version formatted string of `naan/name/version` using only letters, numbers and periods.
 
-? Please select the target runtime:  (Use arrow keys)
-> Nashorn
-  NodeJS
+Change `identifier` to match using the "ark:/" format in front eg: `ark:/naan/name/version` 
 
+Also change the `version` field to match the version on the end of the `identifier`.
+
+Edit the name, description and tags to describe your object.
+
+Then edit the deployment description `deployment.yaml`
+
+```yaml
+/welcome:                     ← endpoint for running code
+  post:                       ← type of HTTP request
+    artifact: src/index.js    ← point to main code file, can be a list
+    engine: javascript        ← runtime, javascript uses the V8 engine
+    function: welcome         ← main function inside the artifact
 ```
 
-Select `Nashorn` for the embedded runtime.
+Change `/welcome` to whatever the endpoint you will call to run the code to be named.
 
+The second line is the type of HTTP request this endpoint will accept. For a javascript object or most other objects which run code and return a result the second line must be `POST` but for a resource object it must be `GET`.
+
+Change the `artifact` to point to your main code file inside the object.
+
+The engine matches the type specified by the internal V8 engine `javascript`. You can see which types of objects your activator supports by going to [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health) and scrolling down to a section similar to this:
+```json
+        "org.kgrid.adapter.proxy.ProxyAdapter": {
+            "status": "up",
+            "details": {
+                "engines": [
+                  "node"        
+              ]
+            }
+        },
+        "org.kgrid.adapter.resource.ResourceAdapter": {
+            "status": "UP",
+            "details": {
+                "engines": [
+                    "resource"
+                ]
+            }
+        },
+        "org.kgrid.adapter.v8.JsV8Adapter": {
+            "status": "UP",
+            "details": {
+                "engines": [
+                    "javascript"
+                ]
+            }
+        },
 ```
-? Please select the target runtime:  Nashorn
 
-? Please select the target runtime:  (Use arrow keys)
-> Nashorn
-  NodeJS
+You can see that this activator supports objects running code in the `node` environemnt, in the `javascript` V8 environment or objects that return a `resource`. All of these are valid `engine` values in this activator.
 
-? Please select the template type:  (Use arrow keys)
-> Simple
-  Bundled
-  Executive
+Change the `function` to match the name of the main function in your code. For example, our js-simple-v1.0 object's main function inside src/index.js is `welcome`.
 
+For other engines there may be more to edit in the deployment spec. The documentation for each engine will specify which fields are required.
+
+Now edit the service spec `service.yaml`
+
+```yaml
+openapi: 3.0.2
+info:
+  version: '1.0'                                      ← api version
+  title: 'Hello, world'                               ← descriptive name
+  description: An example of simple Knowledge Object  ← more info about the object
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:                                            ← your info
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
+servers:
+  - url: /js/simple                                   ← needs to match your /naan/name
+    description: Hello world
+tags:
+  - name: KO Endpoints
+    description: Hello world Endpoints
+paths:
+  /welcome:                                       ← the endpoint in the deployment spec
+    post:                                         ← the HTTP method in the deployment spec
+      tags:
+        - KO Endpoints
+      description: Welcome.
+      operationId: welcome
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
+components:
+  schemas:
+    input:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: Bob
 ```
+The service spec is a standard [OpenAPI](https://swagger.io/specification/) REST API spec. You can make sure it follows the spec by going to [editor.swagger.io](https://editor.swagger.io/) and pasting your service spec into the website.
 
-Once you select the template type, the knowledge object will be created.
+Change the title and description to match your object's title and description.
 
+Note that you should change the other information such as the license and contact info to the license you are using and your own contact info.
 
-```bash
-? Please select the template type:  Simple
+Change the url to match your object's id. It must be in the format `/{naan}/{name}`
 
-The knowledge object 99999/myobject has been created.
+Change the path endpoint and HTTP method to match the ones in the deployment spec.
 
-Please go to the folder by `cd myobject`.
+Note the rest of the path spec is used to display the demo on [editor.swagger.io](https://editor.swagger.io/) and give users information about the data your object will accept as inputs and return as output.
 
-Run `npm install` before deploying to the activator.
-```
+Finally, make sure your code is in the location specified in the deployment spec. In our example the code is in a `src` directory and called `index.js`. You can simply overwrite this file or copy your own code file into the object and have the deployment spec point to it.
 
-The `kgrid create` command sets up a KO source code folder called `myobject`. By default the create command assigns IDs in the metadata for the object based on a generated Archival Resource Key (ARK).  The ARK for this object will be `ark:/<username>/myobject` and a default version of `1.0.0` will be assigned for the knowledge object.
-
-In general, the ARK is used to refer to the activated object running in the activator, the source code folder names are ignored. (Later when the KO is packaged and published the source folder names are replaced with names derived from the actual ARK).
-
-::: tip
-Verify in browser that the new object is displayed in the Library ([http://localhost:8081](http://localhost:8081)) and Activator ([http://localhost:8080](http://localhost:8080)). (Restart the grid with `kgrid start` if it's not running.)
-:::
 
 ### Try out the object
 
 ::: warning
-You may have to reload the Activator after creating or modifying code or metadata. Go to the [`/activate`](http://localhost:8080/activate) endpoint in a browser or use `curl localhost:8080/activate` from the command line
+You may have to reload the Activator after creating or modifying code or metadata. Go to the [`http://localhost:8080/actuator/activation/reload`](http://localhost:8080/actuator/activation/reload) endpoint in a browser or use `curl localhost:8080/actuator/activation/reload` from the command line
 :::
-
-```bash
-> kgrid play ark:/<username>/myobject
+Once you reload the objects in your activator or go to [`http://localhost:8080/endpoints`](http://localhost:8080/endpoints) you can see the details of your object in the activator.
+```json
+    {
+        "title": "Hello world",
+        "swaggerLink": "https://editor.swagger.io?url=http://localhost:8083/kos/js/simple/v1.0/service.yaml",
+        "hasServiceSpecification": "/kos/js/simple/v1.0/service.yaml",
+        "activated": "2021-04-15T13:49:27.9384452",
+        "status": "ACTIVATED",
+        "engine": "javascript",
+        "knowledgeObject": "/kos/js/simple/v1.0",
+        "@id": "js/simple/1.0/welcome",
+        "@context": [
+            "http://kgrid.org/koio/contexts/knowledgeobject.jsonld",
+            "http://kgrid.org/koio/contexts/implementation.jsonld"
+        ]
+    }
 ```
-
-::: tip
-By default`kgrid play` queries the local activator [http://localhost:8080](http://localhost:8080) and
-prompts you to select a knowledge object. See [KGrid CLI](http://kgrid.org/kgrid-cli/#kgrid-play-ark) for more info.
-:::
-
-Once the Swagger Editor is pointed to the service specification of the knowledge object, you'll see the OpenAPI 3 service description and a simple interface for testing the object.
+You can use the swaggerLink to go to the swagger demo of your object using a simple interface.
 
 ![The Swagger Editor](../assets/img/SwaggerEditor.png)
 
@@ -254,150 +262,13 @@ Scroll back up to the inputs section and change the `"name"`.
 
 For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [documentation](docs/documentation)
 
-## Unit test
-
-Make sure you're in the knowledge object directory and set up the Javascript project.
-
-```bash
-> cd myobject
-> npm install
-```
-When the KO was created, a simple unit test was added to your object and specifies Jest as a testing dependency (in package.json).
-
-```bash
-> npm test
-
-> @kgrid/99999-myobject@1.0.0 test ..\myobject
-> jest
-
- PASS  test/welcome.test.js
-  ✓ hello barney (src) (2ms)
-
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
-Snapshots:   0 total
-Time:        1.513s
-Ran all test suites.
-```
-
-You can add your own tests (in `myobject/test` directory), and you'll need to update the existing tests in the next section when you change the code.
-
-For more information on the jest framework and unit testing in general see [Jest project](https://jestjs.io/).
-
-## Edit the object
-
-Let's make the object your own! There are several kinds of changes that you'll make as you work on an object.
-- The  metadata can be changed (and sometimes those changes need to be coordinated with code and service changes.)
-- You may change the code (there are lots of ways to organize and write your code. See [KO Advanced Topics](../tutorial). Some code changes requires updates to metadata or service descriptions.
-- You can change the services description (which services are available, there names, the inputs and outputs, etc.) These changes also need to be coordinated with the code.
-
-Spend some time reviewing the structure and files in the KO you just created. See [KO Intro](../tutorial/ko/overview.md) for more info.
-
-
-### Metadata
-
-Open the `myobject/metadata.json` file in your favorite editor (try [Atom](https://atom.io/) right now!!) Change the title, description, ..., as follows:
-
-```json
-{
-    ...
-    "title": "Hello World 1",
-    "contributors": "Team Wonderface",
-    "description": "Best ever, yeah!",
-    "keywords": "moose, squirrel",
-    ...
-}
-```
-Make sure that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
-
-For more info on the metadata for KOs and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko)
-
-### Changing the code
-
-Let's change the code to reverse the name input.
-
-#### Update the unit test
-
-```javascript
-...
-test("hello barney (src)", () =>
-  {
-    expect( welcome({"name": "Barney Rubble"}) )
-    .toBe("Welcome to Knowledge Grid, elbbuR yenraB") // reverse the expected result
-  })
-```
-Rerun the test (`npm test`). It should fail.
-
-```bash
-> npm test
-...
-    Expected: "Welcome to Knowledge Grid, elbbuR yenraB"
-    Received: "Welcome to Knowledge Grid, Barney Rubble"
-```
-
-#### Update the welcome() function
-
-Open up `myobject/src/index.js` in your favorite editor.
-```javascript
-function welcome(inputs){
- name = inputs.name
-  return "Welcome to Knowledge Grid, " + name.split("").reverse().join("");
- }
-```
-
-Rerun the tests. They should be all green!
-
-#### Try it out
-
-Back to the Swagger Editor (remember to hit the `/activate` endpoint first). If you noticed that the example input `"name": "Bob"` is a palindrome and changed it to `"name": "Ted"` you'll get:
-```
-{
-  "result": "Welcome to Knowledge Grid, deT",
-   ...
-}
-```
-
-### Update the Service Description
-
-***<span style="color: darkred;">=> Rewrite in progress</span>***
-
-Let's make another code change to say "Goodbye" instead of "Welcome". (Remember to update the unit test and rerun the tests.):
-```javascript
-function byebye(inputs){
- name = inputs.name
-  return "Goodbye from the Knowledge Grid, " + name.split("").reverse().join("");
- }
-````
-
-Reactivate the object and test it out in the Swagger Editor. **It doesn't work!**
-
-The problem is our object's microAPI endpoint still says `/welcome`. Let's update the OpenAPI service description. Find the `paths:` element in the `myobject/service.yaml` file, and change `/welcome` to `/byebye`:
-```yaml
-...
-paths:
-  /byebye:
-    post:
-      description: So long.
-      operationId: seeya
-      requestBody:
-        description: inputs
-        required: true
-...
-```
-Then find `x-kgrid-activation:` element and change  `entry:` to the function name:
-```yaml
-...
-      x-kgrid-activation:
-        artifact: src/index.js
-        adapter: JAVASCRIPT
-        entry: byebye
-...
-```
-
-Reactivate and then reload the Swagger Editor page and the `POST` endpoint should change to `/byebye`. You should also see the other changes reflected both in the OpenAPI yaml file and the test UI. Of course the object title is still "Hello' World" — fixing that is left as an exercise. (Hint: you may need to change elements of the metadata and the service description.)
-
-For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy of a KO](), etc.
-
+:::tip
+If your object is not running check these common error points:
+- Does your `metadata.json` correctly point to the deployment spec and service spec?
+- Does the endpoint name and HTTP method (POST or GET) in the deployment spec and service spec match?
+- Does your deployment spec point to your code and has the correct engine and entry function?
+- Is your id consistent between the `metadata.json` and the service spec?
+:::
 
 ## What's next?
 Now, you learned the basics of Knowledge Grid. [KGRID Advanced Tutorial](../tutorial/) will guide you through the process of developing a KO implementing SCORE risk calculation. The tutorial will also cover a wide range of advanced topics.
