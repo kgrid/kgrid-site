@@ -272,3 +272,9 @@ If your object is not running check these common error points:
 
 ## What's next?
 Now, you learned the basics of Knowledge Grid. [KGRID Advanced Tutorial](../tutorial/) will guide you through the process of developing a KO implementing SCORE risk calculation. The tutorial will also cover a wide range of advanced topics.
+
+#### More information on our supported runtimes and their unique knowledge object requirements:
+- [Node.js runtime](https://github.com/kgrid/kgrid-node-runtime#writing-a-knowledge-object-in-node)
+- [Python runtime](https://github.com/kgrid/kgrid-python-runtime#creating-a-python-knowledge-object)
+- [Resource adapter](https://github.com/kgrid/resource-adapter#guidance-for-knowledge-object-developers)
+- [JavaScript V8 adapter](https://github.com/kgrid/javascript-v8-adapter#guidance-for-knowledge-object-developers)
