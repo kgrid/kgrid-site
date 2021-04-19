@@ -22,6 +22,7 @@ Currently we have created two reference implementations:
 - [KGrid Node Runtime](https://www.npmjs.com/package/@kgrid/noderuntime), a npm package, which can be used to execute JavaScript code. The project can be found in this [GitHub repo](https://github.com/kgrid/kgrid-node-runtime)
 - [KGrid Python Runtime](https://pypi.org/project/kgrid-python-runtime/), a PyPi package, which can be used to execute Python code. The project can be found in this [GitHub repo](https://github.com/kgrid/kgrid-python-runtime)
 
+The external runtimes can also be deployed using the container images. Please refer to the Cloud native section in the above documentation for each respective runtime.
 
 ## Security Configuration
 
@@ -33,12 +34,12 @@ A Knowledge Object (KO) or a collection of KOs can be loaded into the activator 
 - On startup, KOs can be loaded directly from the shelf, as described in the [Quick Start Guide](https://kgrid.org/kgrid-activator/)
 
 :::tip
-   The shelf location can be specified using the shelf location configuration. You can refer to [https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-cdostore-url](https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-cdostore-url)
+   The shelf location can be specified using the [shelf location configuration](https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-cdostore-url).
 :::
 
-- On startup, KOs can also be loaded with the specified manifest(s). Please refer to  [https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-manifest](https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-manifest)
+- On startup, KOs can also be loaded with the specified manifest(s). Please refer to the Configuration Documentation, see [kgrid-shelf-manifest](https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-manifest)
 
-- Once the activator is running, the KOs can be loaded via the API by posting one of the three endpoints: `/kos`, `/kos/manifest` or `/kos/manifest-list`. For usage, please refer to [https://kgrid.org/kgrid-shelf/api.html#importing-kos-import-api](https://kgrid.org/kgrid-shelf/api.html#importing-kos-import-api)
+- Once the activator is running, the KOs can be loaded via the API by posting one of the three endpoints: `/kos`, `/kos/manifest` or `/kos/manifest-list`. For usage, please refer to [Import API](https://kgrid.org/kgrid-shelf/api.html#importing-kos-import-api)
 :::tip
-  After successfully loading the KOs to the activator via the API, `/reload` is needed to activated the newly added KOs. (See [https://kgrid.org/kgrid-activator/api.html#get-actuator-activation-reload](https://kgrid.org/kgrid-activator/api.html#get-actuator-activation-reload) )
+  After successfully loading the KOs to the activator via the API, `/reload` is needed to activated the newly added KOs. (See [Activation API - Reload](https://kgrid.org/kgrid-activator/api.html#get-actuator-activation-reload) )
 :::
