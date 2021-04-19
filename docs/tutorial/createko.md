@@ -26,7 +26,7 @@ Looking in to the folder of `/src`, you will find a few more files in addition t
 When we build the bundled KO, `index.js` will be the main entry for `webpack`.
 
 
-## Build bundled KO Service
+## Build bundled KO
 
 Similar with the simple KO, the bundled KO under development is basically a Javascript project which follows the development pattern of node.js/npm.
 
@@ -62,14 +62,14 @@ module.exports = {
 };
 ```
 
-By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for Nashorn Script Engine, only 'var', 'assign' and 'this' are valid options. By default, the output file is set as 'main.js' in the folder defined in `path`. In the example template, it will be `/dist`.
+By default, the `output.libraryTarget` is set as 'var'. For bundling the KO for Graal V8 Script Engine, only 'var', 'assign' and 'this' are valid options. By default, the output file is set as 'main.js' in the folder defined in `path`. In the example template, it will be `/dist`.
 
 
 ::: danger WARNING
 Note library name in the output element _library: "score"_ must match the deployment description element _entry: score_ found on the [deployment specification page](/tutorial/deployment/deployment.html).
 :::
 
-For details on customization of the webpack config, please refer to [Webpack Documentation](https://webpack.js.org/configuration/)
+For details on customization of the webpack config, please refer to [Webpack Documentation](https://v4.webpack.js.org/concepts/configuration/)
 
 You need to change to the ko directory and run
 ```
@@ -82,21 +82,10 @@ Once `npm` installs all dependencies, run
 npm run build
 ```
 
-The build process will create a file `main.js` in `/dist` directory. `service.yaml` is referring this file as the artifact for the service.
+The build process will create a file `main.js` in `/dist` directory. `deployment.yaml` is referring this file as the artifact for the service. Note that this object will not run in an activator if it has not been bundled.
 
 
 ## Activate bundled KO Service
 
-Now, the bundled KO is ready to be activated. The activation process is the same as described in [the developer's guide](../developer/#start-a-local-grid).
+Now, the bundled KO is ready to be activated. The activation process is the same as described in the developer's guide, referring to the [Kgrid Activator Documentation](http://kgrid.org/kgrid-activator/#activator-quick-start).
 
-Go back to the project directory, start the local grid by running
-
-```sh
-kgrid start
-```
-
-Once activated, you can use Swagger Editor to try out the KO service. To get the url link, run
-
-```sh
-kgrid play ark:/<username>/myko
-```
