@@ -72,8 +72,7 @@ module.exports = {
             title: 'KO Service Testing',
             collapsable: false,
             children: [
-              '/tutorial/testing/unit',
-              '/tutorial/testing/integration',
+               '/tutorial/testing/integration'
             ]
           },
           {

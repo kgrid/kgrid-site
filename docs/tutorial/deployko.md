@@ -1,21 +1,9 @@
 # Deploy the packaged KO
 
-When a KO is packaged into a ZIP file complying with the KGrid packaging specification, it is ready to be uploaded to KGRID Library and Activator, for publishing and activation, respectively. There are two ways to deploy the packaged KO. You can use KGRID CLI command `kgrid upload` or call KGRID API directly.
+When a KO is packaged into a ZIP file complying with the KGrid packaging specification, it is ready to be uploaded to KGRID Library and Activator, for publishing and activation, respectively. [KGRID Import API](https://kgrid.org/kgrid-shelf/api.html#importing-kos-import-api) provides three ways to add the packaged KOs to the activator. 
 
-## Deploy using KGRID CLI
 
-If you have a ZIP file as the packaged KO, you can deploy the KO using KGRID CLI. The command to use is
-```sh
- kgrid upload ark:/<username>/myko
-```
-
-By default, the KO will be deployed to the locally running KGrid Activator or Library at http://localhost:8080.
-
-You can specify the URL or the port where the activator or library is hosted, by using the respective flags, `--url` and `--port`.
-
-Details for the command can be found in [KGRID-CLI Documentation](http://kgrid.org/kgrid-cli/#kgrid-upload-ark)
-
-## Directly call KGRID API
+## Deploy a single KO by calling `/kos` 
 
 KGRID API has the service to import the KO in ZIP format. You can call the API directly to upload a packaged KO. Some examples of HTTP client can be found the section of [KO Service Clients](../tutorial/clients/curl.html)
 
@@ -26,16 +14,56 @@ content-type: application/zip
 ```
 In the request body, assign the zip file name to the key of `ko`.
 
-Details for the service can be found in [KGRID-API Documentation](http://kgrid.org/guides/api/#kgrid-activator-api)
 
-## Try the deployed KO
+## Deploy a collection of KOs by calling `/kos/manifest`
 
-If your packaged KO has been deployed to a KGRID Activator, you can activate the KO and try it with KGRID CLI command
+A manifest, containing the list of the packaged KOs' URIs, can be used to deploy the KOs to the activator. Similarly, the request can be initiated using one of the HTTP clients.
 
-```sh
-kgrid play ark:/<username>/myko
+```
+URL:          {activatorurl}/kos/manifest
+HTTP request: POST
+content-type: application/json
 ```
 
-By supplying the ARK ID for the KO to the command, you will be provided a link to the online Swagger Editor loading the KO's service specification.
+The request body should have a json object with the manifest content, as the example shown below:
+```json
+{
+  "manifest": [
+    "file://ABSOLUTE_PATH_TO_KO/js-simple-v1.0.zip",
+    "https://github.com/kgrid-objects/example-collection/releases/download/4.1.1/js-bundled-v1.0.zip"
+  ]
+}
+```
 
-Details for the command can be found in [KGRID-CLI Documentation](http://kgrid.org/kgrid-cli/#kgrid-play-ark)
+
+## Deploy collections of KOs by calling `/kos/manifest-list`
+
+Furthermore, a number of manifests can be posted to deploy the collections of KOs.
+
+```
+URL:          {activatorurl}/kos/manifest-list
+HTTP request: POST
+content-type: application/json
+```
+
+The request body should have a json object, an array with a list of the manifest files, as the example shown below:
+
+
+```json
+[
+"file://ABSOLUTE_PATH_TO_MANIFEST/manifest.json",
+"https://github.com/kgrid-objects/example-collection/releases/download/4.1.1/manifest.json"
+]
+```
+
+
+
+:::tip 
+
+After successfully loading the KOs to the activator via the API, /reload is needed to activate the newly added KOs. (See Activation API - Reload (opens new window))
+Once the KOs are activated, you can try the KO endpoints as described in the [Developer's Guide](https://kgrid.org/guides/developer/#try-out-the-object)
+
+:::
+
+
+
