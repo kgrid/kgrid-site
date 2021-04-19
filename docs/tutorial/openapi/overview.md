@@ -25,7 +25,7 @@ info:
 ```  
 
 ### Servers
-The servers section specifies the API server and base URL. for KO Services we use the [Archival Resource Key](https://en.wikipedia.org/wiki/Archival_Resource_Key) (ark id) which is naan/name.  Using the ark id ensures the paths are unique. 
+The servers section specifies the API server and base URL. for KO Services we use the [Archival Resource Key](https://en.wikipedia.org/wiki/Archival_Resource_Key) (ark id) which is /naan/name.  Using the ark id ensures the paths are unique. 
 ```yaml
 ...
 servers:
@@ -34,7 +34,7 @@ servers:
 ```
 
 ### Paths
-The paths section defines individual endpoints (paths) in your API.  Currently KO Service activation support the _POST_ HTTP method.
+The paths section defines individual endpoints (paths) in your API.  Currently KO Service activation support the _POST_ HTTP method and GET using the resource adapter.
 ```yaml
 ...
 paths:
@@ -46,7 +46,7 @@ paths:
       operationId: welcome
 ```
 ### Request Body
-The requestBody keyword describes the body content and media type. KO Service use json inputs.  The json format is defined in the _input_ scheme components section of the  definition.
+The requestBody keyword describes the body content and media type. KO services use json inputs.  The json format is defined in the _input_ scheme components section of the  definition.
 ```yaml
 ...
       requestBody:

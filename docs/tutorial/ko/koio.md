@@ -14,3 +14,4 @@ computable knowledge. The following are required elements of a koio:KnowledgeObj
   - hasServiceSpecification - This specification is in the form of a OpenAPI document.  Details can be found at [Using OpenAPI](../openapi/overview)
   - hasDeploymentSpecification - This specification is in the form of yaml.
   - hasPayload - specifies the code artifact(s)
+  
