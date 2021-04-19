@@ -7,7 +7,7 @@ In this tutorial, we are demonstrating the concept of the executive object. The 
 To do so, you will need to use V8 context to retrieve the executor from the dependent KOs.
 
 
-## Context of Nashhorn
+## Context of V8
 The V8 script engine has a `context` object where the objects and functions are stored. After the KOs are activated, each KO executor can be accessed in the context.
 
 ## Get the executor
@@ -31,7 +31,7 @@ As shown below, `ted` is the input for `executor` with the type "text/plain"
 ```
 
 Due to a limitation of the Graal V8 engine it is not possible to pass a javascript object between KOs.
-Thus if you wish to pass an object stringify the object first and use the type `application/javascript` as the MIME type. The javascript engine will parse the inputs back into an object before passing it into the function being called.
+Thus if you wish to pass an object stringify the object first and use the type `application/json` as the MIME type. The javascript engine will parse the inputs back into an object before passing it into the function being called.
 
 ## Work with the result
 
