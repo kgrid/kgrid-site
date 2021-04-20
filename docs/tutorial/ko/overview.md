@@ -5,7 +5,7 @@ Conceptually, a knowledge object represents computable knowledge as both a resou
 Here's a picture....
 
 ----
-![KO Layout](../../assets/img/ko-layout.png)
+![KO Layout](/guides/image/Figure1.KO.v3.png)
 
 ----
 
