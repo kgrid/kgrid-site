@@ -27,7 +27,7 @@ There is also a **library** component that can be used to manage and browse KOs.
 
 This guide will focus on creating and modifying knowledge objects, deploying KOs as services in an activator, and using the services with simple clients.
 
-For more information see [Integrator's guide](../integrator) and [Kgrid platform](../platform).
+For more information see [Integrator's guide](../integrator).
 
 ### How it works
 
