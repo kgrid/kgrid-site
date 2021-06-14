@@ -260,7 +260,7 @@ Scroll back up to the inputs section and change the `"name"`.
 }
 ```
 
-For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html) and the [documentation](/documentation)
+For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html) and the [documentation](../documentation)
 
 :::tip
 If your object is not running check these common error points:
