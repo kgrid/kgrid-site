@@ -11,7 +11,7 @@ This tutorial will dig deeper into more advance topics surrounding KO developmen
 - Review of packaging and deployment of KO Service using the KGrid CLI tool, [Package the KO](https://kgrid.org/guides/tutorial/packageko.html), [Deploy the packaged KO
 ](https://kgrid.org/guides/tutorial/deployko.html)
 - Review of the OpenAPI specification and how it is used in the KO Service, [KO Service OpenAPI](https://kgrid.org/guides/tutorial/openapi/overview.html#structure)
-- Look at testing techniques and tools that help in the development life cycle, [KO Service Testing](https://kgrid.org/guides/tutorial/testing/unit.html)
+- Look at testing techniques and tools that help in the development life cycle, [KO Service Testing](./testing/integration.html)
 - Demonstrate some RESTful clients that the KGrid team has found useful, [KO Service Clients](https://kgrid.org/guides/tutorial/clients/curl.html)
 
 ##  Before We Start
