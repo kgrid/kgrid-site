@@ -252,7 +252,7 @@ Scroll back up to the inputs section and change the `"name"`.
 }
 ```
 
-For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [documentation](docs/documentation)
+For more information on the structure of the object, OpenAPI, and activating and using endpoints, see [Anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko) and the [documentation](/documentation)
 
 ## Unit test
 
@@ -310,7 +310,7 @@ Open the `myobject/metadata.json` file in your favorite editor (try [Atom](https
 ```
 Make sure that the metadata changes are reflected in [the Library](http://localhost:8081) and [the Activator](http://localhost:8080)
 
-For more info on the metadata for KOs and what's required and/or useful see the [anatomy of a KO](#deep-dive-into-the-anatomy-of-a-ko)
+For more info on the metadata for KOs and what's required and/or useful see the [anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html)
 
 ### Changing the code
 
@@ -396,7 +396,7 @@ Then find `x-kgrid-activation:` element and change  `entry:` to the function nam
 
 Reactivate and then reload the Swagger Editor page and the `POST` endpoint should change to `/byebye`. You should also see the other changes reflected both in the OpenAPI yaml file and the test UI. Of course the object title is still "Hello' World" — fixing that is left as an exercise. (Hint: you may need to change elements of the metadata and the service description.)
 
-For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy of a KO](), etc.
+For more on creating and implementing API descriptions see [OpenAPI](), [Anatomy of a KO](https://kgrid.org/guides/tutorial/ko/overview.html), etc.
 
 
 ## What's next?
