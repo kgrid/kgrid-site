@@ -9,10 +9,10 @@ testing of our KO Service. Below are examples of using  [Swagger Editor](https:/
 
 1. We will view the OpenAPI specification for the Cardiovascular Risk Calculation KO.
 Each KO exposes its OpenAPI specifications via a
-_/kos/naan/name/service_ endpoint for example [http://activator.kgrid.org/kos/score/calc/service](http://activator.kgrid.org/kos/score/calc/v0.3.0/service)
+_/kos/naan/name/service_ endpoint for example [https://activator.kgrid.org/kos/score/calc/service](https://activator.kgrid.org/kos/score/calc/v0.3.0/service)
 
 2. Now in the Swagger Editor we can reference this specification and access Swagger Editor
-[http://editor.swagger.io/?url=http://activator.kgrid.org/kos/score/calc/v0.3.0/service](http://editor.swagger.io/?url=http://activator.kgrid.org/kos/score/calc/v0.3.0/service).  
+[http://editor.swagger.io/?url=https://activator.kgrid.org/kos/score/calc/v0.3.0/service](http://editor.swagger.io/?url=https://activator.kgrid.org/kos/score/calc/v0.3.0/service).  
 You notice the we passed the OpenAPI spec via the url query parameter
 
 3. Once in the editor for Cardiovascular Risk Calculation KO, you can
