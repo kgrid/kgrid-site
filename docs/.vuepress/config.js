@@ -82,7 +82,8 @@ module.exports = {
               '/tutorial/clients/curl',
               '/tutorial/clients/httpie',
               '/tutorial/clients/postman',
-              '/tutorial/clients/swagger'
+              '/tutorial/clients/swagger',
+              '/tutorial/clients/insomnia'
             ]
           },
           {

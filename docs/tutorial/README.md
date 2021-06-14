@@ -12,7 +12,7 @@ This tutorial will dig deeper into more advance topics surrounding KO developmen
 ](https://kgrid.org/guides/tutorial/deployko.html)
 - Review of the OpenAPI specification and how it is used in the KO Service, [KO Service OpenAPI](https://kgrid.org/guides/tutorial/openapi/overview.html#structure)
 - Look at testing techniques and tools that help in the development life cycle, [KO Service Testing](./testing/integration.html)
-- Demonstrate some RESTful clients that the KGrid team has found useful, [KO Service Clients](https://kgrid.org/guides/tutorial/clients/curl.html)
+- Demonstrate some RESTful clients that the KGrid team has found useful, [KO Service Clients](https://kgrid.org/guides/tutorial/clients)
 
 ##  Before We Start
 [The developer's guide](https://kgrid.org/guides/developer/) has shown you how to create a knowledge Object in the simple form. You can modify, test, package and deploy the KO. By running the KGrid Activator locally on your machine, you can activate the KO and test KO service through RESTful API to the client.
