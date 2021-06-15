@@ -31,7 +31,7 @@ Security Configuration can be set as environment variables, or passed into the t
 
 ## Loading KOs into the activator
 A Knowledge Object (KO) or a collection of KOs can be loaded into the activator in a number of ways.
-- On startup, KOs can be loaded directly from the shelf, as described in the [Quick Start Guide](https://kgrid.org/kgrid-activator/)
+- On startup, KOs can be loaded directly from the shelf, as described in the [Quick Start Guide](https://kgrid.org/kgrid-activator/). The shelf can any persistent form of storage your application has access to and the activator will load any knowledge objects it finds on startup.
 
 :::tip
    The shelf location can be specified using the [shelf location configuration](https://kgrid.org/kgrid-activator/configuration.html#kgrid-shelf-cdostore-url).
