@@ -22,6 +22,7 @@ module.exports = {
         { text: "Integrator's Guide", link: '/integrator/'},
         { text: "Advanced Tutorial", link: '/tutorial/'}
       ]},
+      { text: "Download", link: '/download/'},
       { text: "Documentation", link: '/documentation/'},
       { text: "Awesome", link: '/awesome/'},
       { text: "Help", items: [
