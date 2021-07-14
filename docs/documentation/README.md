@@ -45,7 +45,7 @@ sidebar: auto
 - [User Documentation](https://kgrid.org/kgrid-adapter/proxy-adapter/)
 - [Github](https://github.com/kgrid/kgrid-adapter/tree/main/proxy-adapter)
 
-### Node runtime
+### Node Runtime
 
 - [User Documentation](https://kgrid.org/kgrid-node-runtime/)
 - [Github](https://github.com/kgrid/kgrid-node-runtime/)
