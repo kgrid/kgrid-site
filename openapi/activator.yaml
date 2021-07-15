@@ -1,0 +1,302 @@
+openapi: 3.0.0
+info:
+  title: KGrid Activator API
+  description: KGrid Activator API provides access to the Knowledge Objects, Endpoints and
+     KGrid Activator Server endpoints
+  contact:
+    email: kgrid-developers@umich.edu
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: https://kgrid-activator.herokuapp.com
+    description: Integration Activator
+  - url: https://monkey-activator.kgrid.org
+    description: Sandbox Activator
+  - url: http://localhost:8080
+    description: Local Instance
+paths:
+  /health:
+    get:
+      tags:
+        - KGrid Activator Server
+      summary: Returns health of the KGrid Activator
+      description: |
+        Returns a collection of endpoints
+      operationId: health
+      responses:
+        200:
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+  /activate:
+    get:
+      tags:
+        - KGrid Activator Server
+      summary: Finds all knowledge object endpoints
+      description: |
+        Returns a collection of endpoints
+      operationId: activate
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+  /info:
+    get:
+      tags:
+        - KGrid Activator Server
+      summary: Finds all knowledge object endpoints
+      description: |
+        Returns a collection of endpoints
+      operationId: info
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: object
+              example: {}
+  /endpoints:
+    get:
+      tags:
+        - Knowledge Object Endpoint
+      summary: Finds all knowledge object endpoint resources
+      description: |
+        Returns a collection of endpoints
+      operationId: findallendpoints
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+              example:
+                  _embedded:
+                    endpointResourceList:
+                      - title: Implementation bundle v1 of Hello World
+                        endpointPath: hello/world/v0.2.0/welcome
+                        servicePath: hello/world/v0.2.0/service
+                        activated: '2019-07-03T09:26:34.356'
+                        _links:
+                          self:
+                            href: 'http://localhost:8080/hello/world/v0.2.0/welcome'
+                          swagger_editor:
+                            href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.2.0/service'
+                      - title: 'Ten-year Fatal Cardiovascular Risk Calculation based on SCORE project (Example KO - Bundled with data) '
+                        endpointPath: score/calc/v0.2.0/score
+                        servicePath: score/calc/v0.2.0/service
+                        activated: '2019-07-03T09:26:34.273'
+                        _links:
+                          self:
+                            href: 'http://localhost:8080/score/calc/v0.2.0/score'
+                          swagger_editor:
+                            href: 'https://editor.swagger.io?url=http://localhost:8080/score/calc/v0.2.0/service'
+                  _links:
+                    self:
+                      - href: 'http://localhost:8080'
+
+
+
+  /endpoints/{naan}/{name}/{version}/{endpoint}:
+    get:
+      tags:
+        - Knowledge Object Endpoint
+      summary: Finds a knowledge object's endpoint resource
+      description: |
+        Returns the Endpoint Resource which has access to the knowledge object, the service description in the form of an Open Api specification, etc
+      operationId: findkoendpoint
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+        - name: version
+          in: path
+          description: Version of the KO
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: v0.1.0
+        - name: endpoint
+          in: path
+          description: Specific endpoint path as defined in the OpenApi spec
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: welcome
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+              example:
+                  title: Implementation koio v1 of Hello World
+                  endpointPath: hello/world/v0.1.0/welcome
+                  servicePath: hello/world/v0.1.0/service
+                  activated: '2019-07-03T09:26:34.355'
+                  _links:
+                    self:
+                      href: 'http://localhost:8080/hello/world/v0.1.0/welcome'
+                    swagger_editor:
+                      href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.1.0/service'
+          '200':
+            description: OK
+            content:
+              application/json:
+                schema:
+                  type: object
+                  format: json
+                example:
+                  title: Implementation koio v1 of Hello World
+                  endpointPath: hello/world/v0.1.0/welcome
+                  servicePath: hello/world/v0.1.0/service
+                  activated: '2019-07-03T09:26:34.355'
+                  _links:
+                    self:
+                      href: 'http://localhost:8080/hello/world/v0.1.0/welcome'
+                    swagger_editor:
+                      href: 'https://editor.swagger.io?url=http://localhost:8080/hello/world/v0.1.0/service'
+
+
+  /{naan}/{name}/{version}/{endpoint}:
+    post:
+      tags:
+        - Knowledge Object Endpoint
+      summary: Executes the service provide by the Knowledge Object
+      description: |
+        Executes the service provide by the Knowledge Object as defined in the Knowledge Object’s Open Api specification
+      operationId: serverendpoint
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: world
+        - name: version
+          in: path
+          description: Version of the KO
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: v0.1.0
+        - name: endpoint
+          in: path
+          description: Specific endpoint path as defined in the OpenApi spec
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: welcome
+      requestBody:
+        description: Endpoint json input
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: George Jetson
+      responses:
+        '200':
+          description: KO Endpoint
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                  result: 'Welcome to Knowledge Grid, George Jetson'
+                  info:
+                    ko:
+                      '@id': v0.1.0
+                      '@type': 'koio:KnowledgeObject'
+                      identifier: 'ark:/hello/world/v0.1.0'
+                      title: Implementation koio v1 of Hello World
+                      hasServiceSpecification: v0.1.0/service.yaml
+                      hasPayload: v0.1.0/welcome.js
+                      '@context':
+                        - 'http://kgrid.org/koio/contexts/knowledgeobject.jsonld'
+                    inputs:
+                      name: George Jetson
+        '500':
+          description: KO Service Execution Error
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Status: 500 Internal Server Error
+                Instance: uri=/hello/world/v0.1.0/score
+                Title: Error
+                Time: Fri Aug 30 12:43:49 EDT 2019
+                Detail: No endpoint found for hello-world/v0.1.0/score
+  /kos:
+    $ref: 'kos.yaml#/paths/~1kos'
+
+  /kos/{naan}/{name}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}'
+
+  /kos/{naan}/{name}/{version}:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{version}'
+
+  /kos/{naan}/{name}/{version}/service:
+    $ref: 'kos.yaml#/paths/~1kos~1{naan}~1{name}~1{version}~1service'
+
+  '/kos/manifest':
+    $ref: 'kos.yaml#/paths/~1kos~1manifest'
+
+components:
+
+  examples:
+    KnowledgeObject:
+       $ref: 'shelf.yaml#/components/examples/KnowledgeObject'
+  schemas:
+    importKO:
+       $ref: 'kos.yaml#/components/schemas/importKO'

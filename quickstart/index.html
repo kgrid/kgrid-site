@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>KGrid Quick Start | Knowledge Grid Guides</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Instruction for Deploying R01 KO collection in KGRID">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kgrid">
+    <meta name="twitter:creator" content="@kgrid">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Guides">
+    <meta property="og:site_name" content="Guides">
+    <meta property="og:url" content="https://kgrid.org">
+    
+    <link rel="preload" href="/guides/assets/css/0.styles.81271bcf.css" as="style"><link rel="preload" href="/guides/assets/js/app.37c0a637.js" as="script"><link rel="preload" href="/guides/assets/js/2.816b06cd.js" as="script"><link rel="preload" href="/guides/assets/js/19.5c3adb55.js" as="script"><link rel="prefetch" href="/guides/assets/js/10.34eb8493.js"><link rel="prefetch" href="/guides/assets/js/11.2471b46f.js"><link rel="prefetch" href="/guides/assets/js/12.1a7fc954.js"><link rel="prefetch" href="/guides/assets/js/13.2e6513e0.js"><link rel="prefetch" href="/guides/assets/js/14.01fa979a.js"><link rel="prefetch" href="/guides/assets/js/15.86643edb.js"><link rel="prefetch" href="/guides/assets/js/16.647a8564.js"><link rel="prefetch" href="/guides/assets/js/17.0ecba8d9.js"><link rel="prefetch" href="/guides/assets/js/18.9594982a.js"><link rel="prefetch" href="/guides/assets/js/20.e7f4e06a.js"><link rel="prefetch" href="/guides/assets/js/21.243c487a.js"><link rel="prefetch" href="/guides/assets/js/22.a37447e7.js"><link rel="prefetch" href="/guides/assets/js/23.c4d1267d.js"><link rel="prefetch" href="/guides/assets/js/24.7053dacd.js"><link rel="prefetch" href="/guides/assets/js/25.23e7984f.js"><link rel="prefetch" href="/guides/assets/js/26.8a53e0e2.js"><link rel="prefetch" href="/guides/assets/js/27.a1431ff7.js"><link rel="prefetch" href="/guides/assets/js/28.05517b84.js"><link rel="prefetch" href="/guides/assets/js/29.a0f3a2b4.js"><link rel="prefetch" href="/guides/assets/js/3.3346d14d.js"><link rel="prefetch" href="/guides/assets/js/30.077f120d.js"><link rel="prefetch" href="/guides/assets/js/31.30cbfe5c.js"><link rel="prefetch" href="/guides/assets/js/32.7407418c.js"><link rel="prefetch" href="/guides/assets/js/33.c82918f7.js"><link rel="prefetch" href="/guides/assets/js/34.0e6fd24f.js"><link rel="prefetch" href="/guides/assets/js/35.53c7ee36.js"><link rel="prefetch" href="/guides/assets/js/36.b87be4dd.js"><link rel="prefetch" href="/guides/assets/js/4.c3d27c64.js"><link rel="prefetch" href="/guides/assets/js/5.771379f5.js"><link rel="prefetch" href="/guides/assets/js/6.7ddc698b.js"><link rel="prefetch" href="/guides/assets/js/7.de908ad1.js"><link rel="prefetch" href="/guides/assets/js/8.b910c77a.js"><link rel="prefetch" href="/guides/assets/js/9.515b0df3.js">
+    <link rel="stylesheet" href="/guides/assets/css/0.styles.81271bcf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/guides/" class="home-link router-link-active"><!----> <span class="site-name">Knowledge Grid Guides</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://kgrid.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  KGrid.org
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow down"></span></button> <button type="button" aria-label="Guide" class="mobile-dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/quickstart/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Quick Start
+</a></li><li class="dropdown-item"><!----> <a href="/guides/developer/" class="nav-link">
+  Developer's Guide
+</a></li><li class="dropdown-item"><!----> <a href="/guides/integrator/" class="nav-link">
+  Integrator's Guide
+</a></li><li class="dropdown-item"><!----> <a href="/guides/tutorial/" class="nav-link">
+  Advanced Tutorial
+</a></li></ul></div></div><div class="nav-item"><a href="/guides/download/" class="nav-link">
+  Download
+</a></div><div class="nav-item"><a href="/guides/documentation/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/guides/awesome/" class="nav-link">
+  Awesome
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Help" class="dropdown-title"><span class="title">Help</span> <span class="arrow down"></span></button> <button type="button" aria-label="Help" class="mobile-dropdown-title"><span class="title">Help</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="mailto:kgrid-developers@umich.edu" class="nav-link external">
+  Email
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Event" class="dropdown-title"><span class="title">Event</span> <span class="arrow down"></span></button> <button type="button" aria-label="Event" class="mobile-dropdown-title"><span class="title">Event</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/workshop2019.html" class="nav-link">
+  Fall 2019 Workshop
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://kgrid.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  KGrid.org
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow down"></span></button> <button type="button" aria-label="Guide" class="mobile-dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/quickstart/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Quick Start
+</a></li><li class="dropdown-item"><!----> <a href="/guides/developer/" class="nav-link">
+  Developer's Guide
+</a></li><li class="dropdown-item"><!----> <a href="/guides/integrator/" class="nav-link">
+  Integrator's Guide
+</a></li><li class="dropdown-item"><!----> <a href="/guides/tutorial/" class="nav-link">
+  Advanced Tutorial
+</a></li></ul></div></div><div class="nav-item"><a href="/guides/download/" class="nav-link">
+  Download
+</a></div><div class="nav-item"><a href="/guides/documentation/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/guides/awesome/" class="nav-link">
+  Awesome
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Help" class="dropdown-title"><span class="title">Help</span> <span class="arrow down"></span></button> <button type="button" aria-label="Help" class="mobile-dropdown-title"><span class="title">Help</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/faq/" class="nav-link">
+  FAQ
+</a></li><li class="dropdown-item"><!----> <a href="mailto:kgrid-developers@umich.edu" class="nav-link external">
+  Email
+  <!----></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Event" class="dropdown-title"><span class="title">Event</span> <span class="arrow down"></span></button> <button type="button" aria-label="Event" class="mobile-dropdown-title"><span class="title">Event</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guides/workshop2019.html" class="nav-link">
+  Fall 2019 Workshop
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="kgrid-quick-start"><a href="#kgrid-quick-start" class="header-anchor">#</a> KGrid Quick Start</h1> <h2 id="using-the-internal-runtime"><a href="#using-the-internal-runtime" class="header-anchor">#</a> Using the internal runtime</h2> <p><a href="https://circleci.com/gh/kgrid/guides" target="_blank" rel="noopener noreferrer"><img src="https://circleci.com/gh/kgrid/guides.svg?style=svg" alt="CircleCI"><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><strong>Confirm <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">Node and NPM (version 10+)<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> are
+installed, and <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener noreferrer">Java 11+ JDK<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> is installed.</strong></p></div> <h3 id="step-1-install-the-kgrid-cli"><a href="#step-1-install-the-kgrid-cli" class="header-anchor">#</a> Step 1 - Install the <a href="https://kgrid.org/kgrid-cli" target="_blank" rel="noopener noreferrer">KGrid CLI<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> <span class="token function">npm</span> <span class="token function">install</span> -g @kgrid/cli
+</code></pre></div><h3 id="step-2-install-a-kgrid-in-your-directory-storing-the-kos-kgrid-workspace"><a href="#step-2-install-a-kgrid-in-your-directory-storing-the-kos-kgrid-workspace" class="header-anchor">#</a> Step 2 - Install a Kgrid in your directory storing the KOs (KGrid workspace)</h3> <p>You will create a new directory for a local grid and install the
+Kgrid Library and Activator</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> <span class="token function">mkdir</span> mygrid
+<span class="token operator">&gt;</span> <span class="token builtin class-name">cd</span> mygrid
+<span class="token operator">&gt;</span> kgrid setup
+KGrid CLI v0.5.0
+
+Setting up kgrid at <span class="token punctuation">{</span>path<span class="token punctuation">}</span>/mycollection/.kgrid
+Downloading kgrid components<span class="token punctuation">..</span>. <span class="token keyword">done</span>
+kgrid setup complete
+<span class="token operator">&gt;</span>
+</code></pre></div><p>You can check that everything has been installed with the
+following command:</p> <div class="language- extra-class"><pre class="language-text"><code>&gt; kgrid --version
+Checking JAVA Version ...
+java version &quot;11.0.1&quot; 2018-10-16 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.1+13-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.1+13-LTS, mixed mode)
+
+Checking Node Version ...
+v10.15.3
+
+KGrid Components Version ...
+KGRID Components are installed at: ../mygrid/.kgrid
+
+  KGRID Library:   version 1.2.8    Latest Version
+
+  KGRID Activator: version 1.3.6    Latest Version
+
+______________________________________________________________
+@kgrid/cli/0.5.6 darwin-x64 node-v10.15.3
+</code></pre></div><h3 id="step-3-start-a-local-grid"><a href="#step-3-start-a-local-grid" class="header-anchor">#</a> Step 3 - Start a local grid</h3> <p>Start KGrid &amp; verify in the browser that the activator and
+library are running. You will point to a manifest file to tell
+the Activator to load example objects.</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
+KGrid CLI v0.5.6
+
+Checking KGrid Components Version <span class="token punctuation">..</span>.
+KGRID Components are installed at: /Users/pboisver/dev/42/.kgrid
+
+  KGRID Library:   version <span class="token number">1.2</span>.8    Latest Version
+
+  KGRID Activator: version <span class="token number">1.3</span>.6    Latest Version
+
+java -jar ./.kgrid/kgrid-library-1.2.8.jar --kgrid.shelf.cdostore.url<span class="token operator">=</span>filesystem:file:////Users/username/mygrid --server.port<span class="token operator">=</span><span class="token number">8081</span> --kgrid.shelf.manifest<span class="token operator">=</span>https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
+
+Starting KGrid library<span class="token punctuation">..</span>.
+java -jar ./.kgrid/kgrid-activator-1.3.6.jar --kgrid.shelf.cdostore.url<span class="token operator">=</span>filesystem:file:////Users/username/mygrid --kgrid.shelf.manifest<span class="token operator">=</span>https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-manifest.json
+
+Starting KGrid activator<span class="token punctuation">..</span>.
+</code></pre></div><h3 id="kicking-the-tires-and-taking-it-for-a-spin"><a href="#kicking-the-tires-and-taking-it-for-a-spin" class="header-anchor">#</a> Kicking the tires and taking it for a spin</h3> <p>We should now have a Kgrid Activator running with a single
+Javascript Knowledge Object activated.
+We can go to <code>http://localhost:8080</code> to check its status.
+Going to <code>http://localhost:8080/endpoints</code> will display
+information about the activated objects and give us a link
+with which to execute the KO</p> <h2 id="using-a-remote-runtime"><a href="#using-a-remote-runtime" class="header-anchor">#</a> Using a remote runtime</h2> <p>Currently, the Kgrid Activator natively supports Knowledge
+Objects written in Javascript, however the Activator has
+the ability to support more languages by connecting to
+runtimes that can be built to handle them.</p> <h5 id="the-runtimes-must-be-started-after-the-activator"><a href="#the-runtimes-must-be-started-after-the-activator" class="header-anchor">#</a> The runtimes must be started after the activator</h5> <h3 id="step-1-install-kgrid-nodejs-runtime"><a href="#step-1-install-kgrid-nodejs-runtime" class="header-anchor">#</a> Step 1 - Install KGrid NodeJS runtime</h3> <p>Here, we will install and run the Kgrid NodeJS Runtime,
+which will allow the Activator to handle objects written in NodeJS.
+Install the runtime globally with the following command:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> <span class="token function">npm</span> <span class="token function">install</span> -g @kgrid/noderuntime
+</code></pre></div><h3 id="step-2-stop-and-restart-the-activator"><a href="#step-2-stop-and-restart-the-activator" class="header-anchor">#</a> Step 2 - Stop and restart the Activator</h3> <p>Here, we will stop the Activator by pressing <code>ctrl + C</code>
+in the terminal.
+Now, we will start it again pointed to a manifest that
+contains some Knowledge Objects written in NodeJS.</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> kgrid start -m https://github.com/kgrid-objects/example-collection/releases/download/3.0.0/start-up-node-manifest.json
+</code></pre></div><h3 id="step-3-start-kgrid-nodejs-runtime"><a href="#step-3-start-kgrid-nodejs-runtime" class="header-anchor">#</a> Step 3 - Start KGrid NodeJS runtime</h3> <p>Now, we will start the NodeJS runtime.
+The runtime will register with the activator,
+and the activator will then activate the NodeJS KOs.</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&gt;</span> <span class="token function">mkdir</span> kgrid_node_runtime
+<span class="token operator">&gt;</span> <span class="token builtin class-name">cd</span> kgrid_node_runtime
+<span class="token operator">&gt;</span> kgrid-node
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Once the Library (<a href="http://localhost:8081" target="_blank" rel="noopener noreferrer">http://localhost:8081<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>) and Activator (<a href="http://localhost:8080" target="_blank" rel="noopener noreferrer">http://localhost:8080<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>) are running you can open a browser window verify that both are running</p> <p>The Library will be loaded with the example KO collection.</p> <p>The Activator will show a list of links for detailed information.</p></div> <h2 id="what-s-next"><a href="#what-s-next" class="header-anchor">#</a> What's next?</h2> <p>If you'd like to load existing Knowledge Objects to the
+Activator or Library, KGrid team has developed several
+collections of KOs you can try:</p> <p><a href="https://kgrid-objects.github.io/cpic-collection/deployment/" target="_blank" rel="noopener noreferrer">CPIC Collection<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>More information on KO collections can be found at
+<a href="https://kgrid-objects.github.io/" target="_blank" rel="noopener noreferrer">https://kgrid-objects.github.io/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>If you'd like to create a new Knowledge Object, please refer
+to <a href="https://kgrid.org/guides/developer/" target="_blank" rel="noopener noreferrer">Developer's Guide<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>For more information on remote runtimes and developing your
+own look in the <a href="/guides/tutorial/runtimes/overview">advanced tutiorials</a>.</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/19/2020, 6:16:03 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/guides/assets/js/app.37c0a637.js" defer></script><script src="/guides/assets/js/2.816b06cd.js" defer></script><script src="/guides/assets/js/19.5c3adb55.js" defer></script>
+  </body>
+</html>

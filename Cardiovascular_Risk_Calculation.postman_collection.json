@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "6f79a36a-5b77-4c61-9a33-0f4a2455631e",
+		"name": "Cardiovascular Risk Calculation",
+		"description": "Example postman requests and tests using the Ten-year Fatal Cardiovascular Risk Calculation KO Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Cardiovascular Risk Knowledge Object Implementation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "61e7ff6b-4be5-44a9-9f2a-8f6109e82ca8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test Results\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.identifier).to.eql(\"ark:/score/calc/v0.3.0\");",
+							"    pm.expect(jsonData.hasServiceSpecification).to.eql(\"v0.3.0/service.yaml\");",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://activator.kgrid.org/kos/score/calc/v0.3.0",
+					"protocol": "http",
+					"host": [
+						"activator",
+						"kgrid",
+						"org"
+					],
+					"path": [
+						"kos",
+						"score",
+						"calc",
+						"v0.3.0"
+					]
+				},
+				"description": "Will retrieve the Knowledge Object Implementation"
+			},
+			"response": []
+		},
+		{
+			"name": "Calcuate Cardiovascular Risk",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df7aae2f-efbe-4a75-8e47-34ed4345cf7f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Test Results\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result.cvdrisk.total).to.be.closeTo(0.00265,0.00001);",
+							"    pm.expect(jsonData.result.cvdrisk.chd).to.be.closeTo(0.00176,0.00001);",
+							"    pm.expect(jsonData.result.cvdrisk.nonchd).to.be.closeTo(0.00089,0.00001);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"age\": 48,\n    \"gender\": \"female\",\n    \"risk\": \"low\",\n    \"sbp\": 120,\n    \"cholesterol\": 8,\n    \"smoker\": false\n}"
+				},
+				"url": {
+					"raw": "http://activator.kgrid.org/score/calc/v0.3.0/score",
+					"protocol": "http",
+					"host": [
+						"activator",
+						"kgrid",
+						"org"
+					],
+					"path": [
+						"score",
+						"calc",
+						"v0.3.0",
+						"score"
+					]
+				},
+				"description": "Calcuate Cardiovascular Risk"
+			},
+			"response": [
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": \"<number>\",\n    \"gender\": \"<string>\",\n    \"risk\": \"<string>\",\n    \"sbp\": \"<number>\",\n    \"cholesterol\": \"<number>\",\n    \"smoker\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/score",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"score"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "\"schema type not provided\""
+				},
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"age\": \"<number>\",\n    \"gender\": \"<string>\",\n    \"risk\": \"<string>\",\n    \"sbp\": \"<number>\",\n    \"cholesterol\": \"<number>\",\n    \"smoker\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/score",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"score"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"result\": \"<object>\"\n}"
+				}
+			]
+		}
+	]
+}

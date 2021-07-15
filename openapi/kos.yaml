@@ -1,0 +1,440 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Sample API
+  description: A sample API to illustrate OpenAPI concepts
+paths:
+  /kos:
+    get:
+      tags:
+        - Knowledge Object
+      summary: Finds all knowledge objects
+      description: |
+        Returns a collection of knowledge objects in the form of a JSON array. The JSON
+        objects will follow the <a href="http://kgrid.org/koio/contexts/knowledgeobject.jsonld">KOIO scheme</a> for knowledge objects"
+      operationId: findallkos
+      responses:
+        200:
+          description: List of users of Knowledge Objects
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  ark:/hello/world:
+                    '@id': hello-world
+                    '@type': koio:KnowledgeObject
+                    identifier: ark:/hello/world
+                    version: 1.0.0
+                    title: Hello World Title
+                    contributors: Kgrid Team
+                    description: 'Test Hello World '
+                    keywords: test hello world
+                    '@context':
+                      - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
+                  ark:/score/calc:
+                    '@id': score-calc
+                    '@type': koio:KnowledgeObject
+                    identifier: ark:/score/calc
+                    version: 1.0.0
+                    title: 'Ten-year Fatal Cardiovascular Risk Calculation based on
+                      SCORE project (Example KO) '
+                    contributors: KGRID TEAM
+                    description: SCORE risk calculation.
+                    citations:
+                      - https://academic.oup.com/eurheartj/article/24/11/987/427645
+                    keywords: SCORE, ten-year, Cardiovascular risk, calculation
+                    '@context':
+                      - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
+    post:
+      tags:
+        - Knowledge Object Import
+      summary: Imports a packaged Knowledge Object as a zip file
+      description: Takes a packaged Knowledge Object as a zip file in a ko form field
+      operationId: depositKnowledgeObjectUsingPOST
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/importKO'
+      responses:
+        201:
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                Added: hello-world
+  /kos/{naan}/{name}:
+    get:
+      tags:
+        - Knowledge Object
+        - Knowledge Object Export
+      summary: Find Knowledge Object based on arkid
+      operationId: findko
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+              example:
+                KnowledgeObject:
+                  $ref: '#/components/examples/KnowledgeObject'
+            application/zip:
+              schema:
+                type: string
+                format: binary
+        4XX:
+          description: Bad request. User ID must be an integer and larger than 0.
+        5XX:
+          description: Unexpected error.
+    put:
+      tags:
+        - Knowledge Object
+      summary: Update Knowledge Object
+      operationId: updateko
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+      requestBody:
+        description: Knowledge Object
+        content:
+          application/json:
+            schema:
+              type: object
+            example:
+              KnowledgeObject:
+                $ref: '#/components/examples/KnowledgeObject'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: jspn
+              example:
+                KnowledgeObject:
+                  $ref: '#/components/examples/KnowledgeObject'
+    delete:
+      tags:
+        - Knowledge Object
+      summary: Delete Knowledge Object
+      operationId: deleteko
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            example: world
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+              example:
+                KnowledgeObject:
+                  $ref: '#/components/examples/KnowledgeObject'
+
+  /kos/{naan}/{name}/{version}:
+    get:
+      tags:
+        - Knowledge Object version
+        - Knowledge Object Export
+      summary: Find Knowledge Object based on
+      operationId: findkoversion
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+        - name: version
+          in: path
+          description: Version of the KO
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: v0.1.0
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+            application/zip:
+              schema:
+                type: string
+                format: binary
+    put:
+      tags:
+        - Knowledge Object Version
+      summary: Update Knowledge Object
+      operationId: updatekoversion
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+        - name: version
+          in: path
+          description: Version of the KO
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: v0.1.0
+      requestBody:
+        description: Knowledge Object
+        content:
+          application/json:
+            schema:
+              type: object
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+    delete:
+      tags:
+        - Knowledge Object version
+      summary: Delete Knowledge Object version
+      operationId: deletekoversion
+      parameters:
+        - name: naan
+          in: path
+          description: Name Assigning Authority unique number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: hello
+        - name: name
+          in: path
+          description: Name Assigning Authority name
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: world
+        - name: version
+          in: path
+          description: Specific version of the KO
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: v0.1.0
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+              example:
+                KnowledgeObject:
+                  $ref: '#/components/examples/KnowledgeObject'
+
+  /kos/{naan}/{name}/{version}/service:
+    get:
+      tags:
+        - Knowledge Object version
+      summary: Find Knowledge Object version OpenAPI Service Specification
+      operationId: findkoversionservice
+      parameters:
+          - name: naan
+            in: path
+            description: Name Assigning Authority unique number
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: hello
+          - name: name
+            in: path
+            description: Name Assigning Authority name
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: world
+          - name: version
+            in: path
+            description: Specific version of the KO
+            required: true
+            style: simple
+            explode: false
+            schema:
+              type: string
+            example: v0.1.0
+      responses:
+            200:
+              description: OK
+              content:
+                application/x-yaml:
+                  schema:
+                    type: object
+                    format: yaml
+                application/json:
+                  schema:
+                    type: object
+                    format: json
+
+  /kos/manifest:
+    post:
+      tags:
+        -  Knowledge Object Import
+      summary: Imports packaged Knowledge Object based on url to artifact
+      description: |
+        Imports Knowledge Object based on a collectoin of urls that point to packaged Knowledge Object artifacts (zip file)
+      operationId: importmanifest
+      requestBody:
+        description: Import Manifest
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                manifest:
+                  - 'https://github.com/kgrid-objects/example-collection/releases/download/1.4.0/hello-world.zip'
+                  - 'https://github.com/kgrid-objects/example-collection/releases/download/1.4.0/ri-bmicalc.zip'
+                  - 'https://github.com/kgrid-objects/example-collection/releases/download/1.4.0/score-calc.zip'
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                format: json
+                example:
+                  Added:
+                    - 'ark:/hello/world'
+                    - 'ark:/ri/bmicalc'
+                    - 'ark:/score/calc'
+
+components:
+
+  examples:
+    KnowledgeObject:
+      value:
+        '@id': hello-world
+        '@type': koio:KnowledgeObject
+        identifier: ark:/hello/world
+        title: Hello World Title
+        contributors: Kgrid Team
+        description: 'Test Hello World '
+        keywords: test hello world
+        hasServiceSpecification: service.yaml
+        hasPayload: welcome.js
+        '@context':
+          - http://kgrid.org/koio/contexts/knowledgeobject.jsonld
+
+
+  schemas:
+    importKO:
+      type: object
+      properties:
+        ko:
+          type: string
+          format: binary
